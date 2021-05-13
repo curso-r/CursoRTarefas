@@ -1,6 +1,7 @@
 ---
-title: "Tarefa sobre introdução ao R"
+title: "Tarefas: Introdução ao R"
 description: "Exercícios do curso 'Introdução à programação com R'"
+encoding: "UTF-8"
 output: 
   learnr::tutorial:
     language: pt
@@ -11,7 +12,16 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 library(learnr)
+library(gradethis)
 knitr::opts_chunk$set(echo = FALSE)
+
+gradethis::gradethis_setup(code_correct =  "Correto!",
+                           pass = "Correto!",
+                           fail = "Incorreto. Tente novamente!"
+                            )
+
+# Fazer: frases de feedback do gradethis responderem em Português
+
 ```
 
 
@@ -26,6 +36,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Objetos
 
+```{r setupFrutas}
+frutas <- c("maçã", "banana", "melancia")
+``` 
 
 A) Crie um vetor com o nome de três frutas (maçã, banana, melancia) e guarde em um objeto chamado `frutas`.
 
@@ -45,10 +58,14 @@ frutas <- c(___, ___, ___)
 frutas <- c("maçã", "banana", "melancia")
 ```
 
+```{r objetos-a-check}
+gradethis::grade_this_code()
+```
 
-b) Use a função `length()` para contar o tamanho do vetor. Certifique-se que retorna 3.
 
-```{r objetos-b, exercise = TRUE}
+b) Use a função `length()` para contar o tamanho do vetor `frutas`. Certifique-se que retorna 3.
+
+```{r objetos-b, exercise = TRUE, exercise.setup = "setupFrutas"}
 
 ```
 
@@ -60,29 +77,43 @@ length(_____)
 length(frutas)
 ```
 
-c) Use `[]` para retornar a primeira fruta do vetor.
-
-```{r objetos-c, exercise = TRUE}
-
+```{r objetos-b-check}
+gradethis::grade_this_code()
 ```
 
-```{r objetos-c-hint-1}
-frutas[__]
+c) Observe a saída de `paste("eu gosto de", frutas)` e verifique se o tamanho do vetor `frutas` mudou.
+
+```{r objetos-c, exercise = TRUE, exercise.setup = "setupFrutas"}
+
 ```
 
 ```{r objetos-c-solution}
-frutas[1]
+paste("eu gosto de", frutas)
+# O tamanho do vetor continua o mesmo: 3.
+# O R aplicou a função `paste()` e "colou" a frase
+# "eu gosto de" em cada elemento do vetor frutas. 
 ```
-d) Observe a saída de `paste("eu gosto de", frutas)` e verifique se o tamanho do vetor mudou.
 
-```{r objetos-d, exercise = TRUE}
 
+```{r objetos-d-check}
+gradethis::grade_this_code()
+```
+
+
+d) Use `[]` para retornar a primeira fruta do vetor `frutas`.
+
+```{r objetos-d, exercise = TRUE, exercise.setup = "setupFrutas"}
+
+```
+
+```{r objetos-d-hint-1}
+frutas[__]
 ```
 
 ```{r objetos-d-solution}
-paste("eu gosto de", frutas)
-# O tamanho do vetor continua o mesmo: 3.
-# O R aplicou a função `paste()` para cada elemento do vetor frutas. 
+frutas[1]
 ```
 
-
+```{r objetos-c-check}
+gradethis::grade_this_code()
+```
