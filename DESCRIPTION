@@ -14,10 +14,13 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
+    dplyr (>= 1.0.6),
     gradethis (>= 0.2.3.9001),
     learnr (>= 0.10.1.9009),
+    learnrhash (>= 0.1.0.9000),
     magrittr,
     rmarkdown
-Remotes:  
+Remotes: 
     rstudio/learnr,
-    rstudio/gradethis
+    rstudio/gradethis,
+    rundel/learnrhash
