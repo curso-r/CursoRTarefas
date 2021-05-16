@@ -14,12 +14,15 @@ runtime: shiny_prerendered
 ```{r setup, include=FALSE}
 library(learnr)
 library(gradethis)
-knitr::opts_chunk$set(echo = FALSE)
 
-gradethis::gradethis_setup(code_correct =  "Correto!",
-                           pass = "Correto!",
-                           fail = "Incorreto. Tente novamente!"
-                            )
+knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
+
+
+gradethis::gradethis_setup(
+  code_correct =  paste("Correto! ", CursoRTarefas:::frase_acerto()),
+  pass = paste("Correto! ", CursoRTarefas:::frase_acerto()),
+  fail =  paste("Incorreto. Tente novamente! ", CursoRTarefas:::frase_acerto())
+)
 
 # Fazer: frases de feedback do gradethis responderem em Português
 
@@ -144,6 +147,8 @@ ___(airquality)
 ncol(airquality)
 ```
 
+
+
 ```{r df-a-check}
 gradethis::grade_this_code()
 ```
@@ -182,6 +187,7 @@ head(airquality)
 ```
 
 
+
 ```{r df-c-check}
 gradethis::grade_this_code()
 ```
@@ -204,11 +210,8 @@ colnames(airquality)
 
 ```{r df-d-check}
 gradethis::grade_this({
-  # custom checking code appears here
-  if (identical(.result, .solution)) {
-    pass("Correto!")
-  }
-  fail("Tente novamente!")
+  gradethis::pass_if_equal()
+  gradethis::fail()
 })
 ```
 
@@ -229,11 +232,8 @@ class(airquality$Ozone)
 
 ```{r df-e-check}
 gradethis::grade_this({
-  # custom checking code appears here
-  if (identical(.result, .solution)) {
-    pass("Correto!")
-  }
-  fail("Tente novamente!")
+  gradethis::pass_if_equal()
+  gradethis::fail()
 })
 ```
 
@@ -685,13 +685,13 @@ learnrhash::encoder_ui(ui_before = " ", ui_after = " ")
 
 - [ ] Melhorar as respostas automáticas do **gradethis**. Algumas já traduzi e outras ainda precisam ficar em português.
 
-- [ ] Faz sentido ter dicas e enviar as respostas depois? as dicas já direcionam para as respostas haha
+- [ ] Faz sentido ter dicas e enviar as respostas depois? as dicas já direcionam para as respostas haha. UPDATE: Adicionei o chunk option `exercise.reveal_solution = FALSE`, assim não mostra as respostas.
 
-- [ ] o learnrhash adiciona um botao escrito generate. 
+- [ ] o learnrhash adiciona um botao escrito generate. não encontrei algum arg pra deixar em portugues.
 
 - [ ] Melhorar o css para ficar parecido com a identidade visual da Curso-R
 
-- [ ] ~~Em alguns casos, existem mais de uma forma de resolver os exercícios. Verificar como é possível apontar mais de uma solução aceitável. Por enquanto só entendi como apontar uma solução.~~ `gradethis::grade_this()` possibilita avaliar se os resultados são iguais
+- [ ] Em alguns casos, existem mais de uma forma de resolver os exercícios. Verificar como é possível apontar mais de uma solução aceitável. Por enquanto só entendi como apontar uma solução. `gradethis::grade_this()` possibilita avaliar se os resultados são iguais, mas eu quero avaliar o código e escrever as possibilidades.
 
 
 ### Comentários

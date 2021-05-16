@@ -125,9 +125,6 @@ if (window.hljs) {
 <div class="tutorial-exercise-support" data-label="objetos-a-hint-2" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>frutas &lt;- c(___, ___, ___)</code></pre>
 </div>
-<div class="tutorial-exercise-support" data-label="objetos-a-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>frutas &lt;- c(&quot;maçã&quot;, &quot;banana&quot;, &quot;melancia&quot;)</code></pre>
-</div>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Use a função <code>length()</code> para contar o tamanho do vetor <code>frutas</code>. Certifique-se que retorna 3.</li>
 </ol>
@@ -137,20 +134,11 @@ if (window.hljs) {
 <div class="tutorial-exercise-support" data-label="objetos-b-hint" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>length(_____)</code></pre>
 </div>
-<div class="tutorial-exercise-support" data-label="objetos-b-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>length(frutas)</code></pre>
-</div>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Observe a saída de <code>paste("eu gosto de", frutas)</code> e verifique se o tamanho do vetor <code>frutas</code> mudou.</li>
 </ol>
 <div class="tutorial-exercise" data-label="objetos-c" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
-</div>
-<div class="tutorial-exercise-support" data-label="objetos-c-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>paste(&quot;eu gosto de&quot;, frutas)
-# O tamanho do vetor continua o mesmo: 3.
-# O R aplicou a função `paste()` e &quot;colou&quot; a frase
-# &quot;eu gosto de&quot; em cada elemento do vetor frutas. </code></pre>
 </div>
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Use <code>[]</code> para retornar a primeira fruta do vetor <code>frutas</code>.</li>
@@ -160,9 +148,6 @@ if (window.hljs) {
 </div>
 <div class="tutorial-exercise-support" data-label="objetos-d-hint-1" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>frutas[__]</code></pre>
-</div>
-<div class="tutorial-exercise-support" data-label="objetos-d-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>frutas[1]</code></pre>
 </div>
 </div>
 <div id="section-dataframes" class="section level2">
@@ -178,9 +163,6 @@ if (window.hljs) {
 <div class="tutorial-exercise-support" data-label="df-a-hint" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>___(airquality)</code></pre>
 </div>
-<div class="tutorial-exercise-support" data-label="df-a-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>ncol(airquality)</code></pre>
-</div>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Quantas linhas <code>airquality</code> tem?</li>
 </ol>
@@ -189,9 +171,6 @@ if (window.hljs) {
 </div>
 <div class="tutorial-exercise-support" data-label="df-b-hint" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>___(airquality)</code></pre>
-</div>
-<div class="tutorial-exercise-support" data-label="df-b-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>nrow(airquality)</code></pre>
 </div>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>O que a função <code>head()</code> retorna?</li>
@@ -202,10 +181,6 @@ if (window.hljs) {
 <div class="tutorial-exercise-support" data-label="df-c-hint" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>___(airquality)</code></pre>
 </div>
-<div class="tutorial-exercise-support" data-label="df-c-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>head(airquality)
-# A função head() retorna as 6 primeiras linhas da base.</code></pre>
-</div>
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Quais são os nomes das colunas?</li>
 </ol>
@@ -214,11 +189,6 @@ if (window.hljs) {
 </div>
 <div class="tutorial-exercise-support" data-label="df-d-hint" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>___(airquality)</code></pre>
-</div>
-<div class="tutorial-exercise-support" data-label="df-d-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>colnames(airquality)
-
-# names(airquality) também funciona. Verificar como dar mais de uma solução possível.</code></pre>
 </div>
 <ol start="5" style="list-style-type: lower-alpha">
 <li>Qual é a classe da coluna <code>Ozone</code>? Dicas: <code>class()</code> e <code>$</code></li>
@@ -229,23 +199,11 @@ if (window.hljs) {
 <div class="tutorial-exercise-support" data-label="df-e-hint" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>class(airquality______)</code></pre>
 </div>
-<div class="tutorial-exercise-support" data-label="df-e-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>class(airquality$Ozone)</code></pre>
-</div>
 <ol start="6" style="list-style-type: lower-alpha">
 <li>O que o código <code>dplyr::glimpse(airquality)</code> retorna?</li>
 </ol>
 <div class="tutorial-exercise" data-label="df-f" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
-</div>
-<div class="tutorial-exercise-support" data-label="df-f-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>dplyr::glimpse(airquality)
-# A função glimpse() do pacote dpyr retorna várias informações interessantes:
-# O número de linhas
-# O número de colunas
-# O nome das colunas
-# O tipo de cada coluna
-# Algumas observações da coluna, para ter uma ideia dos dados disponíveis.</code></pre>
 </div>
 <ol start="7" style="list-style-type: lower-alpha">
 <li>Utilizando a resposta da questão anterior, quais são os tipos de cada coluna da tabela <code>airquality</code>?</li>
@@ -261,13 +219,6 @@ if (window.hljs) {
 c(1,2,3) - c(1,1,1)    # código 2</code></pre>
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<div class="tutorial-exercise-support" data-label="vetores-a-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>c(1,2,3) - 1           # código 1
-c(1,2,3) - c(1,1,1)    # código 2
-# Os resultados são iguais.
-# No caso do código 1, como foi solicitado subtrair usando vetores de tamanhos diferentes, o R reciclou o segundo elemento.
-# No caso do código 2, a subtração foi feita baseado na posição dos vetores. Exemplo: 1-1, 2-1, 3-1.</code></pre>
-</div>
 <p>AQUI: Fazer multipla escolha.</p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Considere o vetor booleano abaixo:</li>
@@ -281,21 +232,11 @@ c(1,2,3) - c(1,1,1)    # código 2
 <div class="tutorial-exercise" data-label="vetores-b-i" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<div class="tutorial-exercise-support" data-label="vetores-b-i-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>length(dolar_subiu)
-# A função length retorna o tamanho do vetor. 
-# O vetor &#39;dolar_subiu&#39; possui 7 elementos.</code></pre>
-</div>
 <ol start="2" style="list-style-type: upper-roman">
 <li><code>dolar_subiu[2]</code> (ps: a semana começa no domingo)</li>
 </ol>
 <div class="tutorial-exercise" data-label="vetores-b-ii" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
-</div>
-<div class="tutorial-exercise-support" data-label="vetores-b-ii-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>dolar_subiu[2]
-# O segundo elemento selecionado representa a segunda-feira.
-# Na segunda-feira, o dolar subiu (TRUE).</code></pre>
 </div>
 <ol start="3" style="list-style-type: upper-roman">
 <li><code>sum(dolar_subiu)</code></li>
@@ -303,33 +244,17 @@ c(1,2,3) - c(1,1,1)    # código 2
 <div class="tutorial-exercise" data-label="vetores-b-iii" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<div class="tutorial-exercise-support" data-label="vetores-b-iii-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>sum(dolar_subiu)
-# A função sum() realiza a soma dos elementos do vetor.
-# Como o vetor possui dados do tipo lógico (TRUE ou FALSE), o R entende que TRUE = 1 e FALSE = 0.
-# O resultado de sum(dolar_subiu) é 4, portanto o dólar subiu em 4 dias na semana. </code></pre>
-</div>
 <ol start="4" style="list-style-type: upper-roman">
 <li><code>mean(dolar_subiu)</code></li>
 </ol>
 <div class="tutorial-exercise" data-label="vetores-b-iv" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<div class="tutorial-exercise-support" data-label="vetores-b-iv-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>mean(dolar_subiu)
-# A função sum() realiza a média dos elementos do vetor.
-# O resultado representa a média de dias em que o dólar subiu.</code></pre>
-</div>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Agora observe a saída de <code>as.numeric(dolar_subiu)</code>. O que o R fez?</li>
 </ol>
 <div class="tutorial-exercise" data-label="vetores-c" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
-</div>
-<div class="tutorial-exercise-support" data-label="vetores-c-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>as.numeric(dolar_subiu)
-# A função as.numeric() transforma um vetor em numérico (quando possível).
-# No vetor que o R retornou, TRUE foi transformado em 1, e FALSE foi transformado em 0.</code></pre>
 </div>
 </div>
 <div id="section-desafio" class="section level2">
@@ -362,25 +287,6 @@ sd_ozone_funcao &lt;- ___
 sd_ozone_calculado ___ sd_ozone_funcao</code></pre>
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<div class="tutorial-exercise-support" data-label="desafio-a-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code># a)
-media_ozone &lt;- mean(airquality$Ozone, na.rm = TRUE)
-# b)
-ozone_centralizado &lt;-  airquality$Ozone - media_ozone
-# c)
-ozone_centralizado_ao_quadrado &lt;-  ozone_centralizado ^ 2
-# d)
-media_ozone_centralizado_ao_quadrado &lt;- mean(ozone_centralizado_ao_quadrado, na.rm = TRUE)
-# e)
-sd_ozone_calculado &lt;- sqrt(media_ozone_centralizado_ao_quadrado)
-sd_ozone_calculado
-# f)
-sd_ozone_funcao &lt;- sd(airquality$Ozone, na.rm = TRUE)
-sd_ozone_funcao 
-# São iguais?
-sd_ozone_calculado == sd_ozone_funcao
-# Os resultados são diferentes!</code></pre>
-</div>
 </div>
 <div id="section-funções-próprias" class="section level2">
 <h2>Funções próprias</h2>
@@ -397,13 +303,6 @@ sd_ozone_calculado == sd_ozone_funcao
 }
 numero_ao_quadrado(3)</code></pre>
 </div>
-<div class="tutorial-exercise-support" data-label="funcoes-proprias-a-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>numero_ao_quadrado &lt;- function(numero){
-  numero ^ 2
-}
-# Teste se a função funciona:
-numero_ao_quadrado(3)</code></pre>
-</div>
 <ol start="2" style="list-style-type: lower-alpha">
 <li><strong>DESAFIO!</strong> Crie uma função que recebe 2 números <code>x</code> e <code>y</code> e retorna a raiz quadrada da soma desses números. Depois teste a função para valores <code>x = 6</code> e <code>y = 3</code>, o resultado gerado pela função deve ser 3.</li>
 </ol>
@@ -415,14 +314,6 @@ numero_ao_quadrado(3)</code></pre>
 <pre class="text"><code>raiz_da_soma &lt;- function(x, y){
   ______ &lt;- x + y
   ______
-}
-# Teste se a função funciona:
-raiz_da_soma(x = 6, y = 3)</code></pre>
-</div>
-<div class="tutorial-exercise-support" data-label="funcoes-proprias-b-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>raiz_da_soma &lt;- function(x, y){
-  soma &lt;- x + y
-  sqrt(soma)
 }
 # Teste se a função funciona:
 raiz_da_soma(x = 6, y = 3)</code></pre>
@@ -445,9 +336,6 @@ numeross</code></pre>
 <div class="tutorial-exercise-support" data-label="filtros-ai-hint" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>numeross[numeross ____]</code></pre>
 </div>
-<div class="tutorial-exercise-support" data-label="filtros-ai-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>numeross[numeross &gt; 0]</code></pre>
-</div>
 <ol start="2" style="list-style-type: upper-roman">
 <li>Escreva um código que devolta apenas os valores pares do vetor <code>numeross</code>. Dica: o operador <code>%%</code> devolve o resto da divisão entre dois números.</li>
 </ol>
@@ -460,9 +348,6 @@ numeross</code></pre>
 <div class="tutorial-exercise-support" data-label="filtros-aii-hint-2" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>numeross[numeross %% __ == __]</code></pre>
 </div>
-<div class="tutorial-exercise-support" data-label="filtros-aii-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>numeross[numeross %% 2 == 0]</code></pre>
-</div>
 <ol start="3" style="list-style-type: upper-roman">
 <li>Filtre o vetor para que retorne apenas aqueles valores que quando elevados a 2 são menores do que 4.</li>
 </ol>
@@ -474,9 +359,6 @@ numeross</code></pre>
 </div>
 <div class="tutorial-exercise-support" data-label="filtros-aiii-hint-2" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>numeross[(numeros ^ 2) _____]</code></pre>
-</div>
-<div class="tutorial-exercise-support" data-label="filtros-aiii-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>numeross[(numeross ^ 2) &lt; 4]</code></pre>
 </div>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Use o data.frame <code>airquality</code> para responder às questões abaixo:</li>
@@ -494,9 +376,6 @@ numeross</code></pre>
 <div class="tutorial-exercise-support" data-label="filtros-bi-hint-2" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>sum(___(airquality$Solar.R))</code></pre>
 </div>
-<div class="tutorial-exercise-support" data-label="filtros-bi-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>sum(is.na(airquality$Solar.R))</code></pre>
-</div>
 <ol start="2" style="list-style-type: upper-roman">
 <li>Filtre a tabela <code>airquality</code> com apenas linhas em que <code>Solar.R</code> é <code>NA</code>.</li>
 </ol>
@@ -508,9 +387,6 @@ numeross</code></pre>
 </div>
 <div class="tutorial-exercise-support" data-label="filtros-bii-hint-2" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>____[is.na(airquality$Solar.R) ___ ]</code></pre>
-</div>
-<div class="tutorial-exercise-support" data-label="filtros-bii-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>airquality[is.na(airquality$Solar.R), ]</code></pre>
 </div>
 <ol start="3" style="list-style-type: upper-roman">
 <li>Filtre a tabela <code>airquality</code> com apenas linhas em que <code>Solar.R</code> NÃO é <code>NA</code>.</li>
@@ -524,9 +400,6 @@ numeross</code></pre>
 <div class="tutorial-exercise-support" data-label="filtros-biii-hint-2" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>____[!is.na(airquality$Solar.R) ___ ]</code></pre>
 </div>
-<div class="tutorial-exercise-support" data-label="filtros-biii-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>airquality[!is.na(airquality$Solar.R), ]</code></pre>
-</div>
 <ol start="4" style="list-style-type: upper-roman">
 <li>Filtre a tabela <code>airquality</code> com apenas linhas em que <code>Solar.R</code> NÃO é <code>NA</code> e <code>Month</code> é igual a 5.</li>
 </ol>
@@ -538,9 +411,6 @@ numeross</code></pre>
 </div>
 <div class="tutorial-exercise-support" data-label="filtros-biv-hint-2" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>airquality[!is.na(airquality$Solar.R) &amp; _________, ]</code></pre>
-</div>
-<div class="tutorial-exercise-support" data-label="filtros-biv-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
-<pre class="text"><code>airquality[!is.na(airquality$Solar.R) &amp; airquality$Month == 5, ]</code></pre>
 </div>
 </div>
 <div id="section-enviar-as-respostas" class="section level2">
@@ -622,13 +492,13 @@ Carregando…
 <li><p><input type="checkbox" disabled="" />
 Melhorar as respostas automáticas do <strong>gradethis</strong>. Algumas já traduzi e outras ainda precisam ficar em português.</p></li>
 <li><p><input type="checkbox" disabled="" />
-Faz sentido ter dicas e enviar as respostas depois? as dicas já direcionam para as respostas haha</p></li>
+Faz sentido ter dicas e enviar as respostas depois? as dicas já direcionam para as respostas haha. UPDATE: Adicionei o chunk option <code>exercise.reveal_solution = FALSE</code>, assim não mostra as respostas.</p></li>
 <li><p><input type="checkbox" disabled="" />
-o learnrhash adiciona um botao escrito generate.</p></li>
+o learnrhash adiciona um botao escrito generate. não encontrei algum arg pra deixar em portugues.</p></li>
 <li><p><input type="checkbox" disabled="" />
 Melhorar o css para ficar parecido com a identidade visual da Curso-R</p></li>
 <li><p><input type="checkbox" disabled="" />
-<del>Em alguns casos, existem mais de uma forma de resolver os exercícios. Verificar como é possível apontar mais de uma solução aceitável. Por enquanto só entendi como apontar uma solução.</del> <code>gradethis::grade_this()</code> possibilita avaliar se os resultados são iguais</p></li>
+Em alguns casos, existem mais de uma forma de resolver os exercícios. Verificar como é possível apontar mais de uma solução aceitável. Por enquanto só entendi como apontar uma solução. <code>gradethis::grade_this()</code> possibilita avaliar se os resultados são iguais, mas eu quero avaliar o código e escrever as possibilidades.</p></li>
 </ul>
 <div id="section-comentários" class="section level3">
 <h3>Comentários</h3>
@@ -643,12 +513,15 @@ Melhorar o css para ficar parecido com a identidade visual da Curso-R</p></li>
 <script type="application/shiny-prerendered" data-context="server-start">
 library(learnr)
 library(gradethis)
-knitr::opts_chunk$set(echo = FALSE)
 
-gradethis::gradethis_setup(code_correct =  "Correto!",
-                           pass = "Correto!",
-                           fail = "Incorreto. Tente novamente!"
-                            )
+knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
+
+
+gradethis::gradethis_setup(
+  code_correct =  paste("Correto! ", CursoRTarefas:::frase_acerto()),
+  pass = paste("Correto! ", CursoRTarefas:::frase_acerto()),
+  fail =  paste("Incorreto. Tente novamente! ", CursoRTarefas:::frase_acerto())
+)
 
 # Fazer: frases de feedback do gradethis responderem em Português
 
@@ -669,18 +542,20 @@ session$onSessionEnded(function() {
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::store_exercise_setup_chunk("__setup__", c("library(learnr)", "library(gradethis)", "knitr::opts_chunk$set(echo = FALSE)", 
-"", "gradethis::gradethis_setup(code_correct =  \"Correto!\",", 
-"                           pass = \"Correto!\",", "                           fail = \"Incorreto. Tente novamente!\"", 
-"                            )", "", "# Fazer: frases de feedback do gradethis responderem em Português", 
+learnr:::store_exercise_setup_chunk("__setup__", c("library(learnr)", "library(gradethis)", "", "knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)", 
+"", "", "gradethis::gradethis_setup(", "  code_correct =  paste(\"Correto! \", CursoRTarefas:::frase_acerto()),", 
+"  pass = paste(\"Correto! \", CursoRTarefas:::frase_acerto()),", 
+"  fail =  paste(\"Incorreto. Tente novamente! \", CursoRTarefas:::frase_acerto())", 
+")", "", "# Fazer: frases de feedback do gradethis responderem em Português", 
 ""), overwrite = FALSE)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::store_exercise_setup_chunk("__setup__", c("library(learnr)", "library(gradethis)", "knitr::opts_chunk$set(echo = FALSE)", 
-"", "gradethis::gradethis_setup(code_correct =  \"Correto!\",", 
-"                           pass = \"Correto!\",", "                           fail = \"Incorreto. Tente novamente!\"", 
-"                            )", "", "# Fazer: frases de feedback do gradethis responderem em Português", 
+learnr:::store_exercise_setup_chunk("__setup__", c("library(learnr)", "library(gradethis)", "", "knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)", 
+"", "", "gradethis::gradethis_setup(", "  code_correct =  paste(\"Correto! \", CursoRTarefas:::frase_acerto()),", 
+"  pass = paste(\"Correto! \", CursoRTarefas:::frase_acerto()),", 
+"  fail =  paste(\"Incorreto. Tente novamente! \", CursoRTarefas:::frase_acerto())", 
+")", "", "# Fazer: frases de feedback do gradethis responderem em Português", 
 ""), overwrite = FALSE)
 </script>
  
@@ -714,8 +589,8 @@ learnr:::store_exercise_cache("objetos-a", list(setup = NULL, chunks = list(list
     purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
     exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "objetos-a", exercise = TRUE, code = "", out.width.px = 624, 
-    out.height.px = 384, params.src = "objetos-a, exercise = TRUE", 
+    exercise.reveal_solution = FALSE, label = "objetos-a", exercise = TRUE, 
+    code = "", out.width.px = 624, out.height.px = 384, params.src = "objetos-a, exercise = TRUE", 
     fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -754,8 +629,9 @@ learnr:::store_exercise_cache("objetos-b", list(setup = "frutas <- c(\"maçã\",
         max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
         exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
         exercise.error.check.code = "gradethis_error_checker()", 
-        label = "objetos-b", exercise = TRUE, exercise.setup = "setupFrutas", 
-        code = "", out.width.px = 624, out.height.px = 384, params.src = "objetos-b, exercise = TRUE, exercise.setup = \"setupFrutas\"", 
+        exercise.reveal_solution = FALSE, label = "objetos-b", 
+        exercise = TRUE, exercise.setup = "setupFrutas", code = "", 
+        out.width.px = 624, out.height.px = 384, params.src = "objetos-b, exercise = TRUE, exercise.setup = \"setupFrutas\"", 
         fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -796,8 +672,9 @@ learnr:::store_exercise_cache("objetos-c", list(setup = "frutas <- c(\"maçã\",
         max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
         exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
         exercise.error.check.code = "gradethis_error_checker()", 
-        label = "objetos-c", exercise = TRUE, exercise.setup = "setupFrutas", 
-        code = "", out.width.px = 624, out.height.px = 384, params.src = "objetos-c, exercise = TRUE, exercise.setup = \"setupFrutas\"", 
+        exercise.reveal_solution = FALSE, label = "objetos-c", 
+        exercise = TRUE, exercise.setup = "setupFrutas", code = "", 
+        out.width.px = 624, out.height.px = 384, params.src = "objetos-c, exercise = TRUE, exercise.setup = \"setupFrutas\"", 
         fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -836,8 +713,9 @@ learnr:::store_exercise_cache("objetos-d", list(setup = "frutas <- c(\"maçã\",
         max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
         exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
         exercise.error.check.code = "gradethis_error_checker()", 
-        label = "objetos-d", exercise = TRUE, exercise.setup = "setupFrutas", 
-        code = "", out.width.px = 624, out.height.px = 384, params.src = "objetos-d, exercise = TRUE, exercise.setup = \"setupFrutas\"", 
+        exercise.reveal_solution = FALSE, label = "objetos-d", 
+        exercise = TRUE, exercise.setup = "setupFrutas", code = "", 
+        out.width.px = 624, out.height.px = 384, params.src = "objetos-d, exercise = TRUE, exercise.setup = \"setupFrutas\"", 
         fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -872,8 +750,9 @@ learnr:::store_exercise_cache("df-a", list(setup = "airquality", chunks = list(l
     include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
     exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "df-a", exercise = TRUE, exercise.setup = "setupAirquality", 
-    code = "", out.width.px = 624, out.height.px = 384, params.src = "df-a, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+    exercise.reveal_solution = FALSE, label = "df-a", exercise = TRUE, 
+    exercise.setup = "setupAirquality", code = "", out.width.px = 624, 
+    out.height.px = 384, params.src = "df-a, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
     fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -908,8 +787,9 @@ learnr:::store_exercise_cache("df-b", list(setup = "airquality", chunks = list(l
     include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
     exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "df-b", exercise = TRUE, exercise.setup = "setupAirquality", 
-    code = "", out.width.px = 624, out.height.px = 384, params.src = "df-b, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+    exercise.reveal_solution = FALSE, label = "df-b", exercise = TRUE, 
+    exercise.setup = "setupAirquality", code = "", out.width.px = 624, 
+    out.height.px = 384, params.src = "df-b, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
     fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -945,8 +825,9 @@ learnr:::store_exercise_cache("df-c", list(setup = "airquality", chunks = list(l
     include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
     exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "df-c", exercise = TRUE, exercise.setup = "setupAirquality", 
-    code = "", out.width.px = 624, out.height.px = 384, params.src = "df-c, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+    exercise.reveal_solution = FALSE, label = "df-c", exercise = TRUE, 
+    exercise.setup = "setupAirquality", code = "", out.width.px = 624, 
+    out.height.px = 384, params.src = "df-c, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
     fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -963,9 +844,8 @@ learnr:::store_exercise_cache("df-d", list(setup = "airquality", chunks = list(l
     engine = "r"), list(label = "df-d", code = "", opts = list(
     label = "\"df-d\"", exercise = "TRUE", exercise.setup = "\"setupAirquality\""), 
     engine = "r")), code_check = NULL, error_check = NULL, check = structure(c("gradethis::grade_this({", 
-"  # custom checking code appears here", "  if (identical(.result, .solution)) {", 
-"    pass(\"Correto!\")", "  }", "  fail(\"Tente novamente!\")", 
-"})"), chunk_opts = list(label = "df-d-check")), solution = structure(c("colnames(airquality)", 
+"  gradethis::pass_if_equal()", "  gradethis::fail()", "})"), chunk_opts = list(
+    label = "df-d-check")), solution = structure(c("colnames(airquality)", 
 "", "# names(airquality) também funciona. Verificar como dar mais de uma solução possível."
 ), chunk_opts = list(label = "df-d-solution")), options = list(
     eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
@@ -985,8 +865,9 @@ learnr:::store_exercise_cache("df-d", list(setup = "airquality", chunks = list(l
     include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
     exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "df-d", exercise = TRUE, exercise.setup = "setupAirquality", 
-    code = "", out.width.px = 624, out.height.px = 384, params.src = "df-d, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+    exercise.reveal_solution = FALSE, label = "df-d", exercise = TRUE, 
+    exercise.setup = "setupAirquality", code = "", out.width.px = 624, 
+    out.height.px = 384, params.src = "df-d, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
     fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -1003,9 +884,8 @@ learnr:::store_exercise_cache("df-e", list(setup = "airquality", chunks = list(l
     engine = "r"), list(label = "df-e", code = "", opts = list(
     label = "\"df-e\"", exercise = "TRUE", exercise.setup = "\"setupAirquality\""), 
     engine = "r")), code_check = NULL, error_check = NULL, check = structure(c("gradethis::grade_this({", 
-"  # custom checking code appears here", "  if (identical(.result, .solution)) {", 
-"    pass(\"Correto!\")", "  }", "  fail(\"Tente novamente!\")", 
-"})"), chunk_opts = list(label = "df-e-check")), solution = structure("class(airquality$Ozone)", chunk_opts = list(
+"  gradethis::pass_if_equal()", "  gradethis::fail()", "})"), chunk_opts = list(
+    label = "df-e-check")), solution = structure("class(airquality$Ozone)", chunk_opts = list(
     label = "df-e-solution")), options = list(eval = FALSE, echo = TRUE, 
     results = "markup", tidy = FALSE, tidy.opts = NULL, collapse = FALSE, 
     prompt = FALSE, comment = NA, highlight = FALSE, strip.white = TRUE, 
@@ -1023,8 +903,9 @@ learnr:::store_exercise_cache("df-e", list(setup = "airquality", chunks = list(l
     include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
     exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "df-e", exercise = TRUE, exercise.setup = "setupAirquality", 
-    code = "", out.width.px = 624, out.height.px = 384, params.src = "df-e, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+    exercise.reveal_solution = FALSE, label = "df-e", exercise = TRUE, 
+    exercise.setup = "setupAirquality", code = "", out.width.px = 624, 
+    out.height.px = 384, params.src = "df-e, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
     fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -1063,8 +944,9 @@ learnr:::store_exercise_cache("df-f", list(setup = "airquality", chunks = list(l
     include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
     exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "df-f", exercise = TRUE, exercise.setup = "setupAirquality", 
-    code = "", out.width.px = 624, out.height.px = 384, params.src = "df-f, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+    exercise.reveal_solution = FALSE, label = "df-f", exercise = TRUE, 
+    exercise.setup = "setupAirquality", code = "", out.width.px = 624, 
+    out.height.px = 384, params.src = "df-f, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
     fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -1102,7 +984,8 @@ learnr:::store_exercise_cache("vetores-a", list(setup = NULL, chunks = list(list
         max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
         exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
         exercise.error.check.code = "gradethis_error_checker()", 
-        label = "vetores-a", exercise = TRUE, code = c("c(1,2,3) - 1           # código 1", 
+        exercise.reveal_solution = FALSE, label = "vetores-a", 
+        exercise = TRUE, code = c("c(1,2,3) - 1           # código 1", 
         "c(1,2,3) - c(1,1,1)    # código 2"), out.width.px = 624, 
         out.height.px = 384, params.src = "vetores-a, exercise = TRUE", 
         fig.num = 0, exercise.df_print = "paged"), engine = "r"))
@@ -1139,9 +1022,10 @@ learnr:::store_exercise_cache("vetores-b-i", list(setup = NULL, chunks = list(li
     include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
     exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "vetores-b-i", exercise = TRUE, code = "", out.width.px = 624, 
-    out.height.px = 384, params.src = "vetores-b-i, exercise = TRUE", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+    exercise.reveal_solution = FALSE, label = "vetores-b-i", 
+    exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+    params.src = "vetores-b-i, exercise = TRUE", fig.num = 0L, 
+    exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -1176,9 +1060,10 @@ learnr:::store_exercise_cache("vetores-b-ii", list(setup = NULL, chunks = list(l
     purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
     exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "vetores-b-ii", exercise = TRUE, code = "", out.width.px = 624, 
-    out.height.px = 384, params.src = "vetores-b-ii, exercise = TRUE", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+    exercise.reveal_solution = FALSE, label = "vetores-b-ii", 
+    exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+    params.src = "vetores-b-ii, exercise = TRUE", fig.num = 0L, 
+    exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -1214,9 +1099,10 @@ learnr:::store_exercise_cache("vetores-b-iii", list(setup = NULL, chunks = list(
     include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
     exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "vetores-b-iii", exercise = TRUE, code = "", out.width.px = 624, 
-    out.height.px = 384, params.src = "vetores-b-iii, exercise = TRUE", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+    exercise.reveal_solution = FALSE, label = "vetores-b-iii", 
+    exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+    params.src = "vetores-b-iii, exercise = TRUE", fig.num = 0L, 
+    exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -1251,9 +1137,10 @@ learnr:::store_exercise_cache("vetores-b-iv", list(setup = NULL, chunks = list(l
     include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
     exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "vetores-b-iv", exercise = TRUE, code = "", out.width.px = 624, 
-    out.height.px = 384, params.src = "vetores-b-iv, exercise = TRUE", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+    exercise.reveal_solution = FALSE, label = "vetores-b-iv", 
+    exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+    params.src = "vetores-b-iv, exercise = TRUE", fig.num = 0L, 
+    exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -1288,8 +1175,8 @@ learnr:::store_exercise_cache("vetores-c", list(setup = NULL, chunks = list(list
     include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
     exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "vetores-c", exercise = TRUE, code = "", out.width.px = 624, 
-    out.height.px = 384, params.src = "vetores-c, exercise = TRUE", 
+    exercise.reveal_solution = FALSE, label = "vetores-c", exercise = TRUE, 
+    code = "", out.width.px = 624, out.height.px = 384, params.src = "vetores-c, exercise = TRUE", 
     fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -1333,7 +1220,8 @@ learnr:::store_exercise_cache("desafio-a", list(setup = "airquality", chunks = l
         max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
         exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
         exercise.error.check.code = "gradethis_error_checker()", 
-        label = "desafio-a", exercise = TRUE, exercise.setup = "setupAirquality", 
+        exercise.reveal_solution = FALSE, label = "desafio-a", 
+        exercise = TRUE, exercise.setup = "setupAirquality", 
         code = c("# a)", "media_ozone <-  ___ ", "# b) ", "ozone_centralizado <-  ___ ", 
         "# c) ", "ozone_centralizado_ao_quadrado <-  ___  ", 
         "# d) ", "media_ozone_centralizado_ao_quadrado <-  ___ ", 
@@ -1377,9 +1265,10 @@ learnr:::store_exercise_cache("funcoes-proprias-a", list(setup = NULL, chunks = 
         max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
         exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
         exercise.error.check.code = "gradethis_error_checker()", 
-        label = "funcoes-proprias-a", exercise = TRUE, code = "", 
-        out.width.px = 624, out.height.px = 384, params.src = "funcoes-proprias-a, exercise = TRUE", 
-        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+        exercise.reveal_solution = FALSE, label = "funcoes-proprias-a", 
+        exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+        params.src = "funcoes-proprias-a, exercise = TRUE", fig.num = 0L, 
+        exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -1416,9 +1305,10 @@ learnr:::store_exercise_cache("funcoes-proprias-b", list(setup = NULL, chunks = 
         max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
         exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
         exercise.error.check.code = "gradethis_error_checker()", 
-        label = "funcoes-proprias-b", exercise = TRUE, code = "", 
-        out.width.px = 624, out.height.px = 384, params.src = "funcoes-proprias-b, exercise = TRUE", 
-        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+        exercise.reveal_solution = FALSE, label = "funcoes-proprias-b", 
+        exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+        params.src = "funcoes-proprias-b, exercise = TRUE", fig.num = 0L, 
+        exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -1451,8 +1341,8 @@ learnr:::store_exercise_cache("filtros-ai", list(setup = NULL, chunks = list(lis
     purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
     exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "filtros-ai", exercise = TRUE, code = "", out.width.px = 624, 
-    out.height.px = 384, params.src = "filtros-ai, exercise = TRUE", 
+    exercise.reveal_solution = FALSE, label = "filtros-ai", exercise = TRUE, 
+    code = "", out.width.px = 624, out.height.px = 384, params.src = "filtros-ai, exercise = TRUE", 
     fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -1486,9 +1376,10 @@ learnr:::store_exercise_cache("filtros-aii", list(setup = NULL, chunks = list(li
     purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
     exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "filtros-aii", exercise = TRUE, code = "", out.width.px = 624, 
-    out.height.px = 384, params.src = "filtros-aii, exercise = TRUE", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+    exercise.reveal_solution = FALSE, label = "filtros-aii", 
+    exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+    params.src = "filtros-aii, exercise = TRUE", fig.num = 0L, 
+    exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -1521,9 +1412,10 @@ learnr:::store_exercise_cache("filtros-aiii", list(setup = NULL, chunks = list(l
     purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
     exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "filtros-aiii", exercise = TRUE, code = "", out.width.px = 624, 
-    out.height.px = 384, params.src = "filtros-aiii, exercise = TRUE", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+    exercise.reveal_solution = FALSE, label = "filtros-aiii", 
+    exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+    params.src = "filtros-aiii, exercise = TRUE", fig.num = 0L, 
+    exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -1560,7 +1452,8 @@ learnr:::store_exercise_cache("filtros-bi", list(setup = "airquality", chunks = 
         max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
         exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
         exercise.error.check.code = "gradethis_error_checker()", 
-        label = "filtros-bi", exercise = TRUE, exercise.setup = "setupAirquality", 
+        exercise.reveal_solution = FALSE, label = "filtros-bi", 
+        exercise = TRUE, exercise.setup = "setupAirquality", 
         code = "airquality", out.width.px = 624, out.height.px = 384, 
         params.src = "filtros-bi, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
         fig.num = 0, exercise.df_print = "paged"), engine = "r"))
@@ -1598,8 +1491,9 @@ learnr:::store_exercise_cache("filtros-bii", list(setup = "airquality", chunks =
     purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
     exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "filtros-bii", exercise = TRUE, exercise.setup = "setupAirquality", 
-    code = "", out.width.px = 624, out.height.px = 384, params.src = "filtros-bii, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+    exercise.reveal_solution = FALSE, label = "filtros-bii", 
+    exercise = TRUE, exercise.setup = "setupAirquality", code = "", 
+    out.width.px = 624, out.height.px = 384, params.src = "filtros-bii, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
     fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -1635,8 +1529,9 @@ learnr:::store_exercise_cache("filtros-biii", list(setup = "airquality", chunks 
     purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
     exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "filtros-biii", exercise = TRUE, exercise.setup = "setupAirquality", 
-    code = "", out.width.px = 624, out.height.px = 384, params.src = "filtros-biii, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+    exercise.reveal_solution = FALSE, label = "filtros-biii", 
+    exercise = TRUE, exercise.setup = "setupAirquality", code = "", 
+    out.width.px = 624, out.height.px = 384, params.src = "filtros-biii, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
     fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -1672,8 +1567,9 @@ learnr:::store_exercise_cache("filtros-biv", list(setup = "airquality", chunks =
     include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
     exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
     exercise.error.check.code = "gradethis_error_checker()", 
-    label = "filtros-biv", exercise = TRUE, exercise.setup = "setupAirquality", 
-    code = "", out.width.px = 624, out.height.px = 384, params.src = "filtros-biv, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+    exercise.reveal_solution = FALSE, label = "filtros-biv", 
+    exercise = TRUE, exercise.setup = "setupAirquality", code = "", 
+    out.width.px = 624, out.height.px = 384, params.src = "filtros-biv, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
     fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
@@ -1687,7 +1583,7 @@ learnrhash::encoder_logic()
 <!--/html_preserve-->
 <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="execution_dependencies">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59]}},"value":[{"type":"character","attributes":{},"value":["assertthat","backports","base","bslib","checkmate","compiler","crayon","curl","datasets","DBI","digest","dplyr","ellipsis","evaluate","fansi","fastmap","generics","glue","gradethis","graphics","grDevices","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","learnr","learnrhash","lifecycle","magrittr","markdown","methods","mime","pillar","pkgconfig","promises","purrr","R6","Rcpp","rlang","rmarkdown","rprojroot","sass","shiny","stats","stringi","stringr","tibble","tidyselect","tools","utf8","utils","vctrs","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["0.2.1","1.2.1","4.0.3","0.2.5","2.0.0","4.0.3","1.4.1","4.3.1","4.0.3","1.1.1","0.6.27","1.0.6","0.3.2","0.14","0.4.2","1.1.0","0.1.0","1.4.2","0.2.3.9001","4.0.3","4.0.3","0.5.1.1","1.5.3","1.6.1","0.1.4","1.7.2","1.33","1.2.0","0.10.1.9009","0.1.0.9000","1.0.0","2.0.1","1.1","4.0.3","0.10","1.6.0","2.0.3","1.2.0.1","0.3.4","2.5.0","1.0.6","0.4.11","2.8","2.0.2","0.4.0","1.6.0","4.0.3","1.6.1","1.4.0","3.1.1","1.1.1","4.0.3","1.2.1","4.0.3","0.3.8","2.4.2","0.22","1.8-4","2.2.1"]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60]}},"value":[{"type":"character","attributes":{},"value":["assertthat","backports","base","bslib","checkmate","compiler","crayon","curl","CursoRTarefas","datasets","DBI","digest","dplyr","ellipsis","evaluate","fansi","fastmap","generics","glue","gradethis","graphics","grDevices","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","learnr","learnrhash","lifecycle","magrittr","markdown","methods","mime","pillar","pkgconfig","promises","purrr","R6","Rcpp","rlang","rmarkdown","rprojroot","sass","shiny","stats","stringi","stringr","tibble","tidyselect","tools","utf8","utils","vctrs","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["0.2.1","1.2.1","4.0.3","0.2.5","2.0.0","4.0.3","1.4.1","4.3.1","0.0.0.9000","4.0.3","1.1.1","0.6.27","1.0.6","0.3.2","0.14","0.4.2","1.1.0","0.1.0","1.4.2","0.2.3.9001","4.0.3","4.0.3","0.5.1.1","1.5.3","1.6.1","0.1.4","1.7.2","1.33","1.2.0","0.10.1.9009","0.1.0.9000","1.0.0","2.0.1","1.1","4.0.3","0.10","1.6.0","2.0.3","1.2.0.1","0.3.4","2.5.0","1.0.6","0.4.11","2.8","2.0.2","0.4.0","1.6.0","4.0.3","1.6.1","1.4.0","3.1.1","1.1.1","4.0.3","1.2.1","4.0.3","0.3.8","2.4.2","0.22","1.8-4","2.2.1"]}]}]}
 </script>
 <!--/html_preserve-->
 </div>
