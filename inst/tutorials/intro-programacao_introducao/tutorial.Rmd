@@ -19,9 +19,9 @@ knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
 
 
 gradethis::gradethis_setup(
-  code_correct =  paste("Correto! ", CursoRTarefas:::frase_acerto()),
-  pass = paste("Correto! ", CursoRTarefas:::frase_acerto()),
-  fail =  paste("Incorreto. Tente novamente! ", CursoRTarefas:::frase_acerto())
+  code_correct =  "Correto! Parabéns!",
+  pass = "Correto! Parabéns!",
+  fail =  "Incorreto. Tente novamente! "
 )
 
 # Fazer: frases de feedback do gradethis responderem em Português
