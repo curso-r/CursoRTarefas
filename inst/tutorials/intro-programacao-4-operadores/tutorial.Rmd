@@ -42,7 +42,7 @@ gradethis::gradethis_setup(
 
 1) Considere o vetor booleano abaixo:
 
-```{r vetores-b, echo=TRUE, include=TRUE}
+```{r operadores-vetores-b, echo=TRUE, include=TRUE}
 dolar_subiu <- c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE)
 ```
 
@@ -52,83 +52,83 @@ Interprete os resultados dos códigos abaixo:
 
 I) `length(dolar_subiu)`
 
-```{r vetores-b-i, exercise = TRUE}
+```{r operadores-vetores-b-i, exercise = TRUE}
 
 ```
 
-```{r vetores-b-i-solution}
+```{r operadores-vetores-b-i-solution}
 length(dolar_subiu)
 # A função length retorna o tamanho do vetor. 
 # O vetor 'dolar_subiu' possui 7 elementos.
 ```
 
 
-```{r vetores-b-i-check}
+```{r operadores-vetores-b-i-check}
 gradethis::grade_this_code()
 ```
 
 II) `dolar_subiu[2]`  (ps: a semana começa no domingo)
 
-```{r vetores-b-ii, exercise = TRUE}
+```{r operadores-vetores-b-ii, exercise = TRUE}
 
 ```
 
-```{r vetores-b-ii-solution}
+```{r operadores-vetores-b-ii-solution}
 dolar_subiu[2]
 # O segundo elemento selecionado representa a segunda-feira.
 # Na segunda-feira, o dolar subiu (TRUE).
 ```
 
-```{r vetores-b-ii-check}
+```{r operadores-vetores-b-ii-check}
 gradethis::grade_this_code()
 ```
 
 III) `sum(dolar_subiu)`
 
-```{r vetores-b-iii, exercise = TRUE}
+```{r operadores-vetores-b-iii, exercise = TRUE}
 
 ```
 
-```{r vetores-b-iii-solution}
+```{r operadores-vetores-b-iii-solution}
 sum(dolar_subiu)
 # A função sum() realiza a soma dos elementos do vetor.
 # Como o vetor possui dados do tipo lógico (TRUE ou FALSE), o R entende que TRUE = 1 e FALSE = 0.
 # O resultado de sum(dolar_subiu) é 4, portanto o dólar subiu em 4 dias na semana. 
 ```
 
-```{r vetores-b-iii-check}
+```{r operadores-vetores-b-iii-check}
 gradethis::grade_this_code()
 ```
 
 IV) `mean(dolar_subiu)`
 
-```{r vetores-b-iv, exercise = TRUE}
+```{r operadores-vetores-b-iv, exercise = TRUE}
 
 ```
 
-```{r vetores-b-iv-solution}
+```{r operadores-vetores-b-iv-solution}
 mean(dolar_subiu)
 # A função sum() realiza a média dos elementos do vetor.
 # O resultado representa a média de dias em que o dólar subiu.
 ```
 
-```{r vetores-b-iv-check}
+```{r operadores-vetores-b-iv-check}
 gradethis::grade_this_code()
 ```
 
 c) Agora observe a saída de `as.numeric(dolar_subiu)`. O que o R fez?
 
-```{r vetores-c, exercise = TRUE}
+```{r operadores-vetores-c, exercise = TRUE}
 
 ```
 
-```{r vetores-c-solution}
+```{r operadores-vetores-c-solution}
 as.numeric(dolar_subiu)
 # A função as.numeric() transforma um vetor em numérico (quando possível).
 # No vetor que o R retornou, TRUE foi transformado em 1, e FALSE foi transformado em 0.
 ```
 
-```{r vetores-c-check}
+```{r operadores-vetores-c-check}
 gradethis::grade_this_code()
 ```
 

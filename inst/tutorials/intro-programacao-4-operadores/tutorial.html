@@ -13,7 +13,7 @@
 <meta name="progressive" content="true" />
 <meta name="allow-skip" content="true" />
 
-<title>Tarefas: Introdução ao R</title>
+<title>Tarefas: Operadores</title>
 
 
 <!-- highlightjs -->
@@ -122,31 +122,31 @@ if (window.hljs) {
 <ol style="list-style-type: upper-roman">
 <li><code>length(dolar_subiu)</code></li>
 </ol>
-<div class="tutorial-exercise" data-label="vetores-b-i" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise" data-label="operadores-vetores-b-i" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
 <ol start="2" style="list-style-type: upper-roman">
 <li><code>dolar_subiu[2]</code> (ps: a semana começa no domingo)</li>
 </ol>
-<div class="tutorial-exercise" data-label="vetores-b-ii" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise" data-label="operadores-vetores-b-ii" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
 <ol start="3" style="list-style-type: upper-roman">
 <li><code>sum(dolar_subiu)</code></li>
 </ol>
-<div class="tutorial-exercise" data-label="vetores-b-iii" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise" data-label="operadores-vetores-b-iii" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
 <ol start="4" style="list-style-type: upper-roman">
 <li><code>mean(dolar_subiu)</code></li>
 </ol>
-<div class="tutorial-exercise" data-label="vetores-b-iv" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise" data-label="operadores-vetores-b-iv" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Agora observe a saída de <code>as.numeric(dolar_subiu)</code>. O que o R fez?</li>
 </ol>
-<div class="tutorial-exercise" data-label="vetores-c" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise" data-label="operadores-vetores-c" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
 </div>
@@ -270,192 +270,207 @@ learnr:::store_exercise_setup_chunk("__setup__", c("library(learnr)", "library(g
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-`tutorial-exercise-vetores-b-i-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-vetores-b-i-code-editor`)), session)
-output$`tutorial-exercise-vetores-b-i-output` <- renderUI({
-  `tutorial-exercise-vetores-b-i-result`()
+`tutorial-exercise-operadores-vetores-b-i-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-operadores-vetores-b-i-code-editor`)), session)
+output$`tutorial-exercise-operadores-vetores-b-i-output` <- renderUI({
+  `tutorial-exercise-operadores-vetores-b-i-result`()
 })
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::store_exercise_cache("vetores-b-i", list(setup = NULL, chunks = list(list(label = "vetores-b-i", 
-    code = "", opts = list(label = "\"vetores-b-i\"", exercise = "TRUE"), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
-    label = "vetores-b-i-check")), solution = structure(c("length(dolar_subiu)", 
-"# A função length retorna o tamanho do vetor. ", "# O vetor 'dolar_subiu' possui 7 elementos."
-), chunk_opts = list(label = "vetores-b-i-solution")), options = list(
-    eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
-    tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
-    highlight = FALSE, strip.white = TRUE, size = "normalsize", 
-    background = "#F7F7F7", cache = 0, cache.path = "tutorial_cache/html/", 
-    cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
-    cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-    fig.align = "default", fig.path = "tutorial_files/figure-html/", 
-    dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
-    fig.width = 6.5, fig.height = 4, fig.env = "figure", fig.cap = NULL, 
-    fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, fig.pos = "", 
-    out.width = 624, out.height = NULL, out.extra = NULL, fig.retina = 2, 
-    external = TRUE, sanitize = FALSE, interval = 1, aniopts = "controls,loop", 
-    warning = TRUE, error = FALSE, message = TRUE, render = NULL, 
-    ref.label = NULL, child = NULL, engine = "r", split = FALSE, 
-    include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
-    exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-    exercise.error.check.code = "gradethis_error_checker()", 
-    exercise.reveal_solution = FALSE, label = "vetores-b-i", 
-    exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
-    params.src = "vetores-b-i, exercise = TRUE", fig.num = 0L, 
-    exercise.df_print = "paged"), engine = "r"))
+learnr:::store_exercise_cache("operadores-vetores-b-i", list(setup = NULL, chunks = list(list(label = "operadores-vetores-b-i", 
+    code = "", opts = list(label = "\"operadores-vetores-b-i\"", 
+        exercise = "TRUE"), engine = "r")), code_check = NULL, 
+    error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
+        label = "operadores-vetores-b-i-check")), solution = structure(c("length(dolar_subiu)", 
+    "# A função length retorna o tamanho do vetor. ", "# O vetor 'dolar_subiu' possui 7 elementos."
+    ), chunk_opts = list(label = "operadores-vetores-b-i-solution")), 
+    options = list(eval = FALSE, echo = TRUE, results = "markup", 
+        tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
+        comment = NA, highlight = FALSE, strip.white = TRUE, 
+        size = "normalsize", background = "#F7F7F7", cache = 0, 
+        cache.path = "tutorial_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "operadores-vetores-b-i", 
+        exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+        params.src = "operadores-vetores-b-i, exercise = TRUE", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-`tutorial-exercise-vetores-b-ii-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-vetores-b-ii-code-editor`)), session)
-output$`tutorial-exercise-vetores-b-ii-output` <- renderUI({
-  `tutorial-exercise-vetores-b-ii-result`()
+`tutorial-exercise-operadores-vetores-b-ii-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-operadores-vetores-b-ii-code-editor`)), session)
+output$`tutorial-exercise-operadores-vetores-b-ii-output` <- renderUI({
+  `tutorial-exercise-operadores-vetores-b-ii-result`()
 })
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::store_exercise_cache("vetores-b-ii", list(setup = NULL, chunks = list(list(label = "vetores-b-ii", 
-    code = "", opts = list(label = "\"vetores-b-ii\"", exercise = "TRUE"), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
-    label = "vetores-b-ii-check")), solution = structure(c("dolar_subiu[2]", 
-"# O segundo elemento selecionado representa a segunda-feira.", 
-"# Na segunda-feira, o dolar subiu (TRUE)."), chunk_opts = list(
-    label = "vetores-b-ii-solution")), options = list(eval = FALSE, 
-    echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
-    collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
-    strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
-    cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
-    cache.lazy = TRUE, dependson = NULL, autodep = FALSE, cache.rebuild = FALSE, 
-    fig.keep = "high", fig.show = "asis", fig.align = "default", 
-    fig.path = "tutorial_files/figure-html/", dev = "png", dev.args = NULL, 
-    dpi = 192, fig.ext = "png", fig.width = 6.5, fig.height = 4, 
-    fig.env = "figure", fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", 
-    fig.subcap = NULL, fig.pos = "", out.width = 624, out.height = NULL, 
-    out.extra = NULL, fig.retina = 2, external = TRUE, sanitize = FALSE, 
-    interval = 1, aniopts = "controls,loop", warning = TRUE, 
-    error = FALSE, message = TRUE, render = NULL, ref.label = NULL, 
-    child = NULL, engine = "r", split = FALSE, include = TRUE, 
-    purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
-    exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-    exercise.error.check.code = "gradethis_error_checker()", 
-    exercise.reveal_solution = FALSE, label = "vetores-b-ii", 
-    exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
-    params.src = "vetores-b-ii, exercise = TRUE", fig.num = 0L, 
-    exercise.df_print = "paged"), engine = "r"))
+learnr:::store_exercise_cache("operadores-vetores-b-ii", list(setup = NULL, chunks = list(list(label = "operadores-vetores-b-ii", 
+    code = "", opts = list(label = "\"operadores-vetores-b-ii\"", 
+        exercise = "TRUE"), engine = "r")), code_check = NULL, 
+    error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
+        label = "operadores-vetores-b-ii-check")), solution = structure(c("dolar_subiu[2]", 
+    "# O segundo elemento selecionado representa a segunda-feira.", 
+    "# Na segunda-feira, o dolar subiu (TRUE)."), chunk_opts = list(
+        label = "operadores-vetores-b-ii-solution")), options = list(
+        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
+        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
+        highlight = FALSE, strip.white = TRUE, size = "normalsize", 
+        background = "#F7F7F7", cache = 0, cache.path = "tutorial_cache/html/", 
+        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
+        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
+        fig.show = "asis", fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "operadores-vetores-b-ii", 
+        exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+        params.src = "operadores-vetores-b-ii, exercise = TRUE", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-`tutorial-exercise-vetores-b-iii-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-vetores-b-iii-code-editor`)), session)
-output$`tutorial-exercise-vetores-b-iii-output` <- renderUI({
-  `tutorial-exercise-vetores-b-iii-result`()
+`tutorial-exercise-operadores-vetores-b-iii-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-operadores-vetores-b-iii-code-editor`)), session)
+output$`tutorial-exercise-operadores-vetores-b-iii-output` <- renderUI({
+  `tutorial-exercise-operadores-vetores-b-iii-result`()
 })
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::store_exercise_cache("vetores-b-iii", list(setup = NULL, chunks = list(list(label = "vetores-b-iii", 
-    code = "", opts = list(label = "\"vetores-b-iii\"", exercise = "TRUE"), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
-    label = "vetores-b-iii-check")), solution = structure(c("sum(dolar_subiu)", 
-"# A função sum() realiza a soma dos elementos do vetor.", 
-"# Como o vetor possui dados do tipo lógico (TRUE ou FALSE), o R entende que TRUE = 1 e FALSE = 0.", 
-"# O resultado de sum(dolar_subiu) é 4, portanto o dólar subiu em 4 dias na semana. "
-), chunk_opts = list(label = "vetores-b-iii-solution")), options = list(
-    eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
-    tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
-    highlight = FALSE, strip.white = TRUE, size = "normalsize", 
-    background = "#F7F7F7", cache = 0, cache.path = "tutorial_cache/html/", 
-    cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
-    cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-    fig.align = "default", fig.path = "tutorial_files/figure-html/", 
-    dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
-    fig.width = 6.5, fig.height = 4, fig.env = "figure", fig.cap = NULL, 
-    fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, fig.pos = "", 
-    out.width = 624, out.height = NULL, out.extra = NULL, fig.retina = 2, 
-    external = TRUE, sanitize = FALSE, interval = 1, aniopts = "controls,loop", 
-    warning = TRUE, error = FALSE, message = TRUE, render = NULL, 
-    ref.label = NULL, child = NULL, engine = "r", split = FALSE, 
-    include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
-    exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-    exercise.error.check.code = "gradethis_error_checker()", 
-    exercise.reveal_solution = FALSE, label = "vetores-b-iii", 
-    exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
-    params.src = "vetores-b-iii, exercise = TRUE", fig.num = 0L, 
-    exercise.df_print = "paged"), engine = "r"))
+learnr:::store_exercise_cache("operadores-vetores-b-iii", list(setup = NULL, chunks = list(list(label = "operadores-vetores-b-iii", 
+    code = "", opts = list(label = "\"operadores-vetores-b-iii\"", 
+        exercise = "TRUE"), engine = "r")), code_check = NULL, 
+    error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
+        label = "operadores-vetores-b-iii-check")), solution = structure(c("sum(dolar_subiu)", 
+    "# A função sum() realiza a soma dos elementos do vetor.", 
+    "# Como o vetor possui dados do tipo lógico (TRUE ou FALSE), o R entende que TRUE = 1 e FALSE = 0.", 
+    "# O resultado de sum(dolar_subiu) é 4, portanto o dólar subiu em 4 dias na semana. "
+    ), chunk_opts = list(label = "operadores-vetores-b-iii-solution")), 
+    options = list(eval = FALSE, echo = TRUE, results = "markup", 
+        tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
+        comment = NA, highlight = FALSE, strip.white = TRUE, 
+        size = "normalsize", background = "#F7F7F7", cache = 0, 
+        cache.path = "tutorial_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "operadores-vetores-b-iii", 
+        exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+        params.src = "operadores-vetores-b-iii, exercise = TRUE", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-`tutorial-exercise-vetores-b-iv-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-vetores-b-iv-code-editor`)), session)
-output$`tutorial-exercise-vetores-b-iv-output` <- renderUI({
-  `tutorial-exercise-vetores-b-iv-result`()
+`tutorial-exercise-operadores-vetores-b-iv-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-operadores-vetores-b-iv-code-editor`)), session)
+output$`tutorial-exercise-operadores-vetores-b-iv-output` <- renderUI({
+  `tutorial-exercise-operadores-vetores-b-iv-result`()
 })
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::store_exercise_cache("vetores-b-iv", list(setup = NULL, chunks = list(list(label = "vetores-b-iv", 
-    code = "", opts = list(label = "\"vetores-b-iv\"", exercise = "TRUE"), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
-    label = "vetores-b-iv-check")), solution = structure(c("mean(dolar_subiu)", 
-"# A função sum() realiza a média dos elementos do vetor.", 
-"# O resultado representa a média de dias em que o dólar subiu."
-), chunk_opts = list(label = "vetores-b-iv-solution")), options = list(
-    eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
-    tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
-    highlight = FALSE, strip.white = TRUE, size = "normalsize", 
-    background = "#F7F7F7", cache = 0, cache.path = "tutorial_cache/html/", 
-    cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
-    cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-    fig.align = "default", fig.path = "tutorial_files/figure-html/", 
-    dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
-    fig.width = 6.5, fig.height = 4, fig.env = "figure", fig.cap = NULL, 
-    fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, fig.pos = "", 
-    out.width = 624, out.height = NULL, out.extra = NULL, fig.retina = 2, 
-    external = TRUE, sanitize = FALSE, interval = 1, aniopts = "controls,loop", 
-    warning = TRUE, error = FALSE, message = TRUE, render = NULL, 
-    ref.label = NULL, child = NULL, engine = "r", split = FALSE, 
-    include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
-    exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-    exercise.error.check.code = "gradethis_error_checker()", 
-    exercise.reveal_solution = FALSE, label = "vetores-b-iv", 
-    exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
-    params.src = "vetores-b-iv, exercise = TRUE", fig.num = 0L, 
-    exercise.df_print = "paged"), engine = "r"))
+learnr:::store_exercise_cache("operadores-vetores-b-iv", list(setup = NULL, chunks = list(list(label = "operadores-vetores-b-iv", 
+    code = "", opts = list(label = "\"operadores-vetores-b-iv\"", 
+        exercise = "TRUE"), engine = "r")), code_check = NULL, 
+    error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
+        label = "operadores-vetores-b-iv-check")), solution = structure(c("mean(dolar_subiu)", 
+    "# A função sum() realiza a média dos elementos do vetor.", 
+    "# O resultado representa a média de dias em que o dólar subiu."
+    ), chunk_opts = list(label = "operadores-vetores-b-iv-solution")), 
+    options = list(eval = FALSE, echo = TRUE, results = "markup", 
+        tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
+        comment = NA, highlight = FALSE, strip.white = TRUE, 
+        size = "normalsize", background = "#F7F7F7", cache = 0, 
+        cache.path = "tutorial_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "operadores-vetores-b-iv", 
+        exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+        params.src = "operadores-vetores-b-iv, exercise = TRUE", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-`tutorial-exercise-vetores-c-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-vetores-c-code-editor`)), session)
-output$`tutorial-exercise-vetores-c-output` <- renderUI({
-  `tutorial-exercise-vetores-c-result`()
+`tutorial-exercise-operadores-vetores-c-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-operadores-vetores-c-code-editor`)), session)
+output$`tutorial-exercise-operadores-vetores-c-output` <- renderUI({
+  `tutorial-exercise-operadores-vetores-c-result`()
 })
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::store_exercise_cache("vetores-c", list(setup = NULL, chunks = list(list(label = "vetores-c", code = "", 
-    opts = list(label = "\"vetores-c\"", exercise = "TRUE"), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
-    label = "vetores-c-check")), solution = structure(c("as.numeric(dolar_subiu)", 
-"# A função as.numeric() transforma um vetor em numérico (quando possível).", 
-"# No vetor que o R retornou, TRUE foi transformado em 1, e FALSE foi transformado em 0."
-), chunk_opts = list(label = "vetores-c-solution")), options = list(
-    eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
-    tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
-    highlight = FALSE, strip.white = TRUE, size = "normalsize", 
-    background = "#F7F7F7", cache = 0, cache.path = "tutorial_cache/html/", 
-    cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
-    cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-    fig.align = "default", fig.path = "tutorial_files/figure-html/", 
-    dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
-    fig.width = 6.5, fig.height = 4, fig.env = "figure", fig.cap = NULL, 
-    fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, fig.pos = "", 
-    out.width = 624, out.height = NULL, out.extra = NULL, fig.retina = 2, 
-    external = TRUE, sanitize = FALSE, interval = 1, aniopts = "controls,loop", 
-    warning = TRUE, error = FALSE, message = TRUE, render = NULL, 
-    ref.label = NULL, child = NULL, engine = "r", split = FALSE, 
-    include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
-    exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-    exercise.error.check.code = "gradethis_error_checker()", 
-    exercise.reveal_solution = FALSE, label = "vetores-c", exercise = TRUE, 
-    code = "", out.width.px = 624, out.height.px = 384, params.src = "vetores-c, exercise = TRUE", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+learnr:::store_exercise_cache("operadores-vetores-c", list(setup = NULL, chunks = list(list(label = "operadores-vetores-c", 
+    code = "", opts = list(label = "\"operadores-vetores-c\"", 
+        exercise = "TRUE"), engine = "r")), code_check = NULL, 
+    error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
+        label = "operadores-vetores-c-check")), solution = structure(c("as.numeric(dolar_subiu)", 
+    "# A função as.numeric() transforma um vetor em numérico (quando possível).", 
+    "# No vetor que o R retornou, TRUE foi transformado em 1, e FALSE foi transformado em 0."
+    ), chunk_opts = list(label = "operadores-vetores-c-solution")), 
+    options = list(eval = FALSE, echo = TRUE, results = "markup", 
+        tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
+        comment = NA, highlight = FALSE, strip.white = TRUE, 
+        size = "normalsize", background = "#F7F7F7", cache = 0, 
+        cache.path = "tutorial_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "operadores-vetores-c", 
+        exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+        params.src = "operadores-vetores-c, exercise = TRUE", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -483,7 +498,7 @@ learnrhash::encoder_logic()
 
 <!-- begin doc-metadata -->
 <div id="doc-metadata">
-<h2 class="title toc-ignore" style="display:none;">Tarefas: Introdução ao R</h2>
+<h2 class="title toc-ignore" style="display:none;">Tarefas: Operadores</h2>
 </div>
 <!-- end doc-metadata -->
 

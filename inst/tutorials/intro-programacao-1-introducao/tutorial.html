@@ -118,46 +118,46 @@ if (window.hljs) {
 <ol style="list-style-type: upper-alpha">
 <li>Crie um vetor com o nome de três frutas (maçã, banana, melancia) e guarde em um objeto chamado <code>frutas</code>.</li>
 </ol>
-<div class="tutorial-exercise" data-label="objetos-a" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise" data-label="introducao-objetos-a" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<div class="tutorial-exercise-support" data-label="objetos-a-hint-1" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise-support" data-label="introducao-objetos-a-hint-1" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>frutas __ _(___, ___, ___)</code></pre>
 </div>
-<div class="tutorial-exercise-support" data-label="objetos-a-hint-2" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise-support" data-label="introducao-objetos-a-hint-2" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>frutas &lt;- c(___, ___, ___)</code></pre>
 </div>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Use a função <code>length()</code> para contar o tamanho do vetor <code>frutas</code>. Certifique-se que retorna 3.</li>
 </ol>
-<div class="tutorial-exercise" data-label="objetos-b" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise" data-label="introducao-objetos-b" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<div class="tutorial-exercise-support" data-label="objetos-b-hint" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise-support" data-label="introducao-objetos-b-hint" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>length(_____)</code></pre>
 </div>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Observe a saída de <code>paste("eu gosto de", frutas)</code> e verifique se o tamanho do vetor <code>frutas</code> mudou.</li>
 </ol>
-<div class="tutorial-exercise" data-label="objetos-c" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise" data-label="introducao-objetos-c" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Use <code>[]</code> para retornar a primeira fruta do vetor <code>frutas</code>.</li>
 </ol>
-<div class="tutorial-exercise" data-label="objetos-d" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise" data-label="introducao-objetos-d" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<div class="tutorial-exercise-support" data-label="objetos-d-hint-1" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise-support" data-label="introducao-objetos-d-hint-1" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>frutas[__]</code></pre>
 </div>
 </div>
-<div id="section-vetores-e-funções" class="section level3">
-<h3>Vetores e funções</h3>
+<div id="section-vetores" class="section level3">
+<h3>Vetores</h3>
 <ol style="list-style-type: lower-alpha">
 <li>Analise as duas linhas de códigos abaixo. Os resultados são iguais? Porquê?</li>
 </ol>
-<div class="tutorial-exercise" data-label="vetores-a" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise" data-label="introducao-vetores-a" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>c(1,2,3) - 1           # código 1
 c(1,2,3) - c(1,1,1)    # código 2</code></pre>
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
@@ -285,181 +285,19 @@ learnr:::store_exercise_setup_chunk("__setup__", c("library(learnr)", "library(g
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-`tutorial-exercise-objetos-a-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-objetos-a-code-editor`)), session)
-output$`tutorial-exercise-objetos-a-output` <- renderUI({
-  `tutorial-exercise-objetos-a-result`()
+`tutorial-exercise-introducao-objetos-a-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-introducao-objetos-a-code-editor`)), session)
+output$`tutorial-exercise-introducao-objetos-a-output` <- renderUI({
+  `tutorial-exercise-introducao-objetos-a-result`()
 })
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::store_exercise_cache("objetos-a", list(setup = NULL, chunks = list(list(label = "objetos-a", code = "", 
-    opts = list(label = "\"objetos-a\"", exercise = "TRUE"), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
-    label = "objetos-a-check")), solution = structure("frutas <- c(\"maçã\", \"banana\", \"melancia\")", chunk_opts = list(
-    label = "objetos-a-solution")), options = list(eval = FALSE, 
-    echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
-    collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
-    strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
-    cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
-    cache.lazy = TRUE, dependson = NULL, autodep = FALSE, cache.rebuild = FALSE, 
-    fig.keep = "high", fig.show = "asis", fig.align = "default", 
-    fig.path = "tutorial_files/figure-html/", dev = "png", dev.args = NULL, 
-    dpi = 192, fig.ext = "png", fig.width = 6.5, fig.height = 4, 
-    fig.env = "figure", fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", 
-    fig.subcap = NULL, fig.pos = "", out.width = 624, out.height = NULL, 
-    out.extra = NULL, fig.retina = 2, external = TRUE, sanitize = FALSE, 
-    interval = 1, aniopts = "controls,loop", warning = TRUE, 
-    error = FALSE, message = TRUE, render = NULL, ref.label = NULL, 
-    child = NULL, engine = "r", split = FALSE, include = TRUE, 
-    purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
-    exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-    exercise.error.check.code = "gradethis_error_checker()", 
-    exercise.reveal_solution = FALSE, label = "objetos-a", exercise = TRUE, 
-    code = "", out.width.px = 624, out.height.px = 384, params.src = "objetos-a, exercise = TRUE", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server">
-`tutorial-exercise-objetos-b-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-objetos-b-code-editor`)), session)
-output$`tutorial-exercise-objetos-b-output` <- renderUI({
-  `tutorial-exercise-objetos-b-result`()
-})
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server">
-learnr:::store_exercise_cache("objetos-b", list(setup = "frutas <- c(\"maçã\", \"banana\", \"melancia\")", 
-    chunks = list(list(label = "setupFrutas", code = "frutas <- c(\"maçã\", \"banana\", \"melancia\")", 
-        opts = list(label = "\"setupFrutas\""), engine = "r"), 
-        list(label = "objetos-b", code = "", opts = list(label = "\"objetos-b\"", 
-            exercise = "TRUE", exercise.setup = "\"setupFrutas\""), 
-            engine = "r")), code_check = NULL, error_check = NULL, 
-    check = structure("gradethis::grade_this_code()", chunk_opts = list(
-        label = "objetos-b-check")), solution = structure("length(frutas)", chunk_opts = list(
-        label = "objetos-b-solution")), options = list(eval = FALSE, 
-        echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
-        collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
-        strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
-        cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
-        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
-        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-        fig.align = "default", fig.path = "tutorial_files/figure-html/", 
-        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
-        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
-        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
-        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
-        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
-        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
-        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
-        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
-        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
-        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-        exercise.error.check.code = "gradethis_error_checker()", 
-        exercise.reveal_solution = FALSE, label = "objetos-b", 
-        exercise = TRUE, exercise.setup = "setupFrutas", code = "", 
-        out.width.px = 624, out.height.px = 384, params.src = "objetos-b, exercise = TRUE, exercise.setup = \"setupFrutas\"", 
-        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server">
-`tutorial-exercise-objetos-c-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-objetos-c-code-editor`)), session)
-output$`tutorial-exercise-objetos-c-output` <- renderUI({
-  `tutorial-exercise-objetos-c-result`()
-})
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server">
-learnr:::store_exercise_cache("objetos-c", list(setup = "frutas <- c(\"maçã\", \"banana\", \"melancia\")", 
-    chunks = list(list(label = "setupFrutas", code = "frutas <- c(\"maçã\", \"banana\", \"melancia\")", 
-        opts = list(label = "\"setupFrutas\""), engine = "r"), 
-        list(label = "objetos-c", code = "", opts = list(label = "\"objetos-c\"", 
-            exercise = "TRUE", exercise.setup = "\"setupFrutas\""), 
-            engine = "r")), code_check = NULL, error_check = NULL, 
-    check = structure("gradethis::grade_this_code()", chunk_opts = list(
-        label = "objetos-c-check")), solution = structure(c("paste(\"eu gosto de\", frutas)", 
-    "# O tamanho do vetor continua o mesmo: 3.", "# O R aplicou a função `paste()` e \"colou\" a frase", 
-    "# \"eu gosto de\" em cada elemento do vetor frutas. "), chunk_opts = list(
-        label = "objetos-c-solution")), options = list(eval = FALSE, 
-        echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
-        collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
-        strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
-        cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
-        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
-        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-        fig.align = "default", fig.path = "tutorial_files/figure-html/", 
-        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
-        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
-        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
-        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
-        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
-        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
-        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
-        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
-        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
-        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-        exercise.error.check.code = "gradethis_error_checker()", 
-        exercise.reveal_solution = FALSE, label = "objetos-c", 
-        exercise = TRUE, exercise.setup = "setupFrutas", code = "", 
-        out.width.px = 624, out.height.px = 384, params.src = "objetos-c, exercise = TRUE, exercise.setup = \"setupFrutas\"", 
-        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server">
-`tutorial-exercise-objetos-d-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-objetos-d-code-editor`)), session)
-output$`tutorial-exercise-objetos-d-output` <- renderUI({
-  `tutorial-exercise-objetos-d-result`()
-})
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server">
-learnr:::store_exercise_cache("objetos-d", list(setup = "frutas <- c(\"maçã\", \"banana\", \"melancia\")", 
-    chunks = list(list(label = "setupFrutas", code = "frutas <- c(\"maçã\", \"banana\", \"melancia\")", 
-        opts = list(label = "\"setupFrutas\""), engine = "r"), 
-        list(label = "objetos-d", code = "", opts = list(label = "\"objetos-d\"", 
-            exercise = "TRUE", exercise.setup = "\"setupFrutas\""), 
-            engine = "r")), code_check = NULL, error_check = NULL, 
-    check = structure("gradethis::grade_this_code()", chunk_opts = list(
-        label = "objetos-d-check")), solution = structure("frutas[1]", chunk_opts = list(
-        label = "objetos-d-solution")), options = list(eval = FALSE, 
-        echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
-        collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
-        strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
-        cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
-        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
-        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-        fig.align = "default", fig.path = "tutorial_files/figure-html/", 
-        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
-        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
-        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
-        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
-        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
-        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
-        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
-        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
-        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
-        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-        exercise.error.check.code = "gradethis_error_checker()", 
-        exercise.reveal_solution = FALSE, label = "objetos-d", 
-        exercise = TRUE, exercise.setup = "setupFrutas", code = "", 
-        out.width.px = 624, out.height.px = 384, params.src = "objetos-d, exercise = TRUE, exercise.setup = \"setupFrutas\"", 
-        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server">
-`tutorial-exercise-vetores-a-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-vetores-a-code-editor`)), session)
-output$`tutorial-exercise-vetores-a-output` <- renderUI({
-  `tutorial-exercise-vetores-a-result`()
-})
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server">
-learnr:::store_exercise_cache("vetores-a", list(setup = NULL, chunks = list(list(label = "vetores-a", code = "c(1,2,3) - 1           # código 1\nc(1,2,3) - c(1,1,1)    # código 2", 
-    opts = list(label = "\"vetores-a\"", exercise = "TRUE"), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = NULL, 
-    solution = structure(c("c(1,2,3) - 1           # código 1", 
-    "c(1,2,3) - c(1,1,1)    # código 2", "# Os resultados são iguais.", 
-    "# No caso do código 1, como foi solicitado subtrair usando vetores de tamanhos diferentes, o R reciclou o segundo elemento.", 
-    "# No caso do código 2, a subtração foi feita baseado na posição dos vetores. Exemplo: 1-1, 2-1, 3-1."
-    ), chunk_opts = list(label = "vetores-a-solution")), options = list(
+learnr:::store_exercise_cache("introducao-objetos-a", list(setup = NULL, chunks = list(list(label = "introducao-objetos-a", 
+    code = "", opts = list(label = "\"introducao-objetos-a\"", 
+        exercise = "TRUE"), engine = "r")), code_check = NULL, 
+    error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
+        label = "introducao-objetos-a-check")), solution = structure("frutas <- c(\"maçã\", \"banana\", \"melancia\")", chunk_opts = list(
+        label = "introducao-objetos-a-solution")), options = list(
         eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
         tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
         highlight = FALSE, strip.white = TRUE, size = "normalsize", 
@@ -478,10 +316,177 @@ learnr:::store_exercise_cache("vetores-a", list(setup = NULL, chunks = list(list
         max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
         exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
         exercise.error.check.code = "gradethis_error_checker()", 
-        exercise.reveal_solution = FALSE, label = "vetores-a", 
+        exercise.reveal_solution = FALSE, label = "introducao-objetos-a", 
+        exercise = TRUE, code = "", out.width.px = 624, out.height.px = 384, 
+        params.src = "introducao-objetos-a, exercise = TRUE", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-introducao-objetos-b-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-introducao-objetos-b-code-editor`)), session)
+output$`tutorial-exercise-introducao-objetos-b-output` <- renderUI({
+  `tutorial-exercise-introducao-objetos-b-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache("introducao-objetos-b", list(setup = "frutas <- c(\"maçã\", \"banana\", \"melancia\")", 
+    chunks = list(list(label = "setupFrutas", code = "frutas <- c(\"maçã\", \"banana\", \"melancia\")", 
+        opts = list(label = "\"setupFrutas\""), engine = "r"), 
+        list(label = "introducao-objetos-b", code = "", opts = list(
+            label = "\"introducao-objetos-b\"", exercise = "TRUE", 
+            exercise.setup = "\"setupFrutas\""), engine = "r")), 
+    code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
+        label = "introducao-objetos-b-check")), solution = structure("length(frutas)", chunk_opts = list(
+        label = "introducao-objetos-b-solution")), options = list(
+        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
+        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
+        highlight = FALSE, strip.white = TRUE, size = "normalsize", 
+        background = "#F7F7F7", cache = 0, cache.path = "tutorial_cache/html/", 
+        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
+        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
+        fig.show = "asis", fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "introducao-objetos-b", 
+        exercise = TRUE, exercise.setup = "setupFrutas", code = "", 
+        out.width.px = 624, out.height.px = 384, params.src = "introducao-objetos-b, exercise = TRUE, exercise.setup = \"setupFrutas\"", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-introducao-objetos-c-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-introducao-objetos-c-code-editor`)), session)
+output$`tutorial-exercise-introducao-objetos-c-output` <- renderUI({
+  `tutorial-exercise-introducao-objetos-c-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache("introducao-objetos-c", list(setup = "frutas <- c(\"maçã\", \"banana\", \"melancia\")", 
+    chunks = list(list(label = "setupFrutas", code = "frutas <- c(\"maçã\", \"banana\", \"melancia\")", 
+        opts = list(label = "\"setupFrutas\""), engine = "r"), 
+        list(label = "introducao-objetos-c", code = "", opts = list(
+            label = "\"introducao-objetos-c\"", exercise = "TRUE", 
+            exercise.setup = "\"setupFrutas\""), engine = "r")), 
+    code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
+        label = "introducao-objetos-c-check")), solution = structure(c("paste(\"eu gosto de\", frutas)", 
+    "# O tamanho do vetor continua o mesmo: 3.", "# O R aplicou a função `paste()` e \"colou\" a frase", 
+    "# \"eu gosto de\" em cada elemento do vetor frutas. "), chunk_opts = list(
+        label = "introducao-objetos-c-solution")), options = list(
+        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
+        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
+        highlight = FALSE, strip.white = TRUE, size = "normalsize", 
+        background = "#F7F7F7", cache = 0, cache.path = "tutorial_cache/html/", 
+        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
+        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
+        fig.show = "asis", fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "introducao-objetos-c", 
+        exercise = TRUE, exercise.setup = "setupFrutas", code = "", 
+        out.width.px = 624, out.height.px = 384, params.src = "introducao-objetos-c, exercise = TRUE, exercise.setup = \"setupFrutas\"", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-introducao-objetos-d-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-introducao-objetos-d-code-editor`)), session)
+output$`tutorial-exercise-introducao-objetos-d-output` <- renderUI({
+  `tutorial-exercise-introducao-objetos-d-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache("introducao-objetos-d", list(setup = "frutas <- c(\"maçã\", \"banana\", \"melancia\")", 
+    chunks = list(list(label = "setupFrutas", code = "frutas <- c(\"maçã\", \"banana\", \"melancia\")", 
+        opts = list(label = "\"setupFrutas\""), engine = "r"), 
+        list(label = "introducao-objetos-d", code = "", opts = list(
+            label = "\"introducao-objetos-d\"", exercise = "TRUE", 
+            exercise.setup = "\"setupFrutas\""), engine = "r")), 
+    code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
+        label = "introducao-objetos-d-check")), solution = structure("frutas[1]", chunk_opts = list(
+        label = "introducao-objetos-d-solution")), options = list(
+        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
+        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
+        highlight = FALSE, strip.white = TRUE, size = "normalsize", 
+        background = "#F7F7F7", cache = 0, cache.path = "tutorial_cache/html/", 
+        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
+        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
+        fig.show = "asis", fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "introducao-objetos-d", 
+        exercise = TRUE, exercise.setup = "setupFrutas", code = "", 
+        out.width.px = 624, out.height.px = 384, params.src = "introducao-objetos-d, exercise = TRUE, exercise.setup = \"setupFrutas\"", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-introducao-vetores-a-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-introducao-vetores-a-code-editor`)), session)
+output$`tutorial-exercise-introducao-vetores-a-output` <- renderUI({
+  `tutorial-exercise-introducao-vetores-a-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache("introducao-vetores-a", list(setup = NULL, chunks = list(list(label = "introducao-vetores-a", 
+    code = "c(1,2,3) - 1           # código 1\nc(1,2,3) - c(1,1,1)    # código 2", 
+    opts = list(label = "\"introducao-vetores-a\"", exercise = "TRUE"), 
+    engine = "r")), code_check = NULL, error_check = NULL, check = NULL, 
+    solution = structure(c("c(1,2,3) - 1           # código 1", 
+    "c(1,2,3) - c(1,1,1)    # código 2", "# Os resultados são iguais.", 
+    "# No caso do código 1, como foi solicitado subtrair usando vetores de tamanhos diferentes, o R reciclou o segundo elemento.", 
+    "# No caso do código 2, a subtração foi feita baseado na posição dos vetores. Exemplo: 1-1, 2-1, 3-1."
+    ), chunk_opts = list(label = "introducao-vetores-a-solution")), 
+    options = list(eval = FALSE, echo = TRUE, results = "markup", 
+        tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
+        comment = NA, highlight = FALSE, strip.white = TRUE, 
+        size = "normalsize", background = "#F7F7F7", cache = 0, 
+        cache.path = "tutorial_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "introducao-vetores-a", 
         exercise = TRUE, code = c("c(1,2,3) - 1           # código 1", 
         "c(1,2,3) - c(1,1,1)    # código 2"), out.width.px = 624, 
-        out.height.px = 384, params.src = "vetores-a, exercise = TRUE", 
+        out.height.px = 384, params.src = "introducao-vetores-a, exercise = TRUE", 
         fig.num = 0, exercise.df_print = "paged"), engine = "r"))
 </script>
  

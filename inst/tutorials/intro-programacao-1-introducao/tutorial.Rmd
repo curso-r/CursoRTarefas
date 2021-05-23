@@ -47,52 +47,52 @@ frutas <- c("maçã", "banana", "melancia")
 
 A) Crie um vetor com o nome de três frutas (maçã, banana, melancia) e guarde em um objeto chamado `frutas`.
 
-```{r objetos-a, exercise = TRUE}
+```{r introducao-objetos-a, exercise = TRUE}
 
 ```
 
-```{r objetos-a-hint-1}
+```{r introducao-objetos-a-hint-1}
 frutas __ _(___, ___, ___)
 ```
 
-```{r objetos-a-hint-2}
+```{r introducao-objetos-a-hint-2}
 frutas <- c(___, ___, ___)
 ```
 
-```{r objetos-a-solution}
+```{r introducao-objetos-a-solution}
 frutas <- c("maçã", "banana", "melancia")
 ```
 
-```{r objetos-a-check}
+```{r introducao-objetos-a-check}
 gradethis::grade_this_code()
 ```
 
 
 b) Use a função `length()` para contar o tamanho do vetor `frutas`. Certifique-se que retorna 3.
 
-```{r objetos-b, exercise = TRUE, exercise.setup = "setupFrutas"}
+```{r introducao-objetos-b, exercise = TRUE, exercise.setup = "setupFrutas"}
 
 ```
 
-```{r objetos-b-hint}
+```{r introducao-objetos-b-hint}
 length(_____)
 ```
 
-```{r objetos-b-solution}
+```{r introducao-objetos-b-solution}
 length(frutas)
 ```
 
-```{r objetos-b-check}
+```{r introducao-objetos-b-check}
 gradethis::grade_this_code()
 ```
 
 c) Observe a saída de `paste("eu gosto de", frutas)` e verifique se o tamanho do vetor `frutas` mudou.
 
-```{r objetos-c, exercise = TRUE, exercise.setup = "setupFrutas"}
+```{r introducao-objetos-c, exercise = TRUE, exercise.setup = "setupFrutas"}
 
 ```
 
-```{r objetos-c-solution}
+```{r introducao-objetos-c-solution}
 paste("eu gosto de", frutas)
 # O tamanho do vetor continua o mesmo: 3.
 # O R aplicou a função `paste()` e "colou" a frase
@@ -100,41 +100,41 @@ paste("eu gosto de", frutas)
 ```
 
 
-```{r objetos-d-check}
+```{r introducao-objetos-d-check}
 gradethis::grade_this_code()
 ```
 
 
 d) Use `[]` para retornar a primeira fruta do vetor `frutas`.
 
-```{r objetos-d, exercise = TRUE, exercise.setup = "setupFrutas"}
+```{r introducao-objetos-d, exercise = TRUE, exercise.setup = "setupFrutas"}
 
 ```
 
-```{r objetos-d-hint-1}
+```{r introducao-objetos-d-hint-1}
 frutas[__]
 ```
 
-```{r objetos-d-solution}
+```{r introducao-objetos-d-solution}
 frutas[1]
 ```
 
-```{r objetos-c-check}
+```{r introducao-objetos-c-check}
 gradethis::grade_this_code()
 ```
 
 
 
-### Vetores e funções
+### Vetores
 
 a) Analise as duas linhas de códigos abaixo. Os resultados são iguais? Porquê?
 
-```{r vetores-a, exercise = TRUE}
+```{r introducao-vetores-a, exercise = TRUE}
 c(1,2,3) - 1           # código 1
 c(1,2,3) - c(1,1,1)    # código 2
 ```
 
-```{r vetores-a-solution}
+```{r introducao-vetores-a-solution}
 c(1,2,3) - 1           # código 1
 c(1,2,3) - c(1,1,1)    # código 2
 # Os resultados são iguais.
