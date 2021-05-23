@@ -1,0 +1,247 @@
+---
+title: "Tarefas: Tabelas"
+description: "Exercícios do curso 'Introdução à programação com R'"
+encoding: "UTF-8"
+output: 
+  learnr::tutorial:
+    css: css/custom.css
+    language: pt
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(gradethis)
+
+knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
+
+
+gradethis::gradethis_setup(
+  code_correct =  "Correto! Parabéns!",
+  pass = "Correto! Parabéns!",
+  fail =  "Incorreto. Tente novamente! "
+)
+
+# Fazer: frases de feedback do gradethis responderem em Português
+
+```
+
+
+**Exercícios**
+
+> Boas vindas! 
+>
+> Este material faz parte do curso [Introdução à programação com R](https://curso-r.com/cursos/intro-programacao/), da [Curso-R](https://www.curso-r.com/).
+>
+> Caso tenha dúvidas, pedimos que escreva no [<i class="fab fa-discourse"></i> Discourse](https://discourse.curso-r.com/).
+
+
+## Dataframes
+
+A base de dados `airquality` apresenta dados de qualidade do ar obtidos diariamente, em Nova York, entre os meses de maio e setembro de 1973:
+
+```{r setupAirquality}
+airquality
+``` 
+
+Use o data.frame airquality para responder às questões abaixo:
+
+a) Quantas colunas `airquality` tem?
+
+```{r tabelas-df-a, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r tabelas-df-a-hint}
+___(airquality)
+```
+
+```{r tabelas-df-a-solution}
+ncol(airquality)
+```
+
+
+
+```{r tabelas-df-a-check}
+gradethis::grade_this_code()
+```
+
+b) Quantas linhas `airquality` tem?
+
+```{r tabelas-df-b, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r tabelas-df-b-hint}
+___(airquality)
+```
+
+```{r tabelas-df-b-solution}
+nrow(airquality)
+```
+
+```{r tabelas-df-b-check}
+gradethis::grade_this_code()
+```
+
+c) O que a função `head()` retorna?
+
+```{r tabelas-df-c, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r tabelas-df-c-hint}
+___(airquality)
+```
+
+```{r tabelas-df-c-solution}
+head(airquality)
+# A função head() retorna as 6 primeiras linhas da base.
+```
+
+
+
+```{r tabelas-df-c-check}
+gradethis::grade_this_code()
+```
+
+d) Quais são os nomes das colunas?
+
+```{r tabelas-df-d, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r tabelas-df-d-hint}
+___(airquality)
+```
+
+```{r tabelas-df-d-solution}
+colnames(airquality)
+
+# names(airquality) também funciona. Verificar como dar mais de uma solução possível.
+```
+
+```{r tabelas-df-d-check}
+gradethis::grade_this({
+  gradethis::pass_if_equal()
+  gradethis::fail()
+})
+```
+
+
+e) Qual é a classe da coluna `Ozone`? Dicas: `class()` e `$`
+
+```{r tabelas-df-e, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r tabelas-df-e-hint}
+class(airquality______)
+```
+
+```{r tabelas-df-e-solution}
+class(airquality$Ozone)
+```
+
+```{r tabelas-df-e-check}
+gradethis::grade_this({
+  gradethis::pass_if_equal()
+  gradethis::fail()
+})
+```
+
+f) O que o código `dplyr::glimpse(airquality)` retorna?
+
+```{r tabelas-df-f, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+
+```{r tabelas-df-f-solution}
+dplyr::glimpse(airquality)
+# A função glimpse() do pacote dpyr retorna várias informações interessantes:
+# O número de linhas
+# O número de colunas
+# O nome das colunas
+# O tipo de cada coluna
+# Algumas observações da coluna, para ter uma ideia dos dados disponíveis.
+```
+
+```{r tabelas-df-f-check}
+gradethis::grade_this_code()
+```
+
+
+g) Utilizando a resposta da questão anterior, quais são os tipos de cada coluna da tabela `airquality`?
+
+
+## Desafio
+
+Use o data.frame `airquality` para responder às questões abaixo. __Vamos calcular o desvio padrão de Ozone sem usar a função `sd()`__.
+
+  a) tire a média da coluna `Ozone`. Dica: use `mean(x, na.rm = TRUE)`.
+  b) subtraia da coluna` Ozone` a sua própria média (centralização).
+  c) eleve o vetor ao quadrado.
+  d) tire a média do vetor.
+  e) tire a raíz quadrada.
+  f) compare o resultado com `sd(airquality$Ozone, na.rm = TRUE)`
+
+> Dica: guarde os resultados de cada item em objetos para poderem ser usados depois!
+
+```{r tabelas-desafio-a, exercise = TRUE, exercise.setup = "setupAirquality"}
+# a)
+media_ozone <-  ___ 
+# b) 
+ozone_centralizado <-  ___ 
+# c) 
+ozone_centralizado_ao_quadrado <-  ___  
+# d) 
+media_ozone_centralizado_ao_quadrado <-  ___ 
+# e)
+sd_ozone_calculado <-  ___ 
+# f)
+sd_ozone_funcao <- ___  
+sd_ozone_calculado ___ sd_ozone_funcao
+```
+
+
+```{r tabelas-desafio-a-solution}
+# a)
+media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
+# b)
+ozone_centralizado <-  airquality$Ozone - media_ozone
+# c)
+ozone_centralizado_ao_quadrado <-  ozone_centralizado ^ 2
+# d)
+media_ozone_centralizado_ao_quadrado <- mean(ozone_centralizado_ao_quadrado, na.rm = TRUE)
+# e)
+sd_ozone_calculado <- sqrt(media_ozone_centralizado_ao_quadrado)
+sd_ozone_calculado
+# f)
+sd_ozone_funcao <- sd(airquality$Ozone, na.rm = TRUE)
+sd_ozone_funcao 
+# São iguais?
+sd_ozone_calculado == sd_ozone_funcao
+# Os resultados são diferentes!
+```
+
+
+
+## Enviar as respostas
+
+Se você completou a tarefa e quer submeter, clique no botão abaixo para gerar o seu código hash e envie usando o formulário a seguir:
+
+```{r context="server"}
+learnrhash::encoder_logic()
+```
+
+```{r encode, echo=FALSE}
+learnrhash::encoder_ui(ui_before = " ", ui_after = " ")
+```
+
+### Formulário para enviar o código
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd53h-0iVXI9CyPp0g-yQB0yov6ZcadVISUgMRnsEi5k6BnKA/viewform?embedded=true" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+

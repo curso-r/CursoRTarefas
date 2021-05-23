@@ -1,0 +1,235 @@
+---
+title: "Tarefas: Filtros"
+description: "Exercícios do curso 'Introdução à programação com R'"
+encoding: "UTF-8"
+output: 
+  learnr::tutorial:
+    css: css/custom.css
+    language: pt
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(gradethis)
+
+knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
+
+
+gradethis::gradethis_setup(
+  code_correct =  "Correto! Parabéns!",
+  pass = "Correto! Parabéns!",
+  fail =  "Incorreto. Tente novamente! "
+)
+
+# Fazer: frases de feedback do gradethis responderem em Português
+
+```
+
+
+**Exercícios**
+
+> Boas vindas! 
+>
+> Este material faz parte do curso [Introdução à programação com R](https://curso-r.com/cursos/intro-programacao/), da [Curso-R](https://www.curso-r.com/).
+>
+> Caso tenha dúvidas, pedimos que escreva no [<i class="fab fa-discourse"></i> Discourse](https://discourse.curso-r.com/).
+
+
+```{r setupAirquality}
+airquality
+``` 
+
+## Filtro e vetores lógicos
+
+a) Use o vetor `numeross` abaixo para responder as questões seguintes:
+
+```{r echo=TRUE}
+numeross <- -4:2
+numeross
+```
+
+I) Escreva um código que devolva apenas valores positivos do vetor `numeross`.
+
+```{r filtros-ai, exercise = TRUE}
+
+```
+
+```{r filtros-ai-hint}
+numeross[numeross ____]
+```
+
+```{r filtros-ai-solution}
+numeross[numeross > 0]
+```
+
+```{r filtros-ai-check}
+gradethis::grade_this_code()
+```
+
+II) Escreva um código que devolta apenas os valores pares do vetor `numeross`. Dica: o operador `%%` devolve o resto da divisão entre dois números.
+
+```{r filtros-aii, exercise = TRUE}
+
+```
+
+```{r filtros-aii-hint-1}
+numeross[numeross __ __ __ __]
+```
+
+```{r filtros-aii-hint-2}
+numeross[numeross %% __ == __]
+```
+
+```{r filtros-aii-solution}
+numeross[numeross %% 2 == 0]
+```
+
+
+```{r filtros-aii-check}
+gradethis::grade_this_code()
+```
+
+
+III) Filtre o vetor para que retorne apenas aqueles valores que quando elevados a 2 são menores do que 4.
+
+```{r filtros-aiii, exercise = TRUE}
+
+```
+
+```{r filtros-aiii-hint-1}
+numeross[_______________]
+```
+
+```{r filtros-aiii-hint-2}
+numeross[(numeros ^ 2) _____]
+```
+
+```{r filtros-aiii-solution}
+numeross[(numeross ^ 2) < 4]
+```
+
+```{r filtros-aiii-check}
+gradethis::grade_this_code()
+```
+
+
+b) Use o data.frame `airquality` para responder às questões abaixo:
+
+
+I) Conte quantos `NA`s tem na coluna `Solar.R`. Dica: use '`$`', `is.na()` e `sum()`:
+
+```{r filtros-bi, exercise = TRUE, exercise.setup = "setupAirquality"}
+airquality
+```
+
+```{r filtros-bi-hint-1}
+___(___(airquality$Solar.R))
+```
+
+
+```{r filtros-bi-hint-2}
+sum(___(airquality$Solar.R))
+```
+
+```{r filtros-bi-solution}
+sum(is.na(airquality$Solar.R))
+```
+
+```{r filtros-bi-check}
+gradethis::grade_this_code()
+```
+
+
+II) Filtre a tabela `airquality` com apenas linhas em que `Solar.R` é `NA`.
+
+```{r filtros-bii, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r filtros-bii-hint-1}
+____[___(airquality$Solar.R) ___ ]
+```
+
+
+```{r filtros-bii-hint-2}
+____[is.na(airquality$Solar.R) ___ ]
+```
+
+```{r filtros-bii-solution}
+airquality[is.na(airquality$Solar.R), ]
+```
+
+```{r filtros-bii-check}
+gradethis::grade_this_code()
+```
+
+III) Filtre a tabela `airquality` com apenas linhas em que `Solar.R` NÃO é `NA`.
+
+```{r filtros-biii, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r filtros-biii-hint-1}
+____[____(airquality$Solar.R) ___ ]
+```
+
+
+```{r filtros-biii-hint-2}
+____[!is.na(airquality$Solar.R) ___ ]
+```
+
+```{r filtros-biii-solution}
+airquality[!is.na(airquality$Solar.R), ]
+```
+
+```{r filtros-biii-check}
+gradethis::grade_this_code()
+```
+
+
+IV) Filtre a tabela `airquality` com apenas linhas em que `Solar.R` NÃO é `NA` e `Month` é igual a 5.
+
+
+```{r filtros-biv, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r filtros-biv-hint-1}
+airquality[_________________ _________, ]
+```
+
+
+```{r filtros-biv-hint-2}
+airquality[!is.na(airquality$Solar.R) & _________, ]
+```
+
+```{r filtros-biv-solution}
+airquality[!is.na(airquality$Solar.R) & airquality$Month == 5, ]
+
+```
+
+```{r filtros-biv-check}
+gradethis::grade_this_code()
+```
+
+
+
+## Enviar as respostas
+
+Se você completou a tarefa e quer submeter, clique no botão abaixo para gerar o seu código hash e envie usando o formulário a seguir:
+
+```{r context="server"}
+learnrhash::encoder_logic()
+```
+
+```{r encode, echo=FALSE}
+learnrhash::encoder_ui(ui_before = " ", ui_after = " ")
+```
+
+### Formulário para enviar o código
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd53h-0iVXI9CyPp0g-yQB0yov6ZcadVISUgMRnsEi5k6BnKA/viewform?embedded=true" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+

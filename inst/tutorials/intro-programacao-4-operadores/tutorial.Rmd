@@ -1,0 +1,150 @@
+---
+title: "Tarefas: Operadores"
+description: "Exercícios do curso 'Introdução à programação com R'"
+encoding: "UTF-8"
+output: 
+  learnr::tutorial:
+    css: css/custom.css
+    language: pt
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(gradethis)
+
+knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
+
+
+gradethis::gradethis_setup(
+  code_correct =  "Correto! Parabéns!",
+  pass = "Correto! Parabéns!",
+  fail =  "Incorreto. Tente novamente! "
+)
+
+# Fazer: frases de feedback do gradethis responderem em Português
+
+```
+
+
+**Exercícios**
+
+> Boas vindas! 
+>
+> Este material faz parte do curso [Introdução à programação com R](https://curso-r.com/cursos/intro-programacao/), da [Curso-R](https://www.curso-r.com/).
+>
+> Caso tenha dúvidas, pedimos que escreva no [<i class="fab fa-discourse"></i> Discourse](https://discourse.curso-r.com/).
+
+
+## Operadores
+
+1) Considere o vetor booleano abaixo:
+
+```{r vetores-b, echo=TRUE, include=TRUE}
+dolar_subiu <- c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE)
+```
+
+Este vetor tem informação de uma semana (7 dias) indicando se o dolar subiu (`TRUE`) (ou não subiu - `FALSE`) no respectivo dia.
+
+Interprete os resultados dos códigos abaixo:
+
+I) `length(dolar_subiu)`
+
+```{r vetores-b-i, exercise = TRUE}
+
+```
+
+```{r vetores-b-i-solution}
+length(dolar_subiu)
+# A função length retorna o tamanho do vetor. 
+# O vetor 'dolar_subiu' possui 7 elementos.
+```
+
+
+```{r vetores-b-i-check}
+gradethis::grade_this_code()
+```
+
+II) `dolar_subiu[2]`  (ps: a semana começa no domingo)
+
+```{r vetores-b-ii, exercise = TRUE}
+
+```
+
+```{r vetores-b-ii-solution}
+dolar_subiu[2]
+# O segundo elemento selecionado representa a segunda-feira.
+# Na segunda-feira, o dolar subiu (TRUE).
+```
+
+```{r vetores-b-ii-check}
+gradethis::grade_this_code()
+```
+
+III) `sum(dolar_subiu)`
+
+```{r vetores-b-iii, exercise = TRUE}
+
+```
+
+```{r vetores-b-iii-solution}
+sum(dolar_subiu)
+# A função sum() realiza a soma dos elementos do vetor.
+# Como o vetor possui dados do tipo lógico (TRUE ou FALSE), o R entende que TRUE = 1 e FALSE = 0.
+# O resultado de sum(dolar_subiu) é 4, portanto o dólar subiu em 4 dias na semana. 
+```
+
+```{r vetores-b-iii-check}
+gradethis::grade_this_code()
+```
+
+IV) `mean(dolar_subiu)`
+
+```{r vetores-b-iv, exercise = TRUE}
+
+```
+
+```{r vetores-b-iv-solution}
+mean(dolar_subiu)
+# A função sum() realiza a média dos elementos do vetor.
+# O resultado representa a média de dias em que o dólar subiu.
+```
+
+```{r vetores-b-iv-check}
+gradethis::grade_this_code()
+```
+
+c) Agora observe a saída de `as.numeric(dolar_subiu)`. O que o R fez?
+
+```{r vetores-c, exercise = TRUE}
+
+```
+
+```{r vetores-c-solution}
+as.numeric(dolar_subiu)
+# A função as.numeric() transforma um vetor em numérico (quando possível).
+# No vetor que o R retornou, TRUE foi transformado em 1, e FALSE foi transformado em 0.
+```
+
+```{r vetores-c-check}
+gradethis::grade_this_code()
+```
+
+## Enviar as respostas
+
+Se você completou a tarefa e quer submeter, clique no botão abaixo para gerar o seu código hash e envie usando o formulário a seguir:
+
+```{r context="server"}
+learnrhash::encoder_logic()
+```
+
+```{r encode, echo=FALSE}
+learnrhash::encoder_ui(ui_before = " ", ui_after = " ")
+```
+
+### Formulário para enviar o código
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd53h-0iVXI9CyPp0g-yQB0yov6ZcadVISUgMRnsEi5k6BnKA/viewform?embedded=true" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+

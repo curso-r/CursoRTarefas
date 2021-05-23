@@ -1,0 +1,58 @@
+---
+title: "Tarefas: Loops"
+description: "Exercícios do curso 'Introdução à programação com R'"
+encoding: "UTF-8"
+output: 
+  learnr::tutorial:
+    css: css/custom.css
+    language: pt
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(gradethis)
+
+knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
+
+
+gradethis::gradethis_setup(
+  code_correct =  "Correto! Parabéns!",
+  pass = "Correto! Parabéns!",
+  fail =  "Incorreto. Tente novamente! "
+)
+
+# Fazer: frases de feedback do gradethis responderem em Português
+
+```
+
+
+**Exercícios**
+
+> Boas vindas! 
+>
+> Este material faz parte do curso [Introdução à programação com R](https://curso-r.com/cursos/intro-programacao/), da [Curso-R](https://www.curso-r.com/).
+>
+> Caso tenha dúvidas, pedimos que escreva no [<i class="fab fa-discourse"></i> Discourse](https://discourse.curso-r.com/).
+
+
+## Loops
+
+
+## Enviar as respostas
+
+Se você completou a tarefa e quer submeter, clique no botão abaixo para gerar o seu código hash e envie usando o formulário a seguir:
+
+```{r context="server"}
+learnrhash::encoder_logic()
+```
+
+```{r encode, echo=FALSE}
+learnrhash::encoder_ui(ui_before = " ", ui_after = " ")
+```
+
+### Formulário para enviar o código
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd53h-0iVXI9CyPp0g-yQB0yov6ZcadVISUgMRnsEi5k6BnKA/viewform?embedded=true" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
