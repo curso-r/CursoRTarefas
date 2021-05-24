@@ -65,7 +65,12 @@ ncol(airquality)
 
 
 ```{r tabelas-df-a-check}
-gradethis::grade_this_code()
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Muito bom! Você conseguiu contar as colunas corretamente.")
+  }
+  fail()
+})
 ```
 
 b) Quantas linhas `airquality` tem?
@@ -83,10 +88,15 @@ nrow(airquality)
 ```
 
 ```{r tabelas-df-b-check}
-gradethis::grade_this_code()
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Muito bom! Você conseguiu contar as linhas corretamente.")
+  }
+  fail()
+})
 ```
 
-c) O que a função `head()` retorna?
+c) Execute a função `head()`. Observe o que ela retorna.
 
 ```{r tabelas-df-c, exercise = TRUE, exercise.setup = "setupAirquality"}
 
@@ -104,7 +114,12 @@ head(airquality)
 
 
 ```{r tabelas-df-c-check}
-gradethis::grade_this_code()
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Muito bom! A função `head()` mostra as seis primeiras linhas de um data.frame")
+  }
+  fail()
+})
 ```
 
 d) Quais são os nomes das colunas?
@@ -124,9 +139,11 @@ colnames(airquality)
 ```
 
 ```{r tabelas-df-d-check}
-gradethis::grade_this({
-  gradethis::pass_if_equal()
-  gradethis::fail()
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Muito bom! Você conseguiu consultar o nome das colunas corretamente. Existe mais de uma função que possibilita conferir o nome da colunas de um data.frame, como:  `colnames()` e `names()`.")
+  }
+  fail()
 })
 ```
 
@@ -146,13 +163,15 @@ class(airquality$Ozone)
 ```
 
 ```{r tabelas-df-e-check}
-gradethis::grade_this({
-  gradethis::pass_if_equal()
-  gradethis::fail()
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Muito bom! Você conseguiu verificar a classe da coluna Ozone corretamente.")
+  }
+  fail()
 })
 ```
 
-f) O que o código `dplyr::glimpse(airquality)` retorna?
+f) Execute o seguinte código `dplyr::glimpse(airquality)`, e observe o que ele retorna.
 
 ```{r tabelas-df-f, exercise = TRUE, exercise.setup = "setupAirquality"}
 
@@ -161,20 +180,21 @@ f) O que o código `dplyr::glimpse(airquality)` retorna?
 
 ```{r tabelas-df-f-solution}
 dplyr::glimpse(airquality)
-# A função glimpse() do pacote dpyr retorna várias informações interessantes:
-# O número de linhas
-# O número de colunas
-# O nome das colunas
-# O tipo de cada coluna
-# Algumas observações da coluna, para ter uma ideia dos dados disponíveis.
 ```
 
 ```{r tabelas-df-f-check}
-gradethis::grade_this_code()
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Muito bom! A função glimpse() do pacote dpyr retorna várias informações interessantes sobre uma base de dados, como: o número de linhas, número de colunas, nome das colunas, tipo de cada coluna e as primeiras observações da coluna, para ter uma ideia dos dados disponíveis.")
+  }
+  fail()
+})
 ```
 
 
 g) Utilizando a resposta da questão anterior, quais são os tipos de cada coluna da tabela `airquality`?
+
+> FAZER UMA PERGUNTA  DE MULTIPLA ESCOLHA AQUI
 
 
 ## Desafio
@@ -227,7 +247,7 @@ sd_ozone_calculado == sd_ozone_funcao
 # Os resultados são diferentes!
 ```
 
-
+> Melhorar aqui, e pensar como avaliar
 
 ## Enviar as respostas
 

@@ -134,7 +134,7 @@ if (window.hljs) {
 <pre class="text"><code>___(airquality)</code></pre>
 </div>
 <ol start="3" style="list-style-type: lower-alpha">
-<li>O que a função <code>head()</code> retorna?</li>
+<li>Execute a função <code>head()</code>. Observe o que ela retorna.</li>
 </ol>
 <div class="tutorial-exercise" data-label="tabelas-df-c" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
@@ -161,7 +161,7 @@ if (window.hljs) {
 <pre class="text"><code>class(airquality______)</code></pre>
 </div>
 <ol start="6" style="list-style-type: lower-alpha">
-<li>O que o código <code>dplyr::glimpse(airquality)</code> retorna?</li>
+<li>Execute o seguinte código <code>dplyr::glimpse(airquality)</code>, e observe o que ele retorna.</li>
 </ol>
 <div class="tutorial-exercise" data-label="tabelas-df-f" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":true,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
@@ -169,6 +169,9 @@ if (window.hljs) {
 <ol start="7" style="list-style-type: lower-alpha">
 <li>Utilizando a resposta da questão anterior, quais são os tipos de cada coluna da tabela <code>airquality</code>?</li>
 </ol>
+<blockquote>
+<p>FAZER UMA PERGUNTA DE MULTIPLA ESCOLHA AQUI</p>
+</blockquote>
 </div>
 <div id="section-desafio" class="section level2">
 <h2>Desafio</h2>
@@ -200,6 +203,9 @@ sd_ozone_funcao &lt;- ___
 sd_ozone_calculado ___ sd_ozone_funcao</code></pre>
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
+<blockquote>
+<p>Melhorar aqui, e pensar como avaliar</p>
+</blockquote>
 </div>
 <div id="section-enviar-as-respostas" class="section level2">
 <h2>Enviar as respostas</h2>
@@ -332,30 +338,33 @@ learnr:::store_exercise_cache("tabelas-df-a", list(setup = "airquality", chunks 
     code = "airquality", opts = list(label = "\"setupAirquality\""), 
     engine = "r"), list(label = "tabelas-df-a", code = "", opts = list(
     label = "\"tabelas-df-a\"", exercise = "TRUE", exercise.setup = "\"setupAirquality\""), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
-    label = "tabelas-df-a-check")), solution = structure("ncol(airquality)", chunk_opts = list(
-    label = "tabelas-df-a-solution")), options = list(eval = FALSE, 
-    echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
-    collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
-    strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
-    cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
-    cache.lazy = TRUE, dependson = NULL, autodep = FALSE, cache.rebuild = FALSE, 
-    fig.keep = "high", fig.show = "asis", fig.align = "default", 
-    fig.path = "tutorial_files/figure-html/", dev = "png", dev.args = NULL, 
-    dpi = 192, fig.ext = "png", fig.width = 6.5, fig.height = 4, 
-    fig.env = "figure", fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", 
-    fig.subcap = NULL, fig.pos = "", out.width = 624, out.height = NULL, 
-    out.extra = NULL, fig.retina = 2, external = TRUE, sanitize = FALSE, 
-    interval = 1, aniopts = "controls,loop", warning = TRUE, 
-    error = FALSE, message = TRUE, render = NULL, ref.label = NULL, 
-    child = NULL, engine = "r", split = FALSE, include = TRUE, 
-    purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
-    exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-    exercise.error.check.code = "gradethis_error_checker()", 
-    exercise.reveal_solution = FALSE, label = "tabelas-df-a", 
-    exercise = TRUE, exercise.setup = "setupAirquality", code = "", 
-    out.width.px = 624, out.height.px = 384, params.src = "tabelas-df-a, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+    engine = "r")), code_check = NULL, error_check = NULL, check = structure(c("grade_this({", 
+"  if (identical(.result, .solution)) {", "    pass(\"Muito bom! Você conseguiu contar as colunas corretamente.\")", 
+"  }", "  fail()", "})"), chunk_opts = list(label = "tabelas-df-a-check")), 
+    solution = structure("ncol(airquality)", chunk_opts = list(
+        label = "tabelas-df-a-solution")), options = list(eval = FALSE, 
+        echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
+        collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
+        strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
+        cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "tabelas-df-a", 
+        exercise = TRUE, exercise.setup = "setupAirquality", 
+        code = "", out.width.px = 624, out.height.px = 384, params.src = "tabelas-df-a, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -370,30 +379,33 @@ learnr:::store_exercise_cache("tabelas-df-b", list(setup = "airquality", chunks 
     code = "airquality", opts = list(label = "\"setupAirquality\""), 
     engine = "r"), list(label = "tabelas-df-b", code = "", opts = list(
     label = "\"tabelas-df-b\"", exercise = "TRUE", exercise.setup = "\"setupAirquality\""), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
-    label = "tabelas-df-b-check")), solution = structure("nrow(airquality)", chunk_opts = list(
-    label = "tabelas-df-b-solution")), options = list(eval = FALSE, 
-    echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
-    collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
-    strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
-    cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
-    cache.lazy = TRUE, dependson = NULL, autodep = FALSE, cache.rebuild = FALSE, 
-    fig.keep = "high", fig.show = "asis", fig.align = "default", 
-    fig.path = "tutorial_files/figure-html/", dev = "png", dev.args = NULL, 
-    dpi = 192, fig.ext = "png", fig.width = 6.5, fig.height = 4, 
-    fig.env = "figure", fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", 
-    fig.subcap = NULL, fig.pos = "", out.width = 624, out.height = NULL, 
-    out.extra = NULL, fig.retina = 2, external = TRUE, sanitize = FALSE, 
-    interval = 1, aniopts = "controls,loop", warning = TRUE, 
-    error = FALSE, message = TRUE, render = NULL, ref.label = NULL, 
-    child = NULL, engine = "r", split = FALSE, include = TRUE, 
-    purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
-    exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-    exercise.error.check.code = "gradethis_error_checker()", 
-    exercise.reveal_solution = FALSE, label = "tabelas-df-b", 
-    exercise = TRUE, exercise.setup = "setupAirquality", code = "", 
-    out.width.px = 624, out.height.px = 384, params.src = "tabelas-df-b, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+    engine = "r")), code_check = NULL, error_check = NULL, check = structure(c("grade_this({", 
+"  if (identical(.result, .solution)) {", "    pass(\"Muito bom! Você conseguiu contar as linhas corretamente.\")", 
+"  }", "  fail()", "})"), chunk_opts = list(label = "tabelas-df-b-check")), 
+    solution = structure("nrow(airquality)", chunk_opts = list(
+        label = "tabelas-df-b-solution")), options = list(eval = FALSE, 
+        echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
+        collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
+        strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
+        cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "tabelas-df-b", 
+        exercise = TRUE, exercise.setup = "setupAirquality", 
+        code = "", out.width.px = 624, out.height.px = 384, params.src = "tabelas-df-b, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -408,31 +420,33 @@ learnr:::store_exercise_cache("tabelas-df-c", list(setup = "airquality", chunks 
     code = "airquality", opts = list(label = "\"setupAirquality\""), 
     engine = "r"), list(label = "tabelas-df-c", code = "", opts = list(
     label = "\"tabelas-df-c\"", exercise = "TRUE", exercise.setup = "\"setupAirquality\""), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
-    label = "tabelas-df-c-check")), solution = structure(c("head(airquality)", 
-"# A função head() retorna as 6 primeiras linhas da base."), chunk_opts = list(
-    label = "tabelas-df-c-solution")), options = list(eval = FALSE, 
-    echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
-    collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
-    strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
-    cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
-    cache.lazy = TRUE, dependson = NULL, autodep = FALSE, cache.rebuild = FALSE, 
-    fig.keep = "high", fig.show = "asis", fig.align = "default", 
-    fig.path = "tutorial_files/figure-html/", dev = "png", dev.args = NULL, 
-    dpi = 192, fig.ext = "png", fig.width = 6.5, fig.height = 4, 
-    fig.env = "figure", fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", 
-    fig.subcap = NULL, fig.pos = "", out.width = 624, out.height = NULL, 
-    out.extra = NULL, fig.retina = 2, external = TRUE, sanitize = FALSE, 
-    interval = 1, aniopts = "controls,loop", warning = TRUE, 
-    error = FALSE, message = TRUE, render = NULL, ref.label = NULL, 
-    child = NULL, engine = "r", split = FALSE, include = TRUE, 
-    purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
-    exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-    exercise.error.check.code = "gradethis_error_checker()", 
-    exercise.reveal_solution = FALSE, label = "tabelas-df-c", 
-    exercise = TRUE, exercise.setup = "setupAirquality", code = "", 
-    out.width.px = 624, out.height.px = 384, params.src = "tabelas-df-c, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+    engine = "r")), code_check = NULL, error_check = NULL, check = structure(c("grade_this({", 
+"  if (identical(.result, .solution)) {", "    pass(\"Muito bom! A função `head()` mostra as seis primeiras linhas de um data.frame\")", 
+"  }", "  fail()", "})"), chunk_opts = list(label = "tabelas-df-c-check")), 
+    solution = structure(c("head(airquality)", "# A função head() retorna as 6 primeiras linhas da base."
+    ), chunk_opts = list(label = "tabelas-df-c-solution")), options = list(
+        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
+        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
+        highlight = FALSE, strip.white = TRUE, size = "normalsize", 
+        background = "#F7F7F7", cache = 0, cache.path = "tutorial_cache/html/", 
+        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
+        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
+        fig.show = "asis", fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "tabelas-df-c", 
+        exercise = TRUE, exercise.setup = "setupAirquality", 
+        code = "", out.width.px = 624, out.height.px = 384, params.src = "tabelas-df-c, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -447,32 +461,33 @@ learnr:::store_exercise_cache("tabelas-df-d", list(setup = "airquality", chunks 
     code = "airquality", opts = list(label = "\"setupAirquality\""), 
     engine = "r"), list(label = "tabelas-df-d", code = "", opts = list(
     label = "\"tabelas-df-d\"", exercise = "TRUE", exercise.setup = "\"setupAirquality\""), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = structure(c("gradethis::grade_this({", 
-"  gradethis::pass_if_equal()", "  gradethis::fail()", "})"), chunk_opts = list(
-    label = "tabelas-df-d-check")), solution = structure(c("colnames(airquality)", 
-"", "# names(airquality) também funciona. Verificar como dar mais de uma solução possível."
-), chunk_opts = list(label = "tabelas-df-d-solution")), options = list(
-    eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
-    tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
-    highlight = FALSE, strip.white = TRUE, size = "normalsize", 
-    background = "#F7F7F7", cache = 0, cache.path = "tutorial_cache/html/", 
-    cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
-    cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-    fig.align = "default", fig.path = "tutorial_files/figure-html/", 
-    dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
-    fig.width = 6.5, fig.height = 4, fig.env = "figure", fig.cap = NULL, 
-    fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, fig.pos = "", 
-    out.width = 624, out.height = NULL, out.extra = NULL, fig.retina = 2, 
-    external = TRUE, sanitize = FALSE, interval = 1, aniopts = "controls,loop", 
-    warning = TRUE, error = FALSE, message = TRUE, render = NULL, 
-    ref.label = NULL, child = NULL, engine = "r", split = FALSE, 
-    include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
-    exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-    exercise.error.check.code = "gradethis_error_checker()", 
-    exercise.reveal_solution = FALSE, label = "tabelas-df-d", 
-    exercise = TRUE, exercise.setup = "setupAirquality", code = "", 
-    out.width.px = 624, out.height.px = 384, params.src = "tabelas-df-d, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+    engine = "r")), code_check = NULL, error_check = NULL, check = structure(c("grade_this({", 
+"  if (identical(.result, .solution)) {", "    pass(\"Muito bom! Você conseguiu consultar o nome das colunas corretamente. Existe mais de uma função que possibilita conferir o nome da colunas de um data.frame, como:  `colnames()` e `names()`.\")", 
+"  }", "  fail()", "})"), chunk_opts = list(label = "tabelas-df-d-check")), 
+    solution = structure(c("colnames(airquality)", "", "# names(airquality) também funciona. Verificar como dar mais de uma solução possível."
+    ), chunk_opts = list(label = "tabelas-df-d-solution")), options = list(
+        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
+        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
+        highlight = FALSE, strip.white = TRUE, size = "normalsize", 
+        background = "#F7F7F7", cache = 0, cache.path = "tutorial_cache/html/", 
+        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
+        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
+        fig.show = "asis", fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "tabelas-df-d", 
+        exercise = TRUE, exercise.setup = "setupAirquality", 
+        code = "", out.width.px = 624, out.height.px = 384, params.src = "tabelas-df-d, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -487,31 +502,33 @@ learnr:::store_exercise_cache("tabelas-df-e", list(setup = "airquality", chunks 
     code = "airquality", opts = list(label = "\"setupAirquality\""), 
     engine = "r"), list(label = "tabelas-df-e", code = "", opts = list(
     label = "\"tabelas-df-e\"", exercise = "TRUE", exercise.setup = "\"setupAirquality\""), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = structure(c("gradethis::grade_this({", 
-"  gradethis::pass_if_equal()", "  gradethis::fail()", "})"), chunk_opts = list(
-    label = "tabelas-df-e-check")), solution = structure("class(airquality$Ozone)", chunk_opts = list(
-    label = "tabelas-df-e-solution")), options = list(eval = FALSE, 
-    echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
-    collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
-    strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
-    cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
-    cache.lazy = TRUE, dependson = NULL, autodep = FALSE, cache.rebuild = FALSE, 
-    fig.keep = "high", fig.show = "asis", fig.align = "default", 
-    fig.path = "tutorial_files/figure-html/", dev = "png", dev.args = NULL, 
-    dpi = 192, fig.ext = "png", fig.width = 6.5, fig.height = 4, 
-    fig.env = "figure", fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", 
-    fig.subcap = NULL, fig.pos = "", out.width = 624, out.height = NULL, 
-    out.extra = NULL, fig.retina = 2, external = TRUE, sanitize = FALSE, 
-    interval = 1, aniopts = "controls,loop", warning = TRUE, 
-    error = FALSE, message = TRUE, render = NULL, ref.label = NULL, 
-    child = NULL, engine = "r", split = FALSE, include = TRUE, 
-    purl = TRUE, max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
-    exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-    exercise.error.check.code = "gradethis_error_checker()", 
-    exercise.reveal_solution = FALSE, label = "tabelas-df-e", 
-    exercise = TRUE, exercise.setup = "setupAirquality", code = "", 
-    out.width.px = 624, out.height.px = 384, params.src = "tabelas-df-e, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+    engine = "r")), code_check = NULL, error_check = NULL, check = structure(c("grade_this({", 
+"  if (identical(.result, .solution)) {", "    pass(\"Muito bom! Você conseguiu verificar a classe da coluna Ozone corretamente.\")", 
+"  }", "  fail()", "})"), chunk_opts = list(label = "tabelas-df-e-check")), 
+    solution = structure("class(airquality$Ozone)", chunk_opts = list(
+        label = "tabelas-df-e-solution")), options = list(eval = FALSE, 
+        echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
+        collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
+        strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
+        cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "tabelas-df-e", 
+        exercise = TRUE, exercise.setup = "setupAirquality", 
+        code = "", out.width.px = 624, out.height.px = 384, params.src = "tabelas-df-e, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -526,33 +543,33 @@ learnr:::store_exercise_cache("tabelas-df-f", list(setup = "airquality", chunks 
     code = "airquality", opts = list(label = "\"setupAirquality\""), 
     engine = "r"), list(label = "tabelas-df-f", code = "", opts = list(
     label = "\"tabelas-df-f\"", exercise = "TRUE", exercise.setup = "\"setupAirquality\""), 
-    engine = "r")), code_check = NULL, error_check = NULL, check = structure("gradethis::grade_this_code()", chunk_opts = list(
-    label = "tabelas-df-f-check")), solution = structure(c("dplyr::glimpse(airquality)", 
-"# A função glimpse() do pacote dpyr retorna várias informações interessantes:", 
-"# O número de linhas", "# O número de colunas", "# O nome das colunas", 
-"# O tipo de cada coluna", "# Algumas observações da coluna, para ter uma ideia dos dados disponíveis."
-), chunk_opts = list(label = "tabelas-df-f-solution")), options = list(
-    eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
-    tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
-    highlight = FALSE, strip.white = TRUE, size = "normalsize", 
-    background = "#F7F7F7", cache = 0, cache.path = "tutorial_cache/html/", 
-    cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
-    cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-    fig.align = "default", fig.path = "tutorial_files/figure-html/", 
-    dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
-    fig.width = 6.5, fig.height = 4, fig.env = "figure", fig.cap = NULL, 
-    fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, fig.pos = "", 
-    out.width = 624, out.height = NULL, out.extra = NULL, fig.retina = 2, 
-    external = TRUE, sanitize = FALSE, interval = 1, aniopts = "controls,loop", 
-    warning = TRUE, error = FALSE, message = TRUE, render = NULL, 
-    ref.label = NULL, child = NULL, engine = "r", split = FALSE, 
-    include = TRUE, purl = TRUE, max.print = 1000, tutorial = TRUE, 
-    exercise.timelimit = 60, exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
-    exercise.error.check.code = "gradethis_error_checker()", 
-    exercise.reveal_solution = FALSE, label = "tabelas-df-f", 
-    exercise = TRUE, exercise.setup = "setupAirquality", code = "", 
-    out.width.px = 624, out.height.px = 384, params.src = "tabelas-df-f, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
-    fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
+    engine = "r")), code_check = NULL, error_check = NULL, check = structure(c("grade_this({", 
+"  if (identical(.result, .solution)) {", "    pass(\"Muito bom! A função glimpse() do pacote dpyr retorna várias informações interessantes sobre uma base de dados, como: o número de linhas, número de colunas, nome das colunas, tipo de cada coluna e as primeiras observações da coluna, para ter uma ideia dos dados disponíveis.\")", 
+"  }", "  fail()", "})"), chunk_opts = list(label = "tabelas-df-f-check")), 
+    solution = structure("dplyr::glimpse(airquality)", chunk_opts = list(
+        label = "tabelas-df-f-solution")), options = list(eval = FALSE, 
+        echo = TRUE, results = "markup", tidy = FALSE, tidy.opts = NULL, 
+        collapse = FALSE, prompt = FALSE, comment = NA, highlight = FALSE, 
+        strip.white = TRUE, size = "normalsize", background = "#F7F7F7", 
+        cache = 0, cache.path = "tutorial_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "tutorial_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 6.5, fig.height = 4, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 624, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        max.print = 1000, tutorial = TRUE, exercise.timelimit = 60, 
+        exercise.checker = "function (label = NULL, solution_code = NULL, user_code = NULL, \n    check_code = NULL, envir_result = NULL, evaluate_result = NULL, \n    envir_prep = NULL, last_value = NULL, ...) \n{\n    (utils::getFromNamespace(\"check_exercise\", \"gradethis\"))(label = label, \n        solution_code = solution_code, user_code = user_code, \n        check_code = check_code, envir_result = envir_result, \n        evaluate_result = evaluate_result, envir_prep = envir_prep, \n        last_value = last_value, ...)\n}", 
+        exercise.error.check.code = "gradethis_error_checker()", 
+        exercise.reveal_solution = FALSE, label = "tabelas-df-f", 
+        exercise = TRUE, exercise.setup = "setupAirquality", 
+        code = "", out.width.px = 624, out.height.px = 384, params.src = "tabelas-df-f, exercise = TRUE, exercise.setup = \"setupAirquality\"", 
+        fig.num = 0L, exercise.df_print = "paged"), engine = "r"))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
