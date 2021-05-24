@@ -20,8 +20,8 @@ knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
 
 gradethis::gradethis_setup(
   code_correct =  "Correto! Parabéns!",
-  pass = "Correto! Parabéns!",
-  fail =  "Incorreto. Tente novamente! "
+  pass = "Correto! Parabéns!"#,
+  #fail =  "Incorreto. Tente novamente! "
 )
 
 # Fazer: frases de feedback do gradethis responderem em Português
@@ -41,6 +41,11 @@ gradethis::gradethis_setup(
 ## Dataframes
 
 A base de dados `airquality` apresenta dados de qualidade do ar obtidos diariamente, em Nova York, entre os meses de maio e setembro de 1973:
+
+```{r echo=TRUE}
+airquality
+```
+
 
 ```{r setupAirquality}
 airquality
