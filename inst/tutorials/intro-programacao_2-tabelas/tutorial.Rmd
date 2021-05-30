@@ -50,7 +50,7 @@ airquality
 
 Use o data.frame airquality para responder às questões abaixo:
 
-a) Quantas colunas `airquality` tem?
+a) Use uma função em R para descobrir quantas colunas a base `airquality` tem:
 
 ```{r tabelas-df-a, exercise = TRUE, exercise.setup = "setupAirquality"}
 
@@ -65,11 +65,10 @@ ncol(airquality)
 ```
 
 
-
 ```{r tabelas-df-a-check}
 grade_this({
   if (identical(.result, .solution)) {
-    pass("Muito bom! Você conseguiu contar as colunas corretamente.")
+    pass("Muito bom! Você contou as colunas corretamente.")
   }
   fail()
 })
@@ -92,37 +91,32 @@ nrow(airquality)
 ```{r tabelas-df-b-check}
 grade_this({
   if (identical(.result, .solution)) {
-    pass("Muito bom! Você conseguiu contar as linhas corretamente.")
+    pass("Muito bom! Você contou as linhas corretamente.")
   }
   fail()
 })
 ```
 
-c) Execute a função `head()`. Observe o que ela retorna.
+c) Execute a função `head()`. O que essa função retorna?
 
-```{r tabelas-df-c, exercise = TRUE, exercise.setup = "setupAirquality"}
-
-```
-
-```{r tabelas-df-c-hint}
-___(airquality)
-```
-
-```{r tabelas-df-c-solution}
+```{r tabelas-df-c-codigo, exercise = TRUE, exercise.setup = "setupAirquality"}
 head(airquality)
-# A função head() retorna as 6 primeiras linhas da base.
 ```
 
 
-
-```{r tabelas-df-c-check}
-grade_this({
-  if (identical(.result, .solution)) {
-    pass("Muito bom! A função `head()` mostra as seis primeiras linhas de um data.frame")
-  }
-  fail()
-})
+```{r tabelas-df-c, echo=FALSE}
+question("O que a função `head()` retorna?",
+  answer("A função `head()` retorna as últimas linhas de um data.frame"),
+  answer("A função `head()` retorna as linhas aleatórias de um data.frame"),
+  answer('A função `head()` retorna as primeiras linhas de um data.frame', correct = TRUE),
+  allow_retry = TRUE,
+  random_answer_order = TRUE,
+  correct = "Correto! Parabéns. A função `head()` é útil para observar as primeiras linhas de um data.frame. <br> Curiosidades: <br> - A função `tail()` é similar, porém apresenta as últimas linhas. <br> - A função `dplyr::slice_sample(airquality, n = 6)` nos permite buscar linhas aleatórias na base de dados, usando o número de linhas que queremos no argumento `n`. <br> <b> Você pode experimentar esses códigos no campo de códigos acima!</b> :)",
+  incorrect = "Incorreto. Tente novamente :) <br> Dica 1: Experimente clicar em `Executar código` e observar os resultados." 
+)
 ```
+
+
 
 d) Quais são os nomes das colunas?
 
@@ -136,14 +130,12 @@ ___(airquality)
 
 ```{r tabelas-df-d-solution}
 colnames(airquality)
-
-# names(airquality) também funciona. Verificar como dar mais de uma solução possível.
 ```
 
 ```{r tabelas-df-d-check}
 grade_this({
   if (identical(.result, .solution)) {
-    pass("Muito bom! Você conseguiu consultar o nome das colunas corretamente. Existe mais de uma função que possibilita conferir o nome da colunas de um data.frame, como:  `colnames()` e `names()`.")
+    pass("Muito bom! Você consultou o nome das colunas corretamente. Existe mais de uma função que possibilita conferir o nome da colunas de um data.frame, como:  `colnames()` e `names()`.")
   }
   fail()
 })
@@ -167,7 +159,7 @@ class(airquality$Ozone)
 ```{r tabelas-df-e-check}
 grade_this({
   if (identical(.result, .solution)) {
-    pass("Muito bom! Você conseguiu verificar a classe da coluna Ozone corretamente.")
+    pass("Muito bom! Você verificou a classe da coluna Ozone corretamente.")
   }
   fail()
 })
@@ -175,28 +167,42 @@ grade_this({
 
 f) Execute o seguinte código `dplyr::glimpse(airquality)`, e observe o que ele retorna.
 
-```{r tabelas-df-f, exercise = TRUE, exercise.setup = "setupAirquality"}
-
-```
-
-
-```{r tabelas-df-f-solution}
+```{r tabelas-df-f-codigo, exercise = TRUE, exercise.setup = "setupAirquality"}
 dplyr::glimpse(airquality)
 ```
 
-```{r tabelas-df-f-check}
-grade_this({
-  if (identical(.result, .solution)) {
-    pass("Muito bom! A função glimpse() do pacote dpyr retorna várias informações interessantes sobre uma base de dados, como: o número de linhas, número de colunas, nome das colunas, tipo de cada coluna e as primeiras observações da coluna, para ter uma ideia dos dados disponíveis.")
-  }
-  fail()
-})
+```{r tabelas-df-f, echo=FALSE}
+question("O que o código `dplyr::glimpse(airquality)` retorna? Selecione todas as opções válidas:",
+  answer("Número de linhas de uma base de dados", correct = TRUE),
+  answer("Número de colunas de uma base de dados", correct = TRUE),
+    answer("Nome das colunas de uma base de dados", correct = TRUE),
+  answer("Classe das colunas de uma base de dados", correct = TRUE),
+    answer("Observações das primeiras linhas em uma base de dados", correct = TRUE),
+    answer("Observações das últimas linhas  em uma base de dados"),
+      answer("Observações de linhas aleatórias em uma base de dados"),
+      answer("A média dos valores de cada coluna"),
+  allow_retry = TRUE,
+  random_answer_order = TRUE,
+  correct = "Muito bom! A função `glimpse()` do pacote `dplyr`retorna várias informações interessantes sobre uma base de dados, como: o número de linhas, número de colunas, nome das colunas, classe de cada coluna e as primeiras observações da coluna, para ter uma ideia dos dados disponíveis. <br> <b> Você pode experimentar esses códigos no campo de códigos acima!</b> :)",
+  incorrect = "Incorreto. Tente novamente :) <br> Dica 1: Experimente clicar em `Executar código` e observar os resultados." 
+)
 ```
+
+
 
 
 g) Utilizando a resposta da questão anterior, quais são os tipos de cada coluna da tabela `airquality`?
 
-> FAZER UMA PERGUNTA  DE MULTIPLA ESCOLHA AQUI
+```{r tabelas-df-g, echo=FALSE}
+question("Quais são os tipos de cada coluna da tabela `airquality`?",
+  answer("Integer, Integer, Double, Integer, Integer, Integer", correct = TRUE),
+    answer("Todos são numéricos"),
+  allow_retry = TRUE,
+  random_answer_order = TRUE,
+  correct = "Muito bom! :)",
+  incorrect = "Incorreto. Tente novamente :) <br> Dica 1: Experimente clicar em `Executar código` e observar os resultados." 
+)
+```
 
 
 ## Desafio
