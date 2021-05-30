@@ -2,3 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
+inst/tutorials/*.html
+inst/tutorials/intro-programacao_1-introducao/tutorial.html
+inst/tutorials/intro-programacao_2-tabelas/tutorial.html
+inst/tutorials/intro-programacao_3-filtros/tutorial.html
+inst/tutorials/intro-programacao_4-operadores/tutorial.html
+inst/tutorials/intro-programacao_5-loops/tutorial.html
+inst/tutorials/intro-programacao_6-funcoes/tutorial.html
