@@ -28,3 +28,14 @@ knitr::opts_chunk$set(
 # install.packages("remotes")
 remotes::install_github("curso-r/CursoRTarefas")
 ```
+
+## Tarefas disponíveis
+
+```{r echo=FALSE}
+library(magrittr, include.only = "%>%")
+list.files(path = "inst/tutorials/") %>% 
+  tibble::as_tibble() %>% 
+  tidyr::separate(value, into = c("curso", "tarefa"), "_") %>% 
+  knitr::kable()
+```
+

@@ -15,3 +15,15 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 # install.packages("remotes")
 remotes::install_github("curso-r/CursoRTarefas")
 ```
+
+## Tarefas disponíveis
+
+| curso             | tarefa       |
+|:------------------|:-------------|
+| intro-programacao | 1-introducao |
+| intro-programacao | 2-tabelas    |
+| intro-programacao | 3-filtros    |
+| intro-programacao | 4-operadores |
+| intro-programacao | 5-loops      |
+| intro-programacao | 6-funcoes    |
+| intro-programacao | testes       |

@@ -23,9 +23,6 @@ gradethis::gradethis_setup(
   pass = "Correto! Parabéns!"#,
   #fail =  "Incorreto. Tente novamente! "
 )
-
-# Fazer: frases de feedback do gradethis responderem em Português
-
 ```
 
 
