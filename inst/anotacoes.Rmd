@@ -1,0 +1,38 @@
+---
+title: "Anotacoes internas"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Padrões para seguir
+
+- Ao nomear os tutoriais na pasta inst/tutorials, usar o padrao: codigo-curso_0-nometarefa. Ex: `intro-programacao_1-introducao`
+
+
+- Nos chunks de exercícios/perguntas, sempre começar com o nometarefa. Assim fica fácil de identificar o exercício no resultado do learnrhash.
+
+
+## Coisas para melhorar
+
+- [ ] Melhorar as respostas automáticas do **gradethis**. Algumas já traduzi e outras ainda precisam ficar em português.
+
+- [x] Faz sentido ter dicas e enviar as respostas depois? as dicas já direcionam para as respostas haha. UPDATE: Adicionei o chunk option `exercise.reveal_solution = FALSE`, assim não mostra as respostas.
+
+- [ ] o learnrhash adiciona um botao escrito generate. não encontrei algum arg pra deixar em portugues.
+
+- [ ] Melhorar o css para ficar parecido com a identidade visual da Curso-R
+
+
+### Comentários
+
+- As pessoas precisam clicar em "enviar resposta" para que o learnrhash guarde as respostas corretamente.
+
+- precisamos testar!! depois de avançar e discutir mais, acho que podemos fazer uma rodada de teste com o pessoal.
+
+
+- Acho que compensa não apenas transformar os exercicios em learnr, mas também verificar se eles estão dando match com cada aula.
+
+
