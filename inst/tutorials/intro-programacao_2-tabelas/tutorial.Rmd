@@ -32,7 +32,7 @@ gradethis::gradethis_setup(
 >
 > Este material faz parte do curso [Introdução à programação com R](https://curso-r.com/cursos/intro-programacao/), da [Curso-R](https://www.curso-r.com/).
 >
-> Caso tenha dúvidas, pedimos que escreva no [<i class="fab fa-discourse"></i> Discourse](https://discourse.curso-r.com/).
+> Caso tenha dúvidas sobre como resolver os exercícios,  pedimos que escreva no [<i class="fab fa-discourse"></i> Discourse](https://discourse.curso-r.com/).
 
 
 ## Dataframes
