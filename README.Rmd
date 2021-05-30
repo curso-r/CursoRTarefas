@@ -19,15 +19,31 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-
+Este pacote armazena as tarefas de alguns cursos da Curso-R.
 
 ## Instalação
 
+Para instalar o pacote, execute o código abaixo:
 
 ``` r
 # install.packages("remotes")
 remotes::install_github("curso-r/CursoRTarefas")
 ```
+
+Após a instalação, é possível acessar as tarefas através do painel `Tutorial` na IDE RStudio, escolhendo o tutorial e clicando em `Start Tutorial` (o tutorial será aberto no RStudio):
+
+```{r echo=FALSE}
+knitr::include_graphics("man/figures/README-printscreen.png")
+```
+
+Outra forma de acessar as tarefas é utilizando a seguinte função (o tutorial será aberto no navegador):
+
+```{r eval=FALSE, include=TRUE}
+learnr::run_tutorial("intro-programacao_1-introducao", # id do tutorial
+                     package = "CursoRTarefas")
+```
+
+
 
 ## Tarefas disponíveis
 
@@ -35,7 +51,8 @@ remotes::install_github("curso-r/CursoRTarefas")
 library(magrittr, include.only = "%>%")
 list.files(path = "inst/tutorials/") %>% 
   tibble::as_tibble() %>% 
-  tidyr::separate(value, into = c("curso", "tarefa"), "_") %>% 
+  tidyr::separate(value, into = c("curso", "tarefa"), "_", remove = FALSE) %>% 
+  dplyr::rename("id_tutorial" = value) %>% 
   knitr::kable()
 ```
 
