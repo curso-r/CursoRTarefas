@@ -14,6 +14,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Nos chunks de exercícios/perguntas, sempre começar com o nometarefa. Assim fica fácil de identificar o exercício no resultado do learnrhash.
 
+- Por enquanto, usar:
+
+```
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Parabéns! ...escrever mensagem... :)")
+  }
+  fail()
+})
+```
 
 ## Coisas para melhorar
 
