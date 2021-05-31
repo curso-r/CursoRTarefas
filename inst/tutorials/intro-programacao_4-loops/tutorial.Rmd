@@ -1,5 +1,5 @@
 ---
-title: "Tarefas: Loops"
+title: "Tarefas: Controle de fluxo e repetições"
 description: "Exercícios do curso 'Introdução à programação com R'"
 encoding: "UTF-8"
 output: 

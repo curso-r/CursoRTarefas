@@ -163,6 +163,131 @@ question("Os resultados são iguais? Porquê?",
 ```
 
 
+
+## Operadores
+
+1) Considere o vetor booleano abaixo:
+
+```{r echo=TRUE}
+dolar_subiu <- c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE)
+```
+
+```{r setupintroducao-vetores}
+dolar_subiu <- c(TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE)
+dolar_subiu
+```
+
+Este vetor tem informação de uma semana (7 dias) indicando se o dolar subiu (`TRUE`) (ou não subiu - `FALSE`) no respectivo dia.
+
+Interprete os resultados dos códigos abaixo:
+
+a) Função `length()`:
+
+```{r introducao-vetores-1a-codigo, exercise = TRUE, exercise.setup = "setupintroducao-vetores", exercise.eval = TRUE}
+length(dolar_subiu)
+```
+
+```{r introducao-vetores-1a, echo=FALSE}
+question("a) O que o resultado do código significa?",
+  answer("O resultado representa o número de dias da semana", correct = TRUE),
+    answer("O resultado representa o número de dias em que o dólar subiu"),
+      answer("..."),
+        answer("....."),
+  allow_retry = TRUE,
+  random_answer_order = TRUE,
+  correct = "Correto! Parabéns. A função length() retorna o tamanho do vetor. O vetor 'dolar_subiu' possui 7 elementos, que representa o número de dias da semana.",
+  incorrect = "Incorreto. Tente novamente :) <br> Dica: Experimente clicar em `Executar código` e observar os resultados." 
+)
+```
+
+
+
+b) Uso de colchetes
+
+```{r introducao-vetores-1b-codigo, exercise = TRUE, exercise.setup = "setupintroducao-vetores", exercise.eval = TRUE}
+dolar_subiu[2]
+```
+
+```{r introducao-vetores-1b, echo=FALSE}
+question("b) Considerando que a semana começa no domingo, o que o resultado do código significa?",
+  answer("O dólar subiu na segunda-feira", correct = TRUE),
+    answer("O dólar subiu na terça-feira"),
+      answer("O dólar diminuiu na segunda-feira"),
+        answer("O dólar diminuiu na terça-feira"),
+  allow_retry = TRUE,
+  random_answer_order = TRUE,
+  correct = "Correto! Parabéns. Usar `dolar_subiu[2]` significa que queremos obter o segundo elemento do vetor `dolar_subiu`. O segundo elemento selecionado representa a segunda-feira, então aa segunda-feira o dolar subiu (TRUE).",
+  incorrect = "Incorreto. Tente novamente :) <br> Dica: Experimente clicar em `Executar código` e observar os resultados." 
+)
+```
+
+
+
+c) Somando um vetor
+
+
+```{r introducao-vetores-1c-codigo, exercise = TRUE, exercise.setup = "setupintroducao-vetores", exercise.eval = TRUE}
+sum(dolar_subiu)
+```
+
+```{r introducao-vetores-1c, echo=FALSE}
+question("c) O que o resultado do código significa?",
+  answer("O dólar subiu em 4 dias naquela semana", correct = TRUE),
+    answer("O dólar sempre sobe 4 vezes"),
+      answer("O dólar diminuiu em 4 dias naquela semana"),
+        answer("O dólar subiu no quarto dia da semana"),
+  allow_retry = TRUE,
+  random_answer_order = TRUE,
+  correct = "Correto! Parabéns. A função sum() realiza a soma dos elementos do vetor. Como o vetor possui dados do tipo lógico (TRUE ou FALSE), o R entende que TRUE = 1 e FALSE = 0. O resultado de sum(dolar_subiu) é 4, portanto o dólar subiu em 4 dias na semana.",
+  incorrect = "Incorreto. Tente novamente :) <br> Dica: Experimente clicar em `Executar código` e observar os resultados." 
+)
+```
+
+
+
+d) Média de um vetor
+
+```{r introducao-vetores-1d-codigo, exercise = TRUE, exercise.setup = "setupintroducao-vetores", exercise.eval = TRUE}
+mean(dolar_subiu)
+```
+
+```{r introducao-vetores-1d, echo=FALSE}
+question("d) O que o resultado do código significa?",
+  answer("O dólar subiu em média em 57% dos dias naquela semana.", correct = TRUE),
+    answer("O dólar diminuiu em média em 57% dos dias naquela semana."),
+  
+      answer("...."),
+  
+  allow_retry = TRUE,
+  random_answer_order = TRUE,
+  correct = "Correto! Parabéns. A função mean() realiza a média dos elementos do vetor. O resultado representa a média de dias em que o dólar subiu.",
+  incorrect = "Incorreto. Tente novamente :) <br> Dica: Experimente clicar em `Executar código` e observar os resultados." 
+)
+```
+
+
+e) Agora observe a saída de `as.numeric(dolar_subiu)`. O que o R fez?
+
+```{r introducao-vetores-1e-codigo, exercise = TRUE, exercise.setup = "setupintroducao-vetores", exercise.eval = TRUE}
+as.numeric(dolar_subiu)
+```
+
+```{r introducao-vetores-1e, echo=FALSE}
+question("e) O que o resultado do código significa?",
+  answer("TRUE foi transformado em 1, e FALSE foi transformado em 0", correct = TRUE),
+    answer("TRUE foi transformado em 0, e FALSE foi transformado em 1"),
+  
+      answer("O R fez uma operação incorreta"),
+        answer("..."),
+  
+  allow_retry = TRUE,
+  random_answer_order = TRUE,
+  correct = "Correto! A função as.numeric() transforma um vetor em numérico (quando possível). No vetor que o R retornou, TRUE foi transformado em 1, e FALSE foi transformado em 0.",
+  incorrect = "Incorreto. Tente novamente :) <br> Dica: Experimente clicar em `Executar código` e observar os resultados." 
+)
+```
+
+
 ## Enviar as respostas
 
 Se você completou a tarefa e quer submeter, clique no botão abaixo para gerar o seu código hash e envie usando o formulário a seguir:
