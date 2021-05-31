@@ -34,9 +34,8 @@ gradethis::gradethis_setup(
 >
 > Caso tenha dúvidas sobre como resolver os exercícios, pedimos que escreva no [<i class="fab fa-discourse"></i> Discourse](https://discourse.curso-r.com/).
 
-## Exercícios
 
-### Objetos
+## Objetos
 
 ```{r setupFrutas}
 frutas <- c("maçã", "banana", "melancia")
