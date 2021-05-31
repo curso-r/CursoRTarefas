@@ -20,11 +20,10 @@ knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
 
 gradethis::gradethis_setup(
   code_correct =  "Correto! Parabéns!",
-  pass = "Correto! Parabéns!",
-  fail =  "Incorreto. Tente novamente! "
+  pass = "Correto! Parabéns!"#,
+  #fail =  "Incorreto. Tente novamente! "
 )
 
-# Fazer: frases de feedback do gradethis responderem em Português
 
 ```
 

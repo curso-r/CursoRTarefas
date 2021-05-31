@@ -109,7 +109,7 @@ question("O tamanho do vetor frutas mudou?",
   allow_retry = TRUE,
   random_answer_order = TRUE,
   correct = "Correto! Parabéns. O número de caracteres em cada elemento aumentou, porém o número de elementos continua o mesmo.",
-  incorrect = "Incorreto. Tente novamente :) \n Dica 1: Experimente clicar em `Executar código` e observar os resultados. \n Dica 2: experimente executar `length(paste('eu gosto de', frutas))` para saber o número de elementos que o resultado contém." 
+  incorrect = "Incorreto. Tente novamente :) <br> Dica 1: Experimente clicar em `Executar código` e observar os resultados. <br> Dica 2: experimente executar `length(paste('eu gosto de', frutas))` para saber o número de elementos que o resultado contém." 
 )
 ```
 
@@ -158,7 +158,7 @@ question("Os resultados são iguais? Porquê?",
   allow_retry = TRUE,
   random_answer_order = TRUE,
   correct = "Correto! Parabéns.",
-  incorrect = "Incorreto. Tente novamente :) \n Dica: Experimente clicar em `Executar código` e observar os resultados." 
+  incorrect = "Incorreto. Tente novamente :) <br> Dica: Experimente clicar em `Executar código` e observar os resultados." 
 )
 ```
 
