@@ -36,11 +36,8 @@ gradethis::gradethis_setup(
 > Caso tenha dúvidas sobre como resolver os exercícios,  pedimos que escreva no [<i class="fab fa-discourse"></i> Discourse](https://discourse.curso-r.com/).
 
 
-```{r setupAirquality}
-airquality
-``` 
 
-## Filtro e vetores lógicos
+## Filtrando vetores
 
 a) Use o vetor `numeross` abaixo para responder as questões seguintes:
 
@@ -49,171 +46,305 @@ numeross <- -4:2
 numeross
 ```
 
+
+```{r setupNumeross}
+numeross <- -4:2
+numeross
+``` 
+
+
+
 I) Escreva um código que devolva apenas valores positivos do vetor `numeross`.
 
-```{r filtros-ai, exercise = TRUE}
+```{r filtros-vetor-i, exercise = TRUE, exercise.setup = "setupNumeross"}
 
 ```
 
-```{r filtros-ai-hint}
+```{r filtros-vetor-i-hint}
 numeross[numeross ____]
 ```
 
-```{r filtros-ai-solution}
+```{r filtros-vetor-i-solution}
 numeross[numeross > 0]
 ```
 
-```{r filtros-ai-check}
-gradethis::grade_this_code()
+```{r filtros-vetor-i-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
 ```
 
 II) Escreva um código que devolta apenas os valores pares do vetor `numeross`. Dica: o operador `%%` devolve o resto da divisão entre dois números.
 
-```{r filtros-aii, exercise = TRUE}
+```{r filtros-vetor-ii, exercise = TRUE, exercise.setup = "setupNumeross"}
 
 ```
 
-```{r filtros-aii-hint-1}
+```{r filtros-vetor-ii-hint-1}
 numeross[numeross __ __ __ __]
 ```
 
-```{r filtros-aii-hint-2}
+```{r filtros-vetor-ii-hint-2}
 numeross[numeross %% __ == __]
 ```
 
-```{r filtros-aii-solution}
+```{r filtros-vetor-ii-solution}
 numeross[numeross %% 2 == 0]
 ```
 
 
-```{r filtros-aii-check}
-gradethis::grade_this_code()
+```{r filtros-vetor-ii-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
 ```
 
 
 III) Filtre o vetor para que retorne apenas aqueles valores que quando elevados a 2 são menores do que 4.
 
-```{r filtros-aiii, exercise = TRUE}
+```{r filtros-vetor-iii, exercise = TRUE, exercise.setup = "setupNumeross"}
 
 ```
 
-```{r filtros-aiii-hint-1}
+```{r filtros-vetor-iii-hint-1}
 numeross[_______________]
 ```
 
-```{r filtros-aiii-hint-2}
+```{r filtros-vetor-iii-hint-2}
 numeross[(numeros ^ 2) _____]
 ```
 
-```{r filtros-aiii-solution}
+```{r filtros-vetor-iii-solution}
 numeross[(numeross ^ 2) < 4]
 ```
 
-```{r filtros-aiii-check}
-gradethis::grade_this_code()
+```{r filtros-vetor-iii-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
 ```
 
+## Filtrando data.frames
+
+Para os exercícios de filtros de data.frames, vamos solicitar que faça usando R base e também `dplyr`. 
 
 b) Use o data.frame `airquality` para responder às questões abaixo:
 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+airquality
+``` 
+
+```{r setupAirquality}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+library(dplyr)
+airquality
+``` 
 
 I) Conte quantos `NA`s tem na coluna `Solar.R`. Dica: use '`$`', `is.na()` e `sum()`:
 
-```{r filtros-bi, exercise = TRUE, exercise.setup = "setupAirquality"}
+```{r filtros-df-i-base, exercise = TRUE, exercise.setup = "setupAirquality"}
 airquality
 ```
 
-```{r filtros-bi-hint-1}
+```{r filtros-df-i-base-hint-1}
 ___(___(airquality$Solar.R))
 ```
 
-
-```{r filtros-bi-hint-2}
+```{r filtros-df-i-base-hint-2}
 sum(___(airquality$Solar.R))
 ```
 
-```{r filtros-bi-solution}
+```{r filtros-df-i-base-solution}
 sum(is.na(airquality$Solar.R))
 ```
 
-```{r filtros-bi-check}
-gradethis::grade_this_code()
+```{r filtros-df-i-base-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
 ```
 
 
 II) Filtre a tabela `airquality` com apenas linhas em que `Solar.R` é `NA`.
 
-```{r filtros-bii, exercise = TRUE, exercise.setup = "setupAirquality"}
+- Faça com base R:
+
+
+```{r filtros-df-ii-base, exercise = TRUE, exercise.setup = "setupAirquality"}
 
 ```
 
-```{r filtros-bii-hint-1}
+```{r filtros-df-ii-base-hint-1}
 ____[___(airquality$Solar.R) ___ ]
 ```
 
-
-```{r filtros-bii-hint-2}
+```{r filtros-df-ii-base-hint-2}
 ____[is.na(airquality$Solar.R) ___ ]
 ```
 
-```{r filtros-bii-solution}
+```{r filtros-df-ii-base-solution}
 airquality[is.na(airquality$Solar.R), ]
 ```
 
-```{r filtros-bii-check}
-gradethis::grade_this_code()
+```{r filtros-df-ii-base-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
 ```
+
+
+- Faça com `dplyr`:
+
+```{r filtros-df-ii-dplyr, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r filtros-df-ii-dplyr-hint-1}
+filter(_____, is.na(___))
+```
+
+```{r filtros-df-ii-dplyr-solution}
+filter(airquality, is.na(Solar.R))
+```
+
+```{r filtros-df-ii-dplyr-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
+
+
 
 III) Filtre a tabela `airquality` com apenas linhas em que `Solar.R` NÃO é `NA`.
 
-```{r filtros-biii, exercise = TRUE, exercise.setup = "setupAirquality"}
+- Faça com base R:
+
+```{r filtros-df-iii-base, exercise = TRUE, exercise.setup = "setupAirquality"}
 
 ```
 
-```{r filtros-biii-hint-1}
+```{r filtros-df-iii-base-hint-1}
 ____[____(airquality$Solar.R) ___ ]
 ```
 
 
-```{r filtros-biii-hint-2}
+```{r filtros-df-iii-base-hint-2}
 ____[!is.na(airquality$Solar.R) ___ ]
 ```
 
-```{r filtros-biii-solution}
+```{r filtros-df-iii-base-solution}
 airquality[!is.na(airquality$Solar.R), ]
 ```
 
-```{r filtros-biii-check}
-gradethis::grade_this_code()
+```{r filtros-df-iii-base-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
+
+- Faça com `dplyr`:
+
+
+```{r filtros-df-iii-dplyr, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r filtros-df-iii-dplyr-hint-1}
+filter(___, !is.na(___))
+```
+
+
+```{r filtros-df-iii-dplyr-solution}
+filter(airquality, !is.na(Solar.R))
+```
+
+```{r filtros-df-iii-dplyr-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
 ```
 
 
 IV) Filtre a tabela `airquality` com apenas linhas em que `Solar.R` NÃO é `NA` e `Month` é igual a 5.
 
+- Faça com base R:
 
-```{r filtros-biv, exercise = TRUE, exercise.setup = "setupAirquality"}
+```{r filtros-df-iv-base, exercise = TRUE, exercise.setup = "setupAirquality"}
 
 ```
 
-```{r filtros-biv-hint-1}
+```{r filtros-df-iv-base-hint-1}
 airquality[_________________ _________, ]
 ```
 
 
-```{r filtros-biv-hint-2}
+```{r filtros-df-iv-base-hint-2}
 airquality[!is.na(airquality$Solar.R) & _________, ]
 ```
 
-```{r filtros-biv-solution}
+```{r filtros-df-iv-base-solution}
 airquality[!is.na(airquality$Solar.R) & airquality$Month == 5, ]
 
 ```
 
-```{r filtros-biv-check}
-gradethis::grade_this_code()
+```{r filtros-df-iv-base-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
+
+- Faça com `dplyr`:
+
+
+```{r filtros-df-iv-dplyr, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r filtros-df-iv-dplyr-hint-1}
+filter(____, !is.na(___), ____ == 5)
 ```
 
 
+```{r filtros-df-iv-dplyr-solution}
+filter(airquality, !is.na(Solar.R), Month == 5)
+```
+
+```{r filtros-df-iv-dplyr-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
 
 ## Enviar as respostas
 
