@@ -41,6 +41,6 @@ learnr::run_tutorial("intro-programacao_1-introducao", # id do tutorial
 | intro-programacao\_1-introducao | intro-programacao | 1-introducao |
 | intro-programacao\_2-tabelas    | intro-programacao | 2-tabelas    |
 | intro-programacao\_3-filtros    | intro-programacao | 3-filtros    |
-| intro-programacao\_4-operadores | intro-programacao | 4-operadores |
-| intro-programacao\_5-loops      | intro-programacao | 5-loops      |
-| intro-programacao\_6-funcoes    | intro-programacao | 6-funcoes    |
+| intro-programacao\_4-loops      | intro-programacao | 4-loops      |
+| intro-programacao\_5-funcoes    | intro-programacao | 5-funcoes    |
+| intro-programacao\_6-pipe       | intro-programacao | 6-pipe       |

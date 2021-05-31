@@ -49,10 +49,13 @@ learnr::run_tutorial("intro-programacao_1-introducao", # id do tutorial
 
 ```{r echo=FALSE}
 library(magrittr, include.only = "%>%")
-list.files(path = "inst/tutorials/") %>% 
-  tibble::as_tibble() %>% 
-  tidyr::separate(value, into = c("curso", "tarefa"), "_", remove = FALSE) %>% 
-  dplyr::rename("id_tutorial" = value) %>% 
+list.files(path = "inst/tutorials/") %>%
+  tibble::as_tibble() %>%
+  tidyr::separate(value,
+                  into = c("curso", "tarefa"),
+                  "_",
+                  remove = FALSE) %>%
+  dplyr::rename("id_tutorial" = value) %>%
   knitr::kable()
 ```
 

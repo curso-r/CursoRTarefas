@@ -1,5 +1,5 @@
 ---
-title: "Tarefas: Operadores"
+title: "Tarefas: Pipe"
 description: "Exercícios do curso 'Introdução à programação com R'"
 encoding: "UTF-8"
 output: 
@@ -34,6 +34,45 @@ gradethis::gradethis_setup(
 > Este material faz parte do curso [Introdução à programação com R](https://curso-r.com/cursos/intro-programacao/), da [Curso-R](https://www.curso-r.com/).
 >
 > Caso tenha dúvidas sobre como resulver os exercícios, pedimos que escreva no [<i class="fab fa-discourse"></i> Discourse](https://discourse.curso-r.com/).
+
+## Pipe
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(dplyr) # carregando o pacote dplyr para usar 
+# as funções filter e select
+
+library(magrittr) # carregando o pacote que contém o pipe %>% 
+
+
+airquality
+``` 
+
+
+1) O código a seguir foi apresentado em um exercício na tarefa 3-filtros, onde era necessário selecionar as colunas Solar.R, Month e Day, e filtrar as linhas que não apresentassem NA na coluna Solar.R.
+
+Adapte esse código para usar o pipe (do pacote `magrittr`), sem salvar nada em objetos:
+
+```{r pipe-tidyverse-i, exercise = TRUE}
+airquality_selecao <- select(airquality, Solar.R, Month, Day)
+airquality_filtrado <- filter(airquality_selecao, !is.na(Solar.R))
+airquality_filtrado
+```
+
+```{r pipe-tidyverse-i-hint}
+airquality %>% 
+  select(____) %>% 
+  filter(____)
+```
+
+```{r pipe-tidyverse-i-solution}
+airquality %>% 
+  select(Solar.R, Month, Day) %>% 
+  filter(!is.na(Solar.R))
+```
+
+```{r pipe-tidyverse-i-check}
+gradethis::grade_this_code()
+```
 
 ## Enviar as respostas
 
