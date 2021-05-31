@@ -465,7 +465,72 @@ grade_this({
 })
 ```
 
+## Filtrando linhas e selecionando colunas 
 
+Muitas vezes, queremos fazer as duas operações junto: filtrar linhas e selecionar colunas.
+
+Para esses exercícios, vamos solicitar que faça usando R base e também `dplyr`. 
+
+Use o dataframe `airquality` para responder às questões abaixo:
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(dplyr) # carregando o pacote dplyr
+airquality
+``` 
+
+1) Usando R base, retorne apenas as linhas onde Solar.R não seja NA, e apenas as colunas: "Solar.R", "Month", "Day"
+
+```{r filtros-com-select-i-base, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r filtros-com-select-i-base-hint-1}
+airquality[... ,...]
+```
+
+```{r filtros-com-select-i-base-solution}
+airquality[!is.na(airquality$Solar.R), c("Solar.R", "Month", "Day")]
+```
+
+```{r filtros-com-select-i-base-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
+
+2) Agora vamos fazer o mesmo com dplyr, porém em partes:
+
+2)  Usando dplyr, selecione as colunas "Solar.R", "Month", "Day", e salve em um objeto chamado `airquality_selecao`. Usando a base `airquality_selecao`, filtre as linhas que não sejam NA na coluna Solar.R :
+
+```{r filtros-com-select-i-dplyr, exercise = TRUE, exercise.setup = "setupAirquality"}
+airquality_selecao <- ...
+airquality_filtrado <- ....
+airquality_filtrado
+```
+
+```{r filtros-com-select-i-dplyr-hint-1}
+airquality_selecao <- ...(airquality, ...)
+airquality_filtrado <- ...(airquality_selecao, ...)
+airquality_filtrado
+```
+
+```{r filtros-com-select-i-dplyr-solution}
+airquality_selecao <- select(airquality, Solar.R, Month, Day)
+airquality_filtrado <- filter(airquality_selecao, !is.na(Solar.R))
+airquality_filtrado
+```
+
+```{r filtros-com-select-i-dplyr-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
 
 
 ## Enviar as respostas
