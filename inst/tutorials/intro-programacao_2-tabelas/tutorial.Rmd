@@ -48,7 +48,7 @@ airquality
 airquality
 ``` 
 
-Use o data.frame airquality para responder às questões abaixo:
+Use o dataframe airquality para responder às questões abaixo:
 
 a) Use uma função em R para descobrir quantas colunas a base `airquality` tem:
 
@@ -106,12 +106,12 @@ head(airquality)
 
 ```{r tabelas-df-c, echo=FALSE}
 question("O que a função `head()` retorna?",
-  answer("A função `head()` retorna as últimas linhas de um data.frame"),
-  answer("A função `head()` retorna as linhas aleatórias de um data.frame"),
-  answer('A função `head()` retorna as primeiras linhas de um data.frame', correct = TRUE),
+  answer("A função `head()` retorna as últimas linhas de um dataframe"),
+  answer("A função `head()` retorna as linhas aleatórias de um dataframe"),
+  answer('A função `head()` retorna as primeiras linhas de um dataframe', correct = TRUE),
   allow_retry = TRUE,
   random_answer_order = TRUE,
-  correct = "Correto! Parabéns. A função `head()` é útil para observar as primeiras linhas de um data.frame. <br> Curiosidades: <br> - A função `tail()` é similar, porém apresenta as últimas linhas. <br> - A função `dplyr::slice_sample(airquality, n = 6)` nos permite buscar linhas aleatórias na base de dados, usando o número de linhas que queremos no argumento `n`. <br> <b> Você pode experimentar esses códigos no campo de códigos acima!</b> :)",
+  correct = "Correto! Parabéns. A função `head()` é útil para observar as primeiras linhas de um dataframe. <br> Curiosidades: <br> - A função `tail()` é similar, porém apresenta as últimas linhas. <br> - A função `dplyr::slice_sample(airquality, n = 6)` nos permite buscar linhas aleatórias na base de dados, usando o número de linhas que queremos no argumento `n`. <br> <b> Você pode experimentar esses códigos no campo de códigos acima!</b> :)",
   incorrect = "Incorreto. Tente novamente :) <br> Dica 1: Experimente clicar em `Executar código` e observar os resultados." 
 )
 ```
@@ -135,7 +135,7 @@ colnames(airquality)
 ```{r tabelas-df-d-check}
 grade_this({
   if (identical(.result, .solution)) {
-    pass("Muito bom! Você consultou o nome das colunas corretamente. Existe mais de uma função que possibilita conferir o nome da colunas de um data.frame, como:  `colnames()` e `names()`.")
+    pass("Muito bom! Você consultou o nome das colunas corretamente. Existe mais de uma função que possibilita conferir o nome da colunas de um dataframe, como:  `colnames()` e `names()`.")
   }
   fail()
 })
@@ -207,7 +207,7 @@ question("Quais são os tipos de cada coluna da tabela `airquality`?",
 
 ## Desafio
 
-Use o data.frame `airquality` para responder às questões abaixo. __Vamos calcular o desvio padrão de Ozone sem usar a função `sd()`__. O resultado de um exercício é usado no próximo, então iremos guardar o resultado de cada etapa em um objeto.
+Use o dataframe `airquality` para responder às questões abaixo. __Vamos calcular o desvio padrão de Ozone sem usar a função `sd()`__. O resultado de um exercício é usado no próximo, então iremos guardar o resultado de cada etapa em um objeto.
 
 a) Calcule a média da coluna `Ozone` (excluindo os NAs), e guarde o resultado em um objeto chamado `media_ozone`. 
 

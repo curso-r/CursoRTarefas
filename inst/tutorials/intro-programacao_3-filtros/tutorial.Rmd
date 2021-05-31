@@ -133,14 +133,14 @@ grade_this({
 })
 ```
 
-## Filtrando data.frames
+## Filtrando linhas em dataframes
 
-Para os exercícios de filtros de data.frames, vamos solicitar que faça usando R base e também `dplyr`. 
+Para os exercícios de filtros de linhas em dataframes, vamos solicitar que faça usando R base e também `dplyr`. 
 
-b) Use o data.frame `airquality` para responder às questões abaixo:
+Use o dataframe `airquality` para responder às questões abaixo:
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-library(dplyr)
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(dplyr) # carregando o pacote dplyr
 airquality
 ``` 
 
@@ -347,6 +347,126 @@ grade_this({
 ```
 
 <!-- Não tem exercícios de select(). Pensei em criar uma nova seção e colocar aqui. -->
+
+## Selecionando colunas em um dataframe
+
+Para os exercícios de filtros de linhas em dataframes, vamos solicitar que faça usando R base e também `dplyr`. 
+
+Use o dataframe `airquality` para responder às questões abaixo:
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(dplyr) # carregando o pacote dplyr
+airquality
+``` 
+
+<!-- Acho legal mostrar a diferença de `airquality["Temp"]` e `airquality$Temp` -->
+
+I) Selecione a coluna `Temp`, sem perder a estrutura de data.frame:
+
+- Faça com base R:
+
+```{r filtros-select-i-base, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r filtros-select-i-base-hint-1}
+airquality["..."]
+```
+
+
+```{r filtros-select-i-base-solution}
+airquality["Temp"]
+```
+
+```{r filtros-select-i-base-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
+
+- Faça com dplyr:
+
+
+```{r filtros-select-i-dplyr, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r filtros-select-i-dplyr-hint-1}
+select(....)
+```
+
+
+```{r filtros-select-i-dplyr-solution}
+select(airquality, Temp)
+```
+
+```{r filtros-select-i-dplyr-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
+
+
+II) Selecione as colunas: `Temp`, `Month`, `Day`:
+
+
+- Faça com base R:
+
+```{r filtros-select-ii-base, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r filtros-select-ii-base-hint-1}
+airquality[c(..., ..., ...)]
+```
+
+
+```{r filtros-select-ii-base-solution}
+airquality[c("Temp", "Month", "Day")]
+```
+
+```{r filtros-select-ii-base-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
+
+- Faça com dplyr:
+
+
+```{r filtros-select-ii-dplyr, exercise = TRUE, exercise.setup = "setupAirquality"}
+
+```
+
+```{r filtros-select-ii-dplyr-hint-1}
+select(..., ..., ...)
+```
+
+
+```{r filtros-select-ii-dplyr-solution}
+select(airquality, Temp, Month, Day)
+```
+
+```{r filtros-select-ii-dplyr-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
+
+
+
 
 ## Enviar as respostas
 
