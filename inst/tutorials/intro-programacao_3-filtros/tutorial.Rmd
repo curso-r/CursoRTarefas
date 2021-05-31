@@ -346,6 +346,8 @@ grade_this({
 })
 ```
 
+<!-- Não tem exercícios de select(). Pensei em criar uma nova seção e colocar aqui. -->
+
 ## Enviar as respostas
 
 Se você completou a tarefa e quer submeter, clique no botão abaixo para gerar o seu código hash e envie usando o formulário a seguir:
