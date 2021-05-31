@@ -39,20 +39,17 @@ gradethis::gradethis_setup(
 
 ## Funções próprias
 
-a) Crie uma função chamada `numero_ao_quadrado()` que receba um número e retorne o quadrado deste número. 
+a) Crie uma função chamada `numero_ao_quadrado()` que tenha um argumento (chamado `numero`) e retorne o quadrado deste número. 
 
 Teste se a função funciona: `numero_ao_quadrado(3)` deve retornar o valor 9.
 
 ```{r funcoes-proprias-a, exercise = TRUE}
-
-```
-
-```{r funcoes-proprias-a-hint}
 numero_ao_quadrado <- function(____){
   _____
 }
 numero_ao_quadrado(3)
 ```
+
 
 ```{r funcoes-proprias-a-solution}
 numero_ao_quadrado <- function(numero){
@@ -63,23 +60,24 @@ numero_ao_quadrado(3)
 ```
 
 ```{r funcoes-proprias-a-check}
-gradethis::grade_this_code()
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
 ```
 
-b) **DESAFIO!** Crie uma função que recebe 2 números `x` e `y` e retorna a raiz quadrada da soma desses números.
+b) Crie uma função chamada `raiz_da_soma` que recebe 2 números `x` e `y` e retorna a raiz quadrada da soma desses números.
 Depois teste a função para valores `x = 6` e `y = 3`, o resultado gerado pela função deve ser 3.
 
 Dica: `sqrt()` é a função para raiz quadrada.
 
 
 ```{r funcoes-proprias-b, exercise = TRUE}
+raiz_da_soma <- function(){
 
-```
-
-```{r funcoes-proprias-b-hint}
-raiz_da_soma <- function(x, y){
-  ______ <- x + y
-  ______
+  
 }
 # Teste se a função funciona:
 raiz_da_soma(x = 6, y = 3)
@@ -96,7 +94,12 @@ raiz_da_soma(x = 6, y = 3)
 
 
 ```{r funcoes-proprias-b-check}
-gradethis::grade_this_code()
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
 ```
 
 ## Enviar as respostas
