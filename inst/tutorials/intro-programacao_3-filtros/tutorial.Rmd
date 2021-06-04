@@ -13,12 +13,12 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 library(learnr)
-library(gradethis)
+library(gradethisBR)
 
 knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
 
 
-gradethis::gradethis_setup(
+gradethisBR::gradethis_setup(
   code_correct =  "Correto! Parabéns!",
   pass = "Correto! Parabéns!"#,
   #fail =  "Incorreto. Tente novamente! "

@@ -17,11 +17,13 @@ Imports:
     beepr,
     dplyr (>= 1.0.6),
     gradethis (>= 0.2.3.9001),
+    gradethisBR (>= 0.2.3.9001),
     learnr (>= 0.10.1.9009),
     learnrhash (>= 0.1.0.9000),
     magrittr,
     rmarkdown
-Remotes: 
+Remotes:  
     rstudio/learnr,
     rstudio/gradethis,
-    rundel/learnrhash
+    rundel/learnrhash,
+    curso-r/gradethis
