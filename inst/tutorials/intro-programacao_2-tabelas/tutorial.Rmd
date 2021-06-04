@@ -209,7 +209,7 @@ question("Quais são os tipos de cada coluna da tabela `airquality`?",
 
 Use o dataframe `airquality` para responder às questões abaixo. __Vamos calcular o desvio padrão de Ozone sem usar a função `sd()`__. O resultado de um exercício é usado no próximo, então iremos guardar o resultado de cada etapa em um objeto.
 
-a) Calcule a média da coluna `Ozone` (excluindo os NAs), e guarde o resultado em um objeto chamado `media_ozone`. 
+a) Calcule a média da coluna `Ozone` (excluindo os NAs), e guarde o resultado em um objeto chamado `media_ozone`.  Dica: para remover os NA's, utilize o argumento `na.rm=TRUE` da função que calcula a média.
 
 ```{r tabelas-desafio-a, exercise = TRUE, exercise.setup = "setupAirquality"}
 # a)
@@ -350,7 +350,7 @@ grade_this({
 
 
 
-e) Calcule a raíz quadrada, e guarde o resultado em um objeto chamado `desvio_padrao_ozone_calculado`.
+e) Calcule a raíz quadrada do objeto `media_ozone_centralizado_ao_quadrado`, e guarde o resultado em um objeto chamado `desvio_padrao_ozone_calculado`.
 
 ```{r resposta_ate_d}
 media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
