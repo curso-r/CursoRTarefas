@@ -212,15 +212,21 @@ Use o dataframe `airquality` para responder às questões abaixo. __Vamos calcul
 a) Calcule a média da coluna `Ozone` (excluindo os NAs), e guarde o resultado em um objeto chamado `media_ozone`. 
 
 ```{r tabelas-desafio-a, exercise = TRUE, exercise.setup = "setupAirquality"}
+# a)
 media_ozone <-  #___ 
+media_ozone
 ```
 
 ```{r tabelas-desafio-a-hint}
+# a)
 media_ozone <- mean(_____$_____, na.rm = TRUE)
+media_ozone
 ```
 
 ```{r tabelas-desafio-a-solution}
+# a)
 media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
+media_ozone
 ```
 
 ```{r tabelas-desafio-a-check}
@@ -236,19 +242,26 @@ grade_this({
 
 b) Subtraia da coluna `Ozone` a sua própria média (centralização), e guarde o resultado em um objeto chamado `ozone_centralizado`. 
 
-```{r tabelas-desafio-b, exercise = TRUE, exercise.setup = "tabelas-desafio-a"}
+```{r resposta_ate_a}
+media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
+```
+
+```{r tabelas-desafio-b, exercise = TRUE, exercise.setup = "resposta_ate_a"}
 # b) 
 ozone_centralizado <-  #___
+ozone_centralizado
 ```
 
 ```{r tabelas-desafio-b-hint}
 # b) 
 ozone_centralizado <- ____$____ - media_ozone
+ozone_centralizado
 ```
 
 ```{r tabelas-desafio-b-solution}
 # b) 
 ozone_centralizado <- airquality$Ozone - media_ozone
+ozone_centralizado
 ```
 
 ```{r tabelas-desafio-b-check}
@@ -264,20 +277,29 @@ grade_this({
 
 c) Eleve o vetor `ozone_centralizado` ao quadrado, e guarde o resultado em um objeto chamado `ozone_centralizado_ao_quadrado`.
 
+```{r resposta_ate_b}
+media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
+ozone_centralizado <- airquality$Ozone - media_ozone
+```
 
-```{r tabelas-desafio-c, exercise = TRUE, exercise.setup = "tabelas-desafio-b"}
+
+
+```{r tabelas-desafio-c, exercise = TRUE, exercise.setup = "resposta_ate_b"}
 # c) 
-ozone_centralizado_ao_quadrado <- # ___  
+ozone_centralizado_ao_quadrado <- # ___ 
+ozone_centralizado_ao_quadrado
 ```
 
 ```{r tabelas-desafio-c-hint}
 # c) 
 ozone_centralizado_ao_quadrado <-  ___  ^ 2
+ozone_centralizado_ao_quadrado
 ```
 
 ```{r tabelas-desafio-c-solution}
 # c)
 ozone_centralizado_ao_quadrado <-  ozone_centralizado ^ 2
+ozone_centralizado_ao_quadrado
 ```
 
 ```{r tabelas-desafio-c-check}
@@ -293,20 +315,28 @@ grade_this({
 
 d) Calcule a média do vetor `ozone_centralizado_ao_quadrado`, e guarde o resultado em um objeto chamado `media_ozone_centralizado_ao_quadrado`.
 
+```{r resposta_ate_c}
+media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
+ozone_centralizado <- airquality$Ozone - media_ozone
+ozone_centralizado_ao_quadrado <-  ozone_centralizado ^ 2
+```
 
-```{r tabelas-desafio-d, exercise = TRUE, exercise.setup = "tabelas-desafio-c"}
+```{r tabelas-desafio-d, exercise = TRUE, exercise.setup = "resposta_ate_c"}
 # d) 
 media_ozone_centralizado_ao_quadrado <- # ___ 
+media_ozone_centralizado_ao_quadrado
 ```
 
 ```{r tabelas-desafio-d-hint}
 # d) 
 media_ozone_centralizado_ao_quadrado <-  mean(___, na.rm = TRUE) 
+media_ozone_centralizado_ao_quadrado
 ```
 
 ```{r tabelas-desafio-d-solution}
 # d)
 media_ozone_centralizado_ao_quadrado <- mean(ozone_centralizado_ao_quadrado, na.rm = TRUE)
+media_ozone_centralizado_ao_quadrado
 ```
 
 ```{r tabelas-desafio-d-check}
@@ -322,18 +352,28 @@ grade_this({
 
 e) Calcule a raíz quadrada, e guarde o resultado em um objeto chamado `desvio_padrao_ozone_calculado`.
 
-```{r tabelas-desafio-e, exercise = TRUE, exercise.setup = "tabelas-desafio-d"}
+```{r resposta_ate_d}
+media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
+ozone_centralizado <- airquality$Ozone - media_ozone
+ozone_centralizado_ao_quadrado <-  ozone_centralizado ^ 2
+media_ozone_centralizado_ao_quadrado <- mean(ozone_centralizado_ao_quadrado, na.rm = TRUE)
+```
+
+```{r tabelas-desafio-e, exercise = TRUE, exercise.setup = "resposta_ate_d"}
 # e)
-desvio_padrao_ozone_calculado <- # ___ 
+desvio_padrao_ozone_calculado <- # ___
+desvio_padrao_ozone_calculado
 ```
 
 ```{r tabelas-desafio-e-hint}
 # e)
 desvio_padrao_ozone_calculado <-  sqrt(___)
+desvio_padrao_ozone_calculado
 ```
 
 ```{r tabelas-desafio-e-solution}
 desvio_padrao_ozone_calculado <- sqrt(media_ozone_centralizado_ao_quadrado)
+desvio_padrao_ozone_calculado
 ```
 
 ```{r tabelas-desafio-e-check}
@@ -349,21 +389,32 @@ grade_this({
 
 f) Calcule o desvio padrão da coluna Ozone usando a função `sd()` (dica: `sd(airquality$Ozone, na.rm = TRUE)`). Compare o resultado do desvio padrão que calculamos, e o resultado da função `sd()`: são iguais?
 
-```{r tabelas-desafio-f, exercise = TRUE, exercise.setup = "tabelas-desafio-e"}
+```{r resposta_ate_e}
+media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
+ozone_centralizado <- airquality$Ozone - media_ozone
+ozone_centralizado_ao_quadrado <-  ozone_centralizado ^ 2
+media_ozone_centralizado_ao_quadrado <- mean(ozone_centralizado_ao_quadrado, na.rm = TRUE)
+desvio_padrao_ozone_calculado <- sqrt(media_ozone_centralizado_ao_quadrado)
+```
+
+```{r tabelas-desafio-f, exercise = TRUE, exercise.setup = "resposta_ate_e"}
 # f)
 sd_ozone_funcao <- #___  
-desvio_padrao_ozone_calculado #___ sd_ozone_funcao
+sd_ozone_funcao
+desvio_padrao_ozone_calculado == sd_ozone_funcao
 ```
 
 ```{r tabelas-desafio-f-hint}
 # f)
-sd_ozone_funcao <- ___  
+sd_ozone_funcao <- sd(___, na.rm = TRUE) 
+sd_ozone_funcao
 desvio_padrao_ozone_calculado == sd_ozone_funcao
 ```
 
 ```{r tabelas-desafio-f-solution}
 # f)
 sd_ozone_funcao <- sd(airquality$Ozone, na.rm = TRUE)
+sd_ozone_funcao
 desvio_padrao_ozone_calculado == sd_ozone_funcao
 
 ```
@@ -377,10 +428,6 @@ grade_this({
 })
 ```
 
-<!-- para resolver no desafio: -->
-<!-- - aqui tá aparecendo uma mensagem de erro esquisita nos exercicios:  -->
-<!-- <text>:3:0: unexpected end of input 1: # a) 2: media_ozone <- #___ ^ -->
-<!-- - as mensagens de `pass` nao estao aparecendo corretamente para os exercicios b até f -->
 
 ## Enviar as respostas
 
