@@ -13,8 +13,6 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 library(learnr)
-library(gradethis)
-detach("package:gradethis", unload=TRUE)
 library(gradethisBR)
 
 knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
