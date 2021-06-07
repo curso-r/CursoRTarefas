@@ -40,10 +40,10 @@ gradethisBR::gradethis_setup(
 ## Objetos
 
 ```{r setupFrutas}
-frutas <- c("maçã", "banana", "melancia")
+frutas <- c("abacaxi", "banana", "melancia")
 ``` 
 
-A) Crie um vetor com o nome de três frutas (maçã, banana, melancia) e guarde em um objeto chamado `frutas`.
+A) Crie um vetor com o nome de três frutas (abacaxi, banana, melancia) e guarde em um objeto chamado `frutas`.
 
 ```{r introducao-objetos-a, exercise = TRUE}
 
@@ -58,7 +58,7 @@ frutas <- c(___, ___, ___)
 ```
 
 ```{r introducao-objetos-a-solution}
-frutas <- c("maçã", "banana", "melancia")
+frutas <- c("abacaxi", "banana", "melancia")
 ```
 
 ```{r introducao-objetos-a-check}
@@ -192,8 +192,7 @@ length(dolar_subiu)
 question("a) O que o resultado do código significa?",
   answer("O resultado representa o número de dias da semana", correct = TRUE),
     answer("O resultado representa o número de dias em que o dólar subiu"),
-      answer("..."),
-        answer("....."),
+      answer("O resultado representa a média do número de dias em que o dólar subiu"),
   allow_retry = TRUE,
   random_answer_order = TRUE,
   correct = "Correto! Parabéns. A função length() retorna o tamanho do vetor. O vetor 'dolar_subiu' possui 7 elementos, que representa o número de dias da semana.",
