@@ -14,6 +14,7 @@ runtime: shiny_prerendered
 ```{r setup, include=FALSE}
 library(learnr)
 library(gradethisBR)
+Sys.setenv(LANG = "pt")
 
 knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
 
