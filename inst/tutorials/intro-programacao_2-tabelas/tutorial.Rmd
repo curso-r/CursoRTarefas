@@ -9,6 +9,8 @@ output:
     progressive: true
     allow_skip: true
 runtime: shiny_prerendered
+params:
+  url_form: "https://docs.google.com/forms/d/e/1FAIpQLScGkPoq2cTyxTLoaTGQm-TqS3bk8qYoEI34fG9AbZixopcIgA/viewform"
 ---
 
 ```{r setup, include=FALSE}
@@ -423,16 +425,15 @@ desvio_padrao_ozone_calculado == sd_ozone_funcao
 ```{r tabelas-desafio-f-check}
 grade_this({
   if (identical(.result, .solution)) {
-    pass("Correto! Os resultados são diferentes! Isso porque a função `sd()` calcula o desvio padrão utilizando a variância amostral. Por outro lado, utilizamos a variância populacional para calcular o desvio padrão. Você pode ler mais sobre este tema em: .... COLOCAR ALGUMA REFERENCIA...")
+    pass("Correto! Os resultados são diferentes! Isso porque a função `sd()` calcula o desvio padrão utilizando a variância amostral. Por outro lado, utilizamos a variância populacional para calcular o desvio padrão.")
   }
   fail()
 })
 ```
 
-
 ## Enviar as respostas
 
-Se você completou a tarefa e quer submeter, clique no botão abaixo para gerar o seu código hash e envie usando o formulário a seguir:
+Se você completou a tarefa e quer submeter, clique no botão abaixo ('Generate') para gerar o seu código hash e envie usando o formulário a seguir:
 
 ```{r context="server"}
 learnrhash::encoder_logic()
@@ -444,5 +445,10 @@ learnrhash::encoder_ui(ui_before = " ", ui_after = " ")
 
 ### Formulário para enviar o código
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScGkPoq2cTyxTLoaTGQm-TqS3bk8qYoEI34fG9AbZixopcIgA/viewform" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+Caso o formulário abaixo não carregue, <a href='`r params$url_form`'>clique neste link</a> para abrir o formulário.
+
+
+<iframe src="`r params$url_form`" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+
+
 

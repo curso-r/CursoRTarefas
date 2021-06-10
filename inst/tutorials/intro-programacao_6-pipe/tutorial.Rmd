@@ -9,6 +9,8 @@ output:
     progressive: true
     allow_skip: true
 runtime: shiny_prerendered
+params:
+  url_form: "https://docs.google.com/forms/d/e/1FAIpQLSe6VW8yqlZfoZNiSu05Rml9S6QO2e9MjM5V91glM99exA7lsg/viewform"
 ---
 
 ```{r setup, include=FALSE}
@@ -244,10 +246,9 @@ gradethisBR::grade_this_code()
 ```
 
 
-
 ## Enviar as respostas
 
-Se você completou a tarefa e quer submeter, clique no botão abaixo para gerar o seu código hash e envie usando o formulário a seguir:
+Se você completou a tarefa e quer submeter, clique no botão abaixo ('Generate') para gerar o seu código hash e envie usando o formulário a seguir:
 
 ```{r context="server"}
 learnrhash::encoder_logic()
@@ -259,5 +260,10 @@ learnrhash::encoder_ui(ui_before = " ", ui_after = " ")
 
 ### Formulário para enviar o código
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6VW8yqlZfoZNiSu05Rml9S6QO2e9MjM5V91glM99exA7lsg/viewform" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+Caso o formulário abaixo não carregue, <a href='`r params$url_form`'>clique neste link</a> para abrir o formulário.
+
+
+<iframe src="`r params$url_form`" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+
+
 
