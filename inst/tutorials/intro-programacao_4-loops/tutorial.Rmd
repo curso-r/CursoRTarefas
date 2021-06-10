@@ -53,9 +53,13 @@ library(beepr)
 
 1. Quando programamos o despertador do nosso celular para acordar de manhã, estamos, internamente, programando um laço (for) para que uma mesma tarefa (despertar) seja executada várias vezes.
 
-Vamos imaginar que todos os dias o nosso celular verifica se ele precisa despertar às 8 horas da manhã. Se quisermos acordar todos os dias nesse horário, isso poderia ser representado, no R, pelo seguinte código:
+Vamos imaginar que todos os dias o nosso celular verifica se ele precisa despertar às 8 horas da manhã. Se quisermos acordar todos os dias nesse horário, isso poderia ser representado, no R, pelo código abaixo.
+
+**Observação**: Se você estiver acessando este tutorial em https://curso-r-tarefas.shinyapps.io/intro-programacao_4-loops/ a execução do código abaixo pode não funcionar. Experimente executar o código no RStudio instalado na sua máquina.
 
 ```{r loops-exemplo, exercise = TRUE}
+#install.packages("beepr")
+
 dias_da_semana <- c("seg", "ter", "qua", "qui", "sex", "sab", "dom")
 
 for (dia in dias_da_semana) {

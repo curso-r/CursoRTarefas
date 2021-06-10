@@ -390,7 +390,7 @@ grade_this({
 
 
 
-f) Calcule o desvio padrão da coluna Ozone usando a função `sd()` (dica: `sd(airquality$Ozone, na.rm = TRUE)`). Compare o resultado do desvio padrão que calculamos, e o resultado da função `sd()`: são iguais?
+f) Calcule o desvio padrão da coluna Ozone usando a função sd() (dica: sd(airquality$Ozone, na.rm = TRUE)). Verifique se o resultado da função sd()  é diferente do cálculo que fizemos anteriormente. Caso você tenha dúvidas sobre o cálculo realizado pela função sd , você pode acessar a sessão Details da documentação dessa função.
 
 ```{r resposta_ate_e}
 media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
