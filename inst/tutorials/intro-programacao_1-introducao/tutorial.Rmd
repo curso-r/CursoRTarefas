@@ -255,7 +255,10 @@ question("d) O que o resultado do código significa?",
   answer("A média do vetor dolar_subiu representa a média de dias em que o dólar subiu naquele conjunto de dias. O dólar subiu em média em 57% dos dias naquela semana.", correct = TRUE),
     answer("O dólar diminuiu em média em 57% dos dias naquela semana."),
   
-      answer("....SUGESTÕES?"),
+      answer("O dolar subiu 57% ao longo da semana
+"),
+        answer("O dolar diminuiu 57% ao longo da semana
+"),
   
   allow_retry = TRUE,
   random_answer_order = TRUE,
