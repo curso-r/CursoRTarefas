@@ -10,7 +10,7 @@ output:
     allow_skip: true
 runtime: shiny_prerendered
 params:
-  url_form: "https://docs.google.com/forms/d/e/1FAIpQLSfWCbu_4-jD7H-wV3gTxa80Q0Ko5Aylso3JOBZzRUDhwIKm3A/viewform"
+  url_form: "https://docs.google.com/forms/d/e/1FAIpQLSeydRZve_CGu0_IJ17WlDRcv6s35SY0b0IJ9RU4gW_wG0swrg/viewform"
 ---
 
 ```{r setup, include=FALSE}
@@ -57,7 +57,7 @@ Vamos imaginar que todos os dias o nosso celular verifica se ele precisa despert
 
 **Observação**: Se você estiver acessando este tutorial em https://curso-r-tarefas.shinyapps.io/intro-programacao_4-loops/ a execução do código abaixo pode não funcionar. Experimente executar o código no RStudio instalado na sua máquina.
 
-```{r loops-exemplo, exercise = TRUE}
+```{r loops-exemplo, exercise = TRUE, message=FALSE, warning=FALSE}
 #install.packages("beepr")
 
 dias_da_semana <- c("seg", "ter", "qua", "qui", "sex", "sab", "dom")
@@ -115,7 +115,7 @@ grade_this({
 2) Complete o código abaixo para fazer o nosso despertador iterar (caminhar) no  dia do mês e não mais no dia da semana. Pode considerar que todo mês tem 30 dias.
 
 
-```{r loops-2, exercise = TRUE}
+```{r loops-2, exercise = TRUE, message=FALSE, warning=FALSE}
 
 dias_do_mes <- ..........
 
