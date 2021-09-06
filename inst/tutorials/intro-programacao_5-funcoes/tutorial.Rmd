@@ -53,6 +53,13 @@ numero_ao_quadrado <- function(____){
 numero_ao_quadrado(3)
 ```
 
+```{r funcoes-proprias-a-hint-1}
+numero_ao_quadrado <- function(___){
+ ___ ^ 2
+}
+# Teste se a função funciona:
+numero_ao_quadrado(3)
+```
 
 ```{r funcoes-proprias-a-solution}
 numero_ao_quadrado <- function(numero){
@@ -81,6 +88,16 @@ Dica: `sqrt()` é a função para raiz quadrada.
 raiz_da_soma <- function(){
 
   
+}
+# Teste se a função funciona:
+raiz_da_soma(x = 6, y = 3)
+```
+
+
+```{r funcoes-proprias-b-hint-1}
+raiz_da_soma <- function(x, y){
+  soma <- ___
+  sqrt(soma)
 }
 # Teste se a função funciona:
 raiz_da_soma(x = 6, y = 3)
