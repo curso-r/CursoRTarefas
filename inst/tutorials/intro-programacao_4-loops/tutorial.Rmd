@@ -14,6 +14,9 @@ params:
 ---
 
 ```{r setup, include=FALSE}
+# remotes::install_github("rstudio/gradethis")
+# remotes::install_github("rstudio/learnr")
+# remotes::install_github("curso-r/gradethis")
 library(learnr)
 library(gradethisBR)
 Sys.setenv(LANG = "pt")
@@ -42,38 +45,23 @@ gradethisBR::gradethis_setup(
 
 ## Loops
 
-Neste exercício, usaremos o pacote beepr.
-
-```{r echo=TRUE}
-# install.packages('beepr')
-library(beepr)
-```
-
-
-
-1. Quando programamos o despertador do nosso celular para acordar de manhã, estamos, internamente, programando um laço (for) para que uma mesma tarefa (despertar) seja executada várias vezes.
+Quando programamos o despertador do nosso celular para acordar de manhã, estamos, internamente, programando um laço (for) para que uma mesma tarefa (despertar) seja executada várias vezes.
 
 Vamos imaginar que todos os dias o nosso celular verifica se ele precisa despertar às 8 horas da manhã. Se quisermos acordar todos os dias nesse horário, isso poderia ser representado, no R, pelo código abaixo.
 
-**Observação**: Se você estiver acessando este tutorial em https://curso-r-tarefas.shinyapps.io/intro-programacao_4-loops/ a execução do código abaixo pode não funcionar. Experimente executar o código no RStudio instalado na sua máquina.
 
 ```{r loops-exemplo, exercise = TRUE, message=FALSE, warning=FALSE}
-#install.packages("beepr")
 
 dias_da_semana <- c("seg", "ter", "qua", "qui", "sex", "sab", "dom")
 
 for (dia in dias_da_semana) {
   mensagem <- paste0("8 horas da manhã de ", dia, "! Hora de acordar!")
   print(mensagem)
-  beepr::beep(1)
-  Sys.sleep(1)
 }
 
 ```
 
 
-
-O comando `Sys.sleep(1)` faz o R esperar 1 segundo antes de continuar executando o código. (Esse 1 segundo representano nosso exemplo as 24 horas entre dois dias).
 
 1) Complete o código abaixo para  fazer o nosso despertador não "tocar" no fim de semana.
 
@@ -81,11 +69,31 @@ O comando `Sys.sleep(1)` faz o R esperar 1 segundo antes de continuar executando
 dias_da_semana <- c("seg", "ter", "qua", "qui", "sex", "sab", "dom")
 
 for (dia in dias_da_semana) {
-  if (..........) {
+  if (__________) {
     mensagem <- paste0("8 horas da manhã de ", dia, "! Hora de acordar!")
     print(mensagem)
-    beepr::beep(1)
-    Sys.sleep(1)
+  }
+}
+```
+
+```{r loops-1-hint-1}
+dias_da_semana <- c("seg", "ter", "qua", "qui", "sex", "sab", "dom")
+
+for (dia in dias_da_semana) {
+  if (!___ %in% c(___, ___)) {
+    mensagem <- paste0("8 horas da manhã de ", dia, "! Hora de acordar!")
+    print(mensagem)
+  }
+}
+```
+
+```{r loops-1-hint-2}
+dias_da_semana <- c("seg", "ter", "qua", "qui", "sex", "sab", "dom")
+
+for (dia in dias_da_semana) {
+  if (!dia %in% c(___, ___)) {
+    mensagem <- paste0("8 horas da manhã de ", dia, "! Hora de acordar!")
+    print(mensagem)
   }
 }
 ```
@@ -97,8 +105,6 @@ for (dia in dias_da_semana) {
   if (!dia %in% c("sab", "dom")) {
     mensagem <- paste0("8 horas da manhã de ", dia, "! Hora de acordar!")
     print(mensagem)
-    beepr::beep(1)
-    Sys.sleep(1)
   }
 }
 ```
@@ -117,13 +123,20 @@ grade_this({
 
 ```{r loops-2, exercise = TRUE, message=FALSE, warning=FALSE}
 
-dias_do_mes <- ..........
+dias_do_mes <- ____
 
-for (dia in ..........) {
-  mensagem <- paste0("8 horas da manhã do dia ", ...)
+for (dia in ____) {
+  mensagem <- paste0("8 horas da manhã do dia ", ___)
   print(mensagem)
-  beepr::beep(1)
-  Sys.sleep(0.5)
+}
+```
+
+```{r loops-2-hint-1}
+dias_do_mes <- ___
+
+for (dia in dias_do_mes) {
+  mensagem <- paste0("8 horas da manhã do dia ", dia)
+  print(mensagem)
 }
 ```
 
@@ -133,8 +146,6 @@ dias_do_mes <- 1:30
 for (dia in dias_do_mes) {
   mensagem <- paste0("8 horas da manhã do dia ", dia)
   print(mensagem)
-  beepr::beep(1)
-  Sys.sleep(0.5)
 }
 ```
 
