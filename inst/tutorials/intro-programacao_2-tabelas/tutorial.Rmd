@@ -37,6 +37,33 @@ gradethisBR::gradethis_setup(
 >
 > Caso tenha dúvidas sobre como resolver os exercícios,  pedimos que escreva no [<i class="fab fa-discourse"></i> Discourse](https://discourse.curso-r.com/).
 
+## Dados Faltantes
+
+Em R, o `NA` (do inglês *Not Available*) representa um dado faltante ou indisponível. Esse conceito será tratado em aulas futuras com maior profundidade, mas é importante saber que eles existem e são muito comuns! A maioria das bases de dados contém dados faltantes (os `NA`). 
+
+Uma característica do `NA` é: qualquer operação que seja realizada com dados `NA` resultará em `NA`. A ideia é que `NA` representa um valor que não sabemos qual é!
+
+Por exemplo:
+
+```{r echo=TRUE}
+# somar um número com NA resultará em NA
+1 + NA
+
+
+conjunto <- c(1, 2, 3, NA)
+# calcular a média de valores em um vetor que tenha NA
+# resultará em NA
+mean(conjunto)
+```
+
+Algumas funções para lidar com vetores possuem o argumento `na.rm`, usado para remover os `NA` antes de realizar a operação desejada. Por exemplo, para calcular a média dos valores do vetor chamado `conjunto`, que contém alguns números e um `NA`,  podemos usar o argumento `na.rm = TRUE` para que o `NA` seja removido do conjunto para que a média seja calculada:
+
+```{r echo=TRUE}
+conjunto <- c(1, 2, 3, NA)
+mean(conjunto, na.rm = TRUE)
+```
+
+>  Lembre-se: algumas funções usadas para realizar operações com vetores, como: `sum()`, `mean()`, `var()`, `sd()`, aceitam o argumento  `na.rm=TRUE` para remover os valores faltantes (`NA`).
 
 ## Dataframes
 
