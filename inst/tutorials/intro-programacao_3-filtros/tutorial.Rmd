@@ -382,13 +382,21 @@ airquality["Temp"]
 ```
 
 ```{r filtros-select-i-base-check}
+
+filtros_select_i_base_incorreto_vetor <- airquality[, c("Temp")]
+
 grade_this({
   if (identical(.result, .solution)) {
     pass("Correto!")
   }
+  
+  if(.result == filtros_select_i_base_incorreto_vetor ){
+    fail('Desta forma, você está selecionando uma coluna da base e retornando um vetor. Tente novamente, sem perder a estrutura de data.frame. Tente a forma: nome_da_base["nome_da_coluna"]' )
+  }
   fail()
 })
 ```
+
 
 - Faça com dplyr:
 
