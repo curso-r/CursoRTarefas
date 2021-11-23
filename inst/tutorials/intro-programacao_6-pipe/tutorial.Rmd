@@ -241,8 +241,14 @@ airquality$Ozone %>%
   mean(na.rm = TRUE) %>% 
   sqrt()
 ```
+
 ```{r pipe-tidyverse-iii-check}
-gradethisBR::grade_this_code()
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
 ```
 
 
