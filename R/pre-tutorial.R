@@ -35,10 +35,10 @@ adicionar_codigo_pos_tutorial <- function(url_form){
   glue::glue('
 ### Formulário para enviar o código
 
-Caso o formulário abaixo não carregue, <a href="{url_form}">clique neste link</a> para abrir o formulário.
+Caso o formulário abaixo não carregue, <a href="{url_form}" target="_blank">clique neste link</a> para abrir o formulário.
 
 
-<iframe src="{url_form}" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+<iframe src="{url_form}" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
 ')
 }
 
