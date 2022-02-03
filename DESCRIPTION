@@ -12,17 +12,19 @@ License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Imports: 
     beepr,
     dplyr (>= 1.0.6),
+    glue,
     gradethis (>= 0.2.3.9001),
     gradethisBR (>= 0.2.3.9001),
+    knitr,
     learnr (>= 0.10.1.9009),
     learnrhash (>= 0.1.0.9000),
     magrittr,
     rmarkdown
-Remotes:  
+Remotes: 
     rstudio/learnr,
     rstudio/gradethis,
     rundel/learnrhash,
