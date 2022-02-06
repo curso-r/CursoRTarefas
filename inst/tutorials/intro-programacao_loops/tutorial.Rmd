@@ -27,7 +27,7 @@ CursoRTarefas::adicionar_codigo_pre_tutorial(curso = "Introdução à programaç
                               url = "https://loja.curso-r.com/introduc-o-a-programac-o-com-r.html")
 ```
 
-## Loops
+## Estrutura de repetição (for)
 
 Quando programamos o despertador do nosso celular para acordar de manhã, estamos, internamente, programando um laço (for) para que uma mesma tarefa (despertar) seja executada várias vezes.
 
@@ -45,9 +45,149 @@ for (dia in dias_da_semana) {
 
 ```
 
+1) Complete o código abaixo para fazer o nosso despertador iterar (caminhar) no  dia do mês e não mais no dia da semana. Pode considerar que todo mês tem 30 dias.
 
 
-1) Complete o código abaixo para  fazer o nosso despertador não "tocar" no fim de semana.
+```{r loops-2, exercise = TRUE, message=FALSE, warning=FALSE}
+
+dias_do_mes <- ____
+
+for (dia in ____) {
+  mensagem <- paste0("8 horas da manhã do dia ", ___)
+  print(mensagem)
+}
+```
+
+```{r loops-2-hint-1}
+dias_do_mes <- ___
+
+for (dia in dias_do_mes) {
+  mensagem <- paste0("8 horas da manhã do dia ", dia)
+  print(mensagem)
+}
+```
+
+```{r loops-2-solution}
+dias_do_mes <- 1:30
+
+for (dia in dias_do_mes) {
+  mensagem <- paste0("8 horas da manhã do dia ", dia)
+  print(mensagem)
+}
+```
+
+```{r loops-2-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
+
+## Controle de fluxo (if/else)
+
+2) Queremos escrever um código que apresente uma mensagem diferente conforme o dia da semana. Por exemplo, se for segunda-feira aé quinta-feira, esperamos que o código escreva a mensagem "Bom trabalho!"; se for sexta-feira, escreva "falta pouco para o final de semana!", e se for sábado ou domingo que escreva "Bom descanso!".
+
+Antes de escrever o código que faz esse controle de fluxo, vamos escrever um gerador de dias da semana (para testar se a mensagem está saindo como esperado):
+
+```{r sample-exemplo, exercise = TRUE, message=FALSE, warning=FALSE}
+
+# criar um vetor com os dias da semana
+dias_da_semana <- c("segunda", "terça", "quarta", "quinta", "sexta", 
+                    "sabado", "domingo")
+
+# usando esse vetor, vamos sortear um dia da semana usando a função sample(),
+# e salvar o resultado no vetor 'dia_da_semana':
+dia_da_semana <- sample(dias_da_semana, 1)
+
+# Vamos ver qual dia da semana foi sorteado?
+# experimente executar esse código algumas vezes para ver como teremos 
+# resultados diferentes para os dias da semana:
+dia_da_semana
+```
+
+Agora que conseguimos gerar o dia da semana para testar, podemos construir a estrutura de repetição com `if`, `else if` e `else`. Complete os espaços abaixo para que o código tenha o resultado esperado:
+
+
+```{r ifelse-1, exercise = TRUE}
+# Gerando um dia da semana para testar
+dias_da_semana <- c("segunda", "terça", "quarta", "quinta", "sexta", 
+                    "sabado", "domingo")
+dia_da_semana <- sample(dias_da_semana, 1)
+dia_da_semana
+
+# Estrutura de repetição
+if (_________) {
+  mensagem <- paste0("Hoje é ", dia_da_semana, "! Bom descanso!")
+  print(mensagem)
+  
+} else if (________) {
+  mensagem <- paste0("Hoje é ", dia_da_semana, ", falta pouco para o final de semana!")
+  print(mensagem)
+  
+} else {
+  mensagem <- paste0("Hoje é ", dia_da_semana, "! Bom trabalho!")
+  print(mensagem)
+}
+```
+
+```{r ifelse-1-hint-1}
+dias_da_semana <- c("segunda", "terça", "quarta", "quinta", "sexta", 
+                    "sabado", "domingo")
+dia_da_semana <- sample(dias_da_semana, 1)
+dia_da_semana
+
+# Estrutura de repetição
+if (_________________) {
+  mensagem <- paste0("Hoje é ", dia_da_semana, "! Bom descanso!")
+  print(mensagem)
+  
+} else if (dia_da_semana == "sexta") {
+  mensagem <- paste0("Hoje é ", dia_da_semana, ", falta pouco para o final de semana!")
+  print(mensagem)
+  
+} else {
+  mensagem <- paste0("Hoje é ", dia_da_semana, "! Bom trabalho!")
+  print(mensagem)
+}
+```
+
+```{r ifelse-1-solution}
+# Gerando um dia da semana para testar
+dias_da_semana <- c("segunda", "terça", "quarta", "quinta", "sexta", 
+                    "sabado", "domingo")
+dia_da_semana <- sample(dias_da_semana, 1)
+dia_da_semana
+
+# Estrutura de repetição
+if (dia_da_semana %in% c("sabado", "domingo")) {
+  mensagem <- paste0("Hoje é ", dia_da_semana, "! Bom descanso!")
+  print(mensagem)
+  
+} else if (dia_da_semana == "sexta") {
+  mensagem <- paste0("Hoje é ", dia_da_semana, ", falta pouco para o final de semana!")
+  print(mensagem)
+  
+} else {
+  mensagem <- paste0("Hoje é ", dia_da_semana, "! Bom trabalho!")
+  print(mensagem)
+}
+
+```
+
+```{r ifelse-1-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
+
+## Estrutura de repetição com controle de fluxo (for + if/else)
+
+3) Complete o código abaixo para  fazer o nosso despertador não "tocar" no fim de semana.
 
 ```{r loops-1, exercise = TRUE}
 dias_da_semana <- c("seg", "ter", "qua", "qui", "sex", "sab", "dom")
@@ -102,45 +242,6 @@ grade_this({
 })
 ```
 
-2) Complete o código abaixo para fazer o nosso despertador iterar (caminhar) no  dia do mês e não mais no dia da semana. Pode considerar que todo mês tem 30 dias.
-
-
-```{r loops-2, exercise = TRUE, message=FALSE, warning=FALSE}
-
-dias_do_mes <- ____
-
-for (dia in ____) {
-  mensagem <- paste0("8 horas da manhã do dia ", ___)
-  print(mensagem)
-}
-```
-
-```{r loops-2-hint-1}
-dias_do_mes <- ___
-
-for (dia in dias_do_mes) {
-  mensagem <- paste0("8 horas da manhã do dia ", dia)
-  print(mensagem)
-}
-```
-
-```{r loops-2-solution}
-dias_do_mes <- 1:30
-
-for (dia in dias_do_mes) {
-  mensagem <- paste0("8 horas da manhã do dia ", dia)
-  print(mensagem)
-}
-```
-
-```{r loops-2-check}
-grade_this({
-  if (identical(.result, .solution)) {
-    pass("Correto!")
-  }
-  fail()
-})
-```
 
 
 ## Enviar as respostas
