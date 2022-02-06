@@ -4,13 +4,16 @@ description: "Exercícios do curso 'Introdução à programação com R'"
 encoding: "UTF-8"
 output: 
   learnr::tutorial:
-    css: css/custom.css
-    language: pt
+    language: 
+      pt: 
+        button: 
+          submitanswer: "Avaliar resposta"
     progressive: true
     allow_skip: true
+    theme: yeti
 runtime: shiny_prerendered
 params:
-  url_form: "https://docs.google.com/forms/d/e/1FAIpQLSeydRZve_CGu0_IJ17WlDRcv6s35SY0b0IJ9RU4gW_wG0swrg/viewform"
+  url_form: "https://docs.google.com/forms/d/e/1FAIpQLSevSTfvWHdJCxFlsCpgzvyZw4jTQXykljdITdZhuYl6R5BLrQ/viewform"
 ---
 
 ```{r setup, include=FALSE}
