@@ -17,28 +17,15 @@ params:
 ---
 
 ```{r setup, include=FALSE}
-library(learnr)
-library(gradethisBR)
-Sys.setenv(LANG = "pt")
-
-knitr::opts_chunk$set(echo = FALSE, exercise.reveal_solution = FALSE)
-
-
-gradethisBR::gradethis_setup(
-  code_correct =  "Correto! Parabéns!",
-  pass = "Correto! Parabéns!"#,
-  #fail =  "Incorreto. Tente novamente! "
-)
+# remotes::install_github("curso-r/CursoRTarefas")
+library(CursoRTarefas)
+CursoRTarefas::adicionar_chunk_setup() 
 ```
 
-
-**Exercícios**
-
-> Boas vindas! 
->
-> Este material faz parte do curso [Introdução à programação com R](https://curso-r.com/cursos/intro-programacao/), da [Curso-R](https://www.curso-r.com/).
->
-> Caso tenha dúvidas sobre como resolver os exercícios,  pedimos que escreva no [<i class="fab fa-discourse"></i> Discourse](https://discourse.curso-r.com/).
+```{r results='asis', message = FALSE}
+CursoRTarefas::adicionar_codigo_pre_tutorial(curso = "Introdução à programação com R",
+                              url = "https://loja.curso-r.com/introduc-o-a-programac-o-com-r.html")
+```
 
 ## Dados Faltantes
 
