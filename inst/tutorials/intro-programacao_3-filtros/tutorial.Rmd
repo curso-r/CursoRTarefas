@@ -31,33 +31,33 @@ CursoRTarefas::adicionar_codigo_pre_tutorial(curso = "Introdução à programaç
 
 ## Filtrando vetores
 
-a) Use o vetor `numeross` abaixo para responder as questões seguintes:
+a) Use o vetor `numeros` abaixo para responder as questões seguintes:
 
 ```{r echo=TRUE}
-numeross <- -4:2
-numeross
+numeros <- -4:2
+numeros
 ```
 
 
-```{r setupNumeross}
-numeross <- -4:2
-numeross
+```{r setupnumeros}
+numeros <- -4:2
+numeros
 ``` 
 
 
 
-I) Escreva um código que devolva apenas valores positivos do vetor `numeross`.
+I) Escreva um código que devolva apenas valores positivos do vetor `numeros`.
 
-```{r filtros-vetor-i, exercise = TRUE, exercise.setup = "setupNumeross"}
+```{r filtros-vetor-i, exercise = TRUE, exercise.setup = "setupnumeros"}
 
 ```
 
 ```{r filtros-vetor-i-hint}
-numeross[numeross ____]
+numeros[numeros ____]
 ```
 
 ```{r filtros-vetor-i-solution}
-numeross[numeross > 0]
+numeros[numeros > 0]
 ```
 
 ```{r filtros-vetor-i-check}
@@ -69,22 +69,22 @@ grade_this({
 })
 ```
 
-II) Escreva um código que devolta apenas os valores pares do vetor `numeross`. Dica: o operador `%%` devolve o resto da divisão entre dois números.
+II) Escreva um código que devolta apenas os valores pares do vetor `numeros`. Dica: o operador `%%` devolve o resto da divisão entre dois números.
 
-```{r filtros-vetor-ii, exercise = TRUE, exercise.setup = "setupNumeross"}
+```{r filtros-vetor-ii, exercise = TRUE, exercise.setup = "setupnumeros"}
 
 ```
 
 ```{r filtros-vetor-ii-hint-1}
-numeross[numeross __ __ __ __]
+numeros[numeros __ __ __ __]
 ```
 
 ```{r filtros-vetor-ii-hint-2}
-numeross[numeross %% __ == __]
+numeros[numeros %% __ == __]
 ```
 
 ```{r filtros-vetor-ii-solution}
-numeross[numeross %% 2 == 0]
+numeros[numeros %% 2 == 0]
 ```
 
 
@@ -100,20 +100,20 @@ grade_this({
 
 III) Filtre o vetor para que retorne apenas aqueles valores que quando elevados a 2 são menores do que 4.
 
-```{r filtros-vetor-iii, exercise = TRUE, exercise.setup = "setupNumeross"}
+```{r filtros-vetor-iii, exercise = TRUE, exercise.setup = "setupnumeros"}
 
 ```
 
 ```{r filtros-vetor-iii-hint-1}
-numeross[_______________]
+numeros[_______________]
 ```
 
 ```{r filtros-vetor-iii-hint-2}
-numeross[(numeros ^ 2) _____]
+numeros[(numeros ^ 2) _____]
 ```
 
 ```{r filtros-vetor-iii-solution}
-numeross[(numeross ^ 2) < 4]
+numeros[(numeros ^ 2) < 4]
 ```
 
 ```{r filtros-vetor-iii-check}
@@ -528,6 +528,88 @@ grade_this({
   fail()
 })
 ```
+
+
+## Pipe
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(dplyr) # carregando o pacote dplyr para usar 
+# as funções filter e select
+
+library(magrittr) # carregando o pacote que contém o pipe %>% 
+
+
+airquality
+``` 
+
+
+1) O código a seguir foi apresentado em um exercício anterior, onde era necessário selecionar as colunas Solar.R, Month e Day, e filtrar as linhas que não apresentassem NA na coluna Solar.R.
+
+Adapte esse código para usar o pipe (do pacote `magrittr`), sem salvar nada em objetos:
+
+```{r pipe-tidyverse-i, exercise = TRUE}
+airquality_selecao <- select(airquality, Solar.R, Month, Day)
+airquality_filtrado <- filter(airquality_selecao, !is.na(Solar.R))
+airquality_filtrado
+```
+
+```{r pipe-tidyverse-i-hint}
+airquality %>% 
+  select(____) %>% 
+  filter(____)
+```
+
+```{r pipe-tidyverse-i-solution}
+airquality %>% 
+  select(Solar.R, Month, Day) %>% 
+  filter(!is.na(Solar.R))
+```
+
+```{r pipe-tidyverse-i-check}
+gradethisBR::grade_this_code()
+```
+
+
+2) Se quisermos calcular a média da variável Ozone, para o mês de junho, e arredondar o resultado para duas casas decimais, podemos usar o seguinte código em R base:
+
+```{r echo=TRUE}
+round(mean(airquality[airquality$Month == 6,]$Ozone, na.rm = TRUE), 2)
+```
+É confuso entender o que acontece pois lemos de "dentro pra fora". 
+
+Com o pipe conseguimos escrever este mesmo código de uma forma mais legível.
+
+Reescreva a lógica do código acima usando pipe (verifique também se o resultado é igual): 
+
+```{r pipe-tidyverse-ii, exercise = TRUE}
+airquality %>% 
+  #_____(______) %>% 
+  pull(Ozone) %>% # a função pull(), do pacote dplyr, retorna a coluna
+  # como um vetor
+  #____(na.rm = TRUE) %>% 
+  #_____(_)
+```
+
+```{r pipe-tidyverse-ii-hint}
+airquality %>% 
+  filter(______) %>% 
+  pull(Ozone) %>% 
+  mean(na.rm = TRUE) %>% 
+  round(_)
+```
+
+```{r pipe-tidyverse-ii-solution}
+airquality %>% 
+  filter(Month == 6) %>% 
+  pull(Ozone) %>% 
+  mean(na.rm = TRUE) %>% 
+  round(2)
+```
+
+```{r pipe-tidyverse-ii-check}
+gradethisBR::grade_this_code()
+```
+
 
 
 
