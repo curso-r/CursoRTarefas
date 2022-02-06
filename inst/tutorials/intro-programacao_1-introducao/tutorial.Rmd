@@ -17,6 +17,7 @@ params:
 ---
 
 ```{r setup, include=FALSE}
+# remotes::install_github("curso-r/CursoRTarefas")
 library(CursoRTarefas)
 CursoRTarefas::adicionar_chunk_setup() 
 ```
