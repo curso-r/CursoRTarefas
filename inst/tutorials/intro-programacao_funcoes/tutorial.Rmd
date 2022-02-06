@@ -30,7 +30,7 @@ CursoRTarefas::adicionar_codigo_pre_tutorial(curso = "Introdução à programaç
 
 ## Funções próprias
 
-a) Crie uma função chamada `numero_ao_quadrado()` que tenha um argumento (chamado `numero`) e retorne o quadrado deste número. 
+1)a) Crie uma função chamada `numero_ao_quadrado()` que tenha um argumento (chamado `numero`) e retorne o quadrado deste número. 
 
 Teste se a função funciona: `numero_ao_quadrado(3)` deve retornar o valor 9.
 
@@ -109,6 +109,104 @@ grade_this({
   fail()
 })
 ```
+
+## Adaptando códigos em funções
+
+2) Nos exercícios sobre controle de fluxo, mostramos um exemplo que, para testá-lo, usamos a função `sample` para sortear um dia da semana. Vamos transformar aquele código em uma função? Essa função deve se chamar `mensagem_de_bom_dia()` receber um argumento chamado `dia_da_semana`. Abaixo segue o código que usamos no exercício, que deve ser adaptado, e também algumas chamadas da função que você pode usar para testar se o resultado é o esperado:
+
+```{r desafio-funcao-bom-dia-1, exercise = TRUE}
+# TRANSFORME O CÓDIGO ABAIXO EM UMA FUNÇÃO:
+
+
+# Estrutura de repetição
+if (dia_da_semana %in% c("sabado", "domingo")) {
+  mensagem <- paste0("Hoje é ", dia_da_semana, "! Bom descanso!")
+  print(mensagem)
+  
+} else if (dia_da_semana == "sexta") {
+  mensagem <-
+    paste0("Hoje é ", dia_da_semana, ", falta pouco para o final de semana!")
+  print(mensagem)
+  
+} else {
+  mensagem <- paste0("Hoje é ", dia_da_semana, "! Bom trabalho!")
+  print(mensagem)
+}
+
+
+# VERIFIQUE SE A FUNÇÃO FUNCIONA:
+mensagem_de_bom_dia("segunda")
+mensagem_de_bom_dia("sexta")
+mensagem_de_bom_dia("domingo")
+
+```
+
+```{r desafio-funcao-bom-dia-1-hint-1}
+# TRANSFORME O CÓDIGO ABAIXO EM UMA FUNÇÃO:
+
+mensagem_de_bom_dia <- function(______) {
+  # Estrutura de repetição
+  if (dia_da_semana %in% c("sabado", "domingo")) {
+    mensagem <- paste0("Hoje é ", dia_da_semana, "! Bom descanso!")
+    print(mensagem)
+    
+  } else if (dia_da_semana == "sexta") {
+    mensagem <-
+      paste0("Hoje é ", dia_da_semana, ", falta pouco para o final de semana!")
+    print(mensagem)
+    
+  } else {
+    mensagem <- paste0("Hoje é ", dia_da_semana, "! Bom trabalho!")
+    print(mensagem)
+  }
+}
+
+# VERIFIQUE SE A FUNÇÃO FUNCIONA:
+mensagem_de_bom_dia("segunda")
+mensagem_de_bom_dia("sexta")
+mensagem_de_bom_dia("domingo")
+
+```
+
+
+```{r desafio-funcao-bom-dia-1-solution}
+# TRANSFORME O CÓDIGO ABAIXO EM UMA FUNÇÃO:
+
+mensagem_de_bom_dia <- function(dia_da_semana) {
+  # Estrutura de repetição
+  if (dia_da_semana %in% c("sabado", "domingo")) {
+    mensagem <- paste0("Hoje é ", dia_da_semana, "! Bom descanso!")
+    print(mensagem)
+    
+  } else if (dia_da_semana == "sexta") {
+    mensagem <-
+      paste0("Hoje é ", dia_da_semana, ", falta pouco para o final de semana!")
+    print(mensagem)
+    
+  } else {
+    mensagem <- paste0("Hoje é ", dia_da_semana, "! Bom trabalho!")
+    print(mensagem)
+  }
+}
+
+# VERIFIQUE SE A FUNÇÃO FUNCIONA:
+mensagem_de_bom_dia("segunda")
+mensagem_de_bom_dia("sexta")
+mensagem_de_bom_dia("domingo")
+
+```
+
+
+```{r desafio-funcao-bom-dia-1-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
+
+
 
 ## Revendo um desafio
 
@@ -242,6 +340,7 @@ grade_this({
   fail()
 })
 ```
+
 
 
 
