@@ -27,35 +27,14 @@ CursoRTarefas::adicionar_codigo_pre_tutorial(curso = "Introdução à programaç
                               url = "https://loja.curso-r.com/introduc-o-a-programac-o-com-r.html")
 ```
 
-## Dados Faltantes
-
-Em R, o `NA` (do inglês *Not Available*) representa um dado faltante ou indisponível. Esse conceito será tratado em aulas futuras com maior profundidade, mas é importante saber que eles existem e são muito comuns! A maioria das bases de dados contém dados faltantes (os `NA`). 
-
-Uma característica do `NA` é: qualquer operação que seja realizada com dados `NA` resultará em `NA`. A ideia é que `NA` representa um valor que não sabemos qual é!
-
-Por exemplo:
-
-```{r echo=TRUE}
-# somar um número com NA resultará em NA
-1 + NA
-
-
-conjunto <- c(1, 2, 3, NA)
-# calcular a média de valores em um vetor que tenha NA
-# resultará em NA
-mean(conjunto)
-```
-
-Algumas funções para lidar com vetores possuem o argumento `na.rm`, usado para remover os `NA` antes de realizar a operação desejada. Por exemplo, para calcular a média dos valores do vetor chamado `conjunto`, que contém alguns números e um `NA`,  podemos usar o argumento `na.rm = TRUE` para que o `NA` seja removido do conjunto para que a média seja calculada:
-
-```{r echo=TRUE}
-conjunto <- c(1, 2, 3, NA)
-mean(conjunto, na.rm = TRUE)
-```
-
->  Lembre-se: algumas funções usadas para realizar operações com vetores, como: `sum()`, `mean()`, `var()`, `sd()`, aceitam o argumento  `na.rm=TRUE` para remover os valores faltantes (`NA`).
 
 ## Dataframes
+
+```{r}
+
+```
+
+
 
 A base de dados `airquality` apresenta dados de qualidade do ar obtidos diariamente, em Nova York, entre os meses de maio e setembro de 1973:
 
@@ -215,8 +194,9 @@ g) Utilizando a resposta da questão anterior, quais são os tipos de cada colun
 
 ```{r tabelas-df-g, echo=FALSE}
 question("Quais são os tipos de cada coluna da tabela `airquality`?",
-  answer("Integer, Integer, Double, Integer, Integer, Integer", correct = TRUE),
     answer("Todos são numéricos"),
+  answer("Todos são textos"),
+  answer("Há uma coluna Double (números que aceitam casas decimais) e as outras são integer (número inteiro).", correct = TRUE),
   allow_retry = TRUE,
   random_answer_order = TRUE,
   correct = "Muito bom! :)",
@@ -224,229 +204,6 @@ question("Quais são os tipos de cada coluna da tabela `airquality`?",
 )
 ```
 
-
-## Desafio
-
-Use o dataframe `airquality` para responder às questões abaixo. __Vamos calcular o desvio padrão de Ozone sem usar a função `sd()`__. O resultado de um exercício é usado no próximo, então iremos guardar o resultado de cada etapa em um objeto.
-
-a) Calcule a média da coluna `Ozone` (excluindo os NAs), e guarde o resultado em um objeto chamado `media_ozone`.  Dica: para remover os NA's, utilize o argumento `na.rm=TRUE` da função que calcula a média.
-
-```{r tabelas-desafio-a, exercise = TRUE, exercise.setup = "setupAirquality"}
-# a)
-media_ozone <-  #___ 
-media_ozone
-```
-
-```{r tabelas-desafio-a-hint}
-# a)
-media_ozone <- mean(_____$_____, na.rm = TRUE)
-media_ozone
-```
-
-```{r tabelas-desafio-a-solution}
-# a)
-media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
-media_ozone
-```
-
-```{r tabelas-desafio-a-check}
-grade_this({
-  if (identical(.result, .solution)) {
-    pass("Muito bom! Você calculou a média da coluna Ozone corretamente, excluindo os NAs.")
-  }
-  fail()
-})
-```
-
-
-
-b) Subtraia da coluna `Ozone` a sua própria média (centralização), e guarde o resultado em um objeto chamado `ozone_centralizado`. 
-
-```{r resposta_ate_a}
-media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
-```
-
-```{r tabelas-desafio-b, exercise = TRUE, exercise.setup = "resposta_ate_a"}
-# b) 
-ozone_centralizado <-  #___
-ozone_centralizado
-```
-
-```{r tabelas-desafio-b-hint}
-# b) 
-ozone_centralizado <- ____$____ - media_ozone
-ozone_centralizado
-```
-
-```{r tabelas-desafio-b-solution}
-# b) 
-ozone_centralizado <- airquality$Ozone - media_ozone
-ozone_centralizado
-```
-
-```{r tabelas-desafio-b-check}
-grade_this({
-  if (identical(.result, .solution)) {
-    pass("Muito bom! Você calculou a centralização da coluna Ozone.")
-  }
-  fail()
-})
-```
-
-
-
-c) Eleve o vetor `ozone_centralizado` ao quadrado, e guarde o resultado em um objeto chamado `ozone_centralizado_ao_quadrado`.
-
-```{r resposta_ate_b}
-media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
-ozone_centralizado <- airquality$Ozone - media_ozone
-```
-
-
-
-```{r tabelas-desafio-c, exercise = TRUE, exercise.setup = "resposta_ate_b"}
-# c) 
-ozone_centralizado_ao_quadrado <- # ___ 
-ozone_centralizado_ao_quadrado
-```
-
-```{r tabelas-desafio-c-hint}
-# c) 
-ozone_centralizado_ao_quadrado <-  ___  ^ 2
-ozone_centralizado_ao_quadrado
-```
-
-```{r tabelas-desafio-c-solution}
-# c)
-ozone_centralizado_ao_quadrado <-  ozone_centralizado ^ 2
-ozone_centralizado_ao_quadrado
-```
-
-```{r tabelas-desafio-c-check}
-grade_this({
-  if (identical(.result, .solution)) {
-    pass("Muito bom! Você elevou o vetor `ozone_centralizado` ao quadrado.")
-  }
-  fail()
-})
-```
-
-
-
-d) Calcule a média do vetor `ozone_centralizado_ao_quadrado`, e guarde o resultado em um objeto chamado `media_ozone_centralizado_ao_quadrado`.
-
-```{r resposta_ate_c}
-media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
-ozone_centralizado <- airquality$Ozone - media_ozone
-ozone_centralizado_ao_quadrado <-  ozone_centralizado ^ 2
-```
-
-```{r tabelas-desafio-d, exercise = TRUE, exercise.setup = "resposta_ate_c"}
-# d) 
-media_ozone_centralizado_ao_quadrado <- # ___ 
-media_ozone_centralizado_ao_quadrado
-```
-
-```{r tabelas-desafio-d-hint}
-# d) 
-media_ozone_centralizado_ao_quadrado <-  mean(___, na.rm = TRUE) 
-media_ozone_centralizado_ao_quadrado
-```
-
-```{r tabelas-desafio-d-solution}
-# d)
-media_ozone_centralizado_ao_quadrado <- mean(ozone_centralizado_ao_quadrado, na.rm = TRUE)
-media_ozone_centralizado_ao_quadrado
-```
-
-```{r tabelas-desafio-d-check}
-grade_this({
-  if (identical(.result, .solution)) {
-    pass("Correto! Falta pouco.")
-  }
-  fail()
-})
-```
-
-
-
-e) Calcule a raíz quadrada do objeto `media_ozone_centralizado_ao_quadrado`, e guarde o resultado em um objeto chamado `desvio_padrao_ozone_calculado`.
-
-```{r resposta_ate_d}
-media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
-ozone_centralizado <- airquality$Ozone - media_ozone
-ozone_centralizado_ao_quadrado <-  ozone_centralizado ^ 2
-media_ozone_centralizado_ao_quadrado <- mean(ozone_centralizado_ao_quadrado, na.rm = TRUE)
-```
-
-```{r tabelas-desafio-e, exercise = TRUE, exercise.setup = "resposta_ate_d"}
-# e)
-desvio_padrao_ozone_calculado <- # ___
-desvio_padrao_ozone_calculado
-```
-
-```{r tabelas-desafio-e-hint}
-# e)
-desvio_padrao_ozone_calculado <-  sqrt(___)
-desvio_padrao_ozone_calculado
-```
-
-```{r tabelas-desafio-e-solution}
-desvio_padrao_ozone_calculado <- sqrt(media_ozone_centralizado_ao_quadrado)
-desvio_padrao_ozone_calculado
-```
-
-```{r tabelas-desafio-e-check}
-grade_this({
-  if (identical(.result, .solution)) {
-    pass("Correto! Parabéns, até aqui você calculou o desvio padrão da coluna Ozone.")
-  }
-  fail()
-})
-```
-
-
-
-f) Calcule o desvio padrão da coluna Ozone usando a função sd() (dica: sd(airquality$Ozone, na.rm = TRUE)). Verifique se o resultado da função sd()  é diferente do cálculo que fizemos anteriormente. Caso você tenha dúvidas sobre o cálculo realizado pela função sd , você pode acessar a sessão Details da documentação dessa função.
-
-```{r resposta_ate_e}
-media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
-ozone_centralizado <- airquality$Ozone - media_ozone
-ozone_centralizado_ao_quadrado <-  ozone_centralizado ^ 2
-media_ozone_centralizado_ao_quadrado <- mean(ozone_centralizado_ao_quadrado, na.rm = TRUE)
-desvio_padrao_ozone_calculado <- sqrt(media_ozone_centralizado_ao_quadrado)
-```
-
-```{r tabelas-desafio-f, exercise = TRUE, exercise.setup = "resposta_ate_e"}
-# f)
-sd_ozone_funcao <- #___  
-sd_ozone_funcao
-desvio_padrao_ozone_calculado == sd_ozone_funcao
-```
-
-```{r tabelas-desafio-f-hint}
-# f)
-sd_ozone_funcao <- sd(___, na.rm = TRUE) 
-sd_ozone_funcao
-desvio_padrao_ozone_calculado == sd_ozone_funcao
-```
-
-```{r tabelas-desafio-f-solution}
-# f)
-sd_ozone_funcao <- sd(airquality$Ozone, na.rm = TRUE)
-sd_ozone_funcao
-desvio_padrao_ozone_calculado == sd_ozone_funcao
-
-```
-
-```{r tabelas-desafio-f-check}
-grade_this({
-  if (identical(.result, .solution)) {
-    pass("Correto! Os resultados são diferentes! Isso porque a função `sd()` calcula o desvio padrão utilizando a variância amostral. Por outro lado, utilizamos a variância populacional para calcular o desvio padrão.")
-  }
-  fail()
-})
-```
 
 ## Enviar as respostas
 
