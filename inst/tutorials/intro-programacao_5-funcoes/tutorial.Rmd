@@ -110,6 +110,142 @@ grade_this({
 })
 ```
 
+## Revendo um desafio
+
+3) Nesse exercício, voltaremos no desafio apresentado em uma tarefa anterior. Naquele desafio, mostramos como calcular o desvio padrão.
+
+```{r pipe-tidyverse-iii-exemplo, echo=TRUE, exercise = TRUE}
+media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
+ozone_centralizado <- airquality$Ozone - media_ozone
+ozone_centralizado_ao_quadrado <-  ozone_centralizado ^ 2
+media_ozone_centralizado_ao_quadrado <- mean(ozone_centralizado_ao_quadrado, na.rm = TRUE)
+desvio_padrao_ozone_calculado <- sqrt(media_ozone_centralizado_ao_quadrado)
+desvio_padrao_ozone_calculado
+```
+
+
+Agora vamos adaptar esse código para usar com pipe. Antes disso, também iremos criar funções para usar nesse encadeamento:
+
+a) Crie uma função chamada `centralizar`, que recebe um argumento chamado `vetor_centralizar`, e retorna o vetor centralizado (vetor - média do vetor).
+
+b) Crie uma função chamada `eleva_ao_quadrado`, que recebe um argumento chamado `x`, e retorna o valor de x elevado ao quadrado.
+
+c) Usando as funções criadas e o pipe, reescreva o código para calcular o desvio padrão:
+
+```{r pipe-tidyverse-iii, exercise = TRUE,  echo=FALSE}
+# a) 
+centralizar <- function(vetor_centralizar){
+  _____
+}
+
+# b)
+eleva_ao_quadrado <- function(x){
+  _____
+}
+
+# c) 
+airquality$Ozone %>% 
+  ___ %>% 
+  ___ %>% 
+  ___ %>% 
+  ___()
+  
+  
+  
+  
+```
+
+```{r pipe-tidyverse-iii-hint-1,  echo=FALSE}
+# a) 
+centralizar <- function(vetor_centralizar){
+  vetor_centralizar - mean(vetor_centralizar, na.rm = TRUE) 
+}
+
+# b)
+eleva_ao_quadrado <- function(x){
+  _____
+}
+
+# c) 
+airquality$Ozone %>% 
+  ___ %>% 
+  ___ %>% 
+  ___ %>% 
+  ___()
+  
+```
+
+```{r pipe-tidyverse-iii-hint-2,  echo=FALSE}
+# a) 
+centralizar <- function(vetor_centralizar){
+  vetor_centralizar - mean(vetor_centralizar, na.rm = TRUE) 
+}
+
+# b)
+eleva_ao_quadrado <- function(x){
+  x ^ 2 
+}
+
+# c) 
+airquality$Ozone %>% 
+  ___ %>% 
+  ___ %>% 
+  ___ %>% 
+  ___()
+  
+```
+
+
+```{r pipe-tidyverse-iii-hint-3,  echo=FALSE}
+# a) 
+centralizar <- function(vetor_centralizar){
+  vetor_centralizar - mean(vetor_centralizar, na.rm = TRUE) 
+}
+
+# b)
+eleva_ao_quadrado <- function(x){
+  x ^ 2 
+}
+
+# c) 
+airquality$Ozone %>% 
+  centralizar() %>% 
+  eleva_ao_quadrado() %>% 
+  ___(na.rm = TRUE) %>% 
+  ___()
+```
+
+```{r pipe-tidyverse-iii-solution,  echo=FALSE}
+# a) 
+centralizar <- function(vetor_centralizar){
+  vetor_centralizar - mean(vetor_centralizar, na.rm = TRUE) 
+}
+
+# b)
+eleva_ao_quadrado <- function(x){
+  x ^ 2 
+}
+
+# c) 
+airquality$Ozone %>% 
+  centralizar() %>% 
+  eleva_ao_quadrado() %>% 
+  mean(na.rm = TRUE) %>% 
+  sqrt()
+```
+
+```{r pipe-tidyverse-iii-check}
+grade_this({
+  if (identical(.result, .solution)) {
+    pass("Correto!")
+  }
+  fail()
+})
+```
+
+
+
+
 ## Enviar as respostas
 
 Se você completou a tarefa e quer submeter, clique no botão abaixo ('Generate') para gerar o seu código hash e envie usando o formulário a seguir:
