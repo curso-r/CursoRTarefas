@@ -208,7 +208,7 @@ grade_this({
 
 
 
-e) Calcule a raíz quadrada do objeto `media_ozone_centralizado_ao_quadrado`, e guarde o resultado em um objeto chamado `desvio_padrao_ozone_calculado`.
+e) Calcule a raíz quadrada do objeto `media_ozone_centralizado_ao_quadrado`, e guarde o resultado em um objeto chamado `desvio_padrao_ozone_calculado`. Dica: para calcular a raíz quadrada, é possível usar a função `sqrt()`.
 
 ```{r resposta_ate_d}
 media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
@@ -245,7 +245,7 @@ grade_this({
 
 
 
-f) Calcule o desvio padrão da coluna Ozone usando a função sd() (dica: sd(airquality$Ozone, na.rm = TRUE)). Verifique se o resultado da função sd()  é diferente do cálculo que fizemos anteriormente. Caso você tenha dúvidas sobre o cálculo realizado pela função sd , você pode acessar a sessão Details da documentação dessa função.
+f) Calcule o desvio padrão da coluna Ozone usando a função `sd()` (dica: `sd(airquality$Ozone, na.rm = TRUE)`). Verifique se o resultado da função `sd()`  é diferente do cálculo que fizemos anteriormente. Caso você tenha dúvidas sobre o cálculo realizado pela função sd , você pode acessar a sessão Details da documentação dessa função.
 
 ```{r resposta_ate_e}
 media_ozone <- mean(airquality$Ozone, na.rm = TRUE)
